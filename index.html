@@ -1,0 +1,1593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kolkata Durga Puja 2026 Pandal-Hopping Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Tiro+Bangla:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F8F8FB; --surface:#FFFFFF; --ink:#1A1B3A; --ink-soft:#55587A; --line:#DCDDEA;
+  --lal:#C4122F; --lal-ink:#FFFFFF; --gold:#F5A300; --gold-soft:#FFF4D6; --gold-ink:#5B3C00;
+  --blue:#1565C0; --green:#2E7D32; --purple:#7B2CBF; --none:#7A7D99;
+  --serif:"Tiro Bangla","Noto Serif Bengali",Georgia,"Times New Roman",serif;
+  --sans:"Hind Siliguri","Noto Sans Bengali",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#10112A; --surface:#191A3A; --ink:#F0EFF8; --ink-soft:#A9ABCB; --line:#2E3057;
+    --lal:#FF5470; --lal-ink:#1A0008; --gold:#FFBE3D; --gold-soft:#2C2410; --gold-ink:#FFE2A3;
+    --blue:#6FB0FF; --green:#6FD07A; --purple:#C58CFF; --none:#9A9DC0;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#10112A; --surface:#191A3A; --ink:#F0EFF8; --ink-soft:#A9ABCB; --line:#2E3057;
+  --lal:#FF5470; --lal-ink:#1A0008; --gold:#FFBE3D; --gold-soft:#2C2410; --gold-ink:#FFE2A3;
+  --blue:#6FB0FF; --green:#6FD07A; --purple:#C58CFF; --none:#9A9DC0;
+}
+*,*::before,*::after{box-sizing:inherit}
+[hidden]{display:none!important}
+html{height:100%;scroll-padding-top:calc(var(--hdr,60px) + 130px);scroll-behavior:smooth}
+body{margin:0;min-height:100%;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.55;-webkit-text-size-adjust:100%}
+html[lang="bn"] body{line-height:1.75}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--lal);outline-offset:2px;border-radius:4px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+
+/* lal-par: the red border of the white Ashtami saree */
+.par{height:22px;background:
+  linear-gradient(var(--lal),var(--lal)) 0 0/100% 12px no-repeat,
+  linear-gradient(var(--lal),var(--lal)) 0 18px/100% 3px no-repeat,
+  var(--surface)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+
+/* hero */
+.hero{padding:44px 20px 28px}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(3.2rem,12vw,6.6rem);line-height:1.05;margin:0;letter-spacing:-.01em}
+.hero .sub{font-family:var(--serif);font-size:clamp(1.25rem,3.6vw,1.9rem);margin:10px 0 0;color:var(--ink)}
+.hero .lede{max-width:56ch;margin:18px 0 0;color:var(--ink-soft);font-size:1.05rem}
+.jump{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.jump a{font-weight:600;text-decoration:none;border-bottom:2px solid var(--lal);padding-bottom:1px}
+.when{margin-top:26px;display:flex;flex-wrap:wrap;gap:0;border:1px solid var(--line);border-left:6px solid var(--lal);background:var(--surface);border-radius:4px}
+.when>div{flex:1 1 120px;padding:12px 16px;border-right:1px solid var(--line)}
+.when>div:last-child{border-right:0}
+.when b{display:block;font-weight:600}
+.when span{color:var(--ink-soft);font-size:.92rem}
+.when .now{background:var(--lal);color:var(--lal-ink)}
+.when .now span{color:inherit;opacity:.92}
+.note{font-size:.88rem;color:var(--ink-soft);margin:10px 0 0;max-width:70ch}
+
+/* toolbar */
+.bar{position:sticky;top:calc(env(safe-area-inset-top,0px) + var(--hdr,60px));z-index:20;background:var(--paper);border-bottom:1px solid var(--line);padding:10px 0}
+.bar .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.search{flex:1 1 220px;min-width:0;font:inherit;font-size:1rem;padding:10px 14px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--ink)}
+.sel{font:inherit;font-size:.95rem;padding:10px 12px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--ink);max-width:100%}
+.lang{display:inline-flex;border:1px solid var(--ink);border-radius:6px;overflow:hidden}
+.lang button{font:inherit;font-size:.92rem;font-weight:600;padding:8px 12px;border:0;background:var(--surface);color:var(--ink);cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:10px 0 2px;scrollbar-width:thin}
+.chip{flex:0 0 auto;font:inherit;font-size:.95rem;font-weight:500;padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.chip small{opacity:.7;margin-left:4px}
+
+/* regions */
+.region{padding:38px 0 6px}
+.region h2,.sec h2{font-family:var(--serif);font-weight:400;font-size:clamp(1.9rem,5vw,2.6rem);line-height:1.15;margin:0}
+.region .desc{margin:8px 0 0;color:var(--ink-soft);max-width:62ch}
+.hoods{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 4px}
+.hoods a{font-size:.88rem;text-decoration:none;border:1px dashed var(--line);padding:4px 10px;border-radius:999px;color:var(--ink-soft)}
+.hoods a:hover{border-color:var(--lal);color:var(--lal)}
+.list{margin:16px 0 0;padding:0;list-style:none;border-top:1px solid var(--line)}
+.item{display:grid;grid-template-columns:1fr auto;gap:6px 18px;padding:16px 0 16px 16px;border-bottom:1px solid var(--line);border-left:4px solid var(--lal)}
+.item h3{margin:0;font-size:1.12rem;font-weight:600;line-height:1.35}
+.meta{color:var(--ink-soft);font-size:.93rem}
+.theme{margin-top:2px;font-family:var(--serif);font-size:1.02rem}
+.theme.tbc{color:var(--ink-soft);font-family:var(--sans);font-size:.9rem;font-style:italic}
+.tag{display:inline-block;font-size:.75rem;font-weight:600;padding:1px 8px;border-radius:999px;border:1px solid var(--line);color:var(--ink-soft);margin-left:6px;vertical-align:middle}
+.tag.sp{background:var(--gold);color:#2A1B00;border-color:var(--gold)}
+.metro{display:flex;flex-direction:column;align-items:flex-end;gap:2px;font-size:.92rem;text-align:right}
+.mline{display:inline-flex;align-items:center;gap:7px;font-weight:600}
+.dot{width:12px;height:12px;border-radius:50%;background:var(--none);flex:0 0 12px}
+.dot.B{background:var(--blue)}.dot.G{background:var(--green)}.dot.P{background:var(--purple)}
+.metro small{color:var(--ink-soft);font-size:.8rem}
+.acts{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.btn{font:inherit;font-size:.92rem;font-weight:600;text-decoration:none;padding:7px 14px;border-radius:6px;border:1px solid var(--ink);background:var(--surface);color:var(--ink);cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.btn.map{background:var(--lal);border-color:var(--lal);color:var(--lal-ink)}
+.btn.add[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.btn.ghost{border-color:var(--line);font-weight:500;color:var(--ink-soft)}
+.empty{padding:26px 16px;border:1px dashed var(--line);margin-top:16px;border-radius:6px;color:var(--ink-soft)}
+
+/* shows */
+.sec{padding:46px 0 6px}
+.sec .desc{margin:8px 0 0;color:var(--ink-soft);max-width:64ch}
+.disc{margin:14px 0 0;padding:10px 14px;border-left:4px solid var(--gold);background:var(--gold-soft);color:var(--gold-ink);font-size:.92rem;max-width:72ch}
+.moments{margin:18px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:0;border:1px solid var(--line);border-radius:4px;background:var(--surface)}
+.moments li{padding:12px 14px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.moments b{display:block;font-family:var(--serif);font-weight:400;font-size:1.05rem}
+.moments span{color:var(--ink-soft);font-size:.9rem}
+.sfilters{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:20px}
+.shows{margin:16px 0 0;padding:0;list-style:none;border-top:1px solid var(--line)}
+.show{display:grid;grid-template-columns:96px 1fr auto;gap:6px 18px;padding:16px 0;border-bottom:1px solid var(--line)}
+.show .when2{border-left:4px solid var(--lal);padding-left:12px;line-height:1.3}
+.show .when2 b{display:block;font-weight:700}
+.show .when2 span{color:var(--ink-soft);font-size:.88rem}
+.show h3{margin:0;font-size:1.12rem;font-weight:600;line-height:1.35}
+.show.promo{background:var(--gold-soft);padding-left:12px;padding-right:12px;border-left:4px solid var(--gold)}
+.show.openslot{border-style:dashed;color:var(--ink-soft)}
+.price{font-weight:600}
+.show .right{display:flex;flex-direction:column;gap:8px;align-items:flex-end;text-align:right}
+.partners{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:22px}
+
+/* sponsors */
+.sponsor-band{margin:44px 0 0;border:2px solid var(--gold);background:var(--gold-soft);border-radius:6px;padding:22px 20px 24px}
+.sponsor-band h2{font-family:var(--serif);font-weight:400;font-size:clamp(1.7rem,4.6vw,2.3rem);margin:0}
+.paid{display:inline-block;background:var(--gold);color:#2A1B00;font-weight:700;font-size:.8rem;padding:2px 10px;border-radius:3px;margin-bottom:8px}
+.sponsor-band p{margin:8px 0 0;max-width:64ch;color:var(--gold-ink)}
+.slots{display:grid;gap:12px;margin-top:18px}
+.slots.plat{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.slots.gold{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.slot{background:var(--surface);border:1px solid var(--gold);border-radius:6px;padding:16px;display:flex;flex-direction:column;gap:6px;min-height:120px}
+.slot.open{border-style:dashed;color:var(--ink-soft)}
+.slot .tier{font-size:.78rem;font-weight:700;color:var(--gold-ink)}
+.slot h3{margin:0;font-size:1.1rem}
+.slot.plat h3{font-family:var(--serif);font-weight:400;font-size:1.4rem}
+.slot p{margin:0;color:var(--ink-soft);font-size:.93rem}
+.slot a.go,.slot .go{margin-top:auto;font-weight:600;color:var(--lal)}
+.linkbtn{font:inherit;background:none;border:0;padding:0;text-align:left;cursor:pointer;text-decoration:underline}
+dialog.enq{border:2px solid var(--ink);border-radius:8px;padding:0;max-width:560px;width:calc(100% - 28px);background:var(--surface);color:var(--ink);max-height:calc(100% - 28px);overflow:auto}
+dialog.enq::backdrop{background:rgba(10,10,30,.6)}
+.enq form{padding:20px}
+.enq h2{font-family:var(--serif);font-weight:400;font-size:1.6rem;margin:0 0 4px;line-height:1.2}
+.enq .fld{display:flex;flex-direction:column;gap:4px;margin-top:12px}
+.enq label{font-weight:600;font-size:.92rem}
+.enq input,.enq select,.enq textarea{font:inherit;font-size:1rem;padding:9px 12px;border:1px solid var(--line);border-radius:6px;background:var(--paper);color:var(--ink);width:100%}
+.enq textarea{min-height:90px;resize:vertical}
+.enq .row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.enq .acts2{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.enq .err{color:var(--lal);font-weight:600;font-size:.92rem;min-height:1.2em;margin-top:10px}
+.enq .fallback{margin-top:12px;font-size:.88rem;color:var(--ink-soft)}
+.enq .x{position:absolute;right:12px;top:10px;font:inherit;font-size:1.4rem;line-height:1;background:none;border:0;color:var(--ink);cursor:pointer;padding:6px 10px}
+@media (max-width:520px){.enq .row2{grid-template-columns:1fr}}
+.site-hdr{position:sticky;top:env(safe-area-inset-top,0px);z-index:35;background:var(--paper);border-bottom:1px solid var(--line)}
+.hdr-in{display:flex;flex-wrap:wrap;align-items:center;gap:4px 14px;padding-top:8px;padding-bottom:0}
+.brand{display:flex;align-items:baseline;gap:10px;text-decoration:none;flex:1 1 auto;min-width:0}
+.brand-bn{font-family:var(--serif);font-size:1.5rem;line-height:1.2}
+.brand-name{font-weight:700;font-size:.98rem;color:var(--lal)}
+.tabs{order:3;width:100%;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tabs a{flex:0 0 auto;text-decoration:none;font-weight:600;padding:9px 12px;border-bottom:3px solid transparent;font-size:.96rem}
+.tabs a[aria-current="page"]{border-bottom-color:var(--lal);color:var(--lal)}
+@media (max-width:620px){.brand-bn{display:none}.brand-name{font-size:1.02rem}}
+@media (min-width:900px){.hdr-in{flex-wrap:nowrap;padding-bottom:0}.brand{flex:0 0 auto}.tabs{order:2;width:auto;flex:1;margin-left:14px}.lang{order:3}}
+.stats{margin:14px 0 0;font-weight:600}
+.cta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.btn.big{padding:12px 22px;font-size:1.02rem}
+.feats{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));border-left:1px solid var(--line);border-top:1px solid var(--line);margin-top:18px;background:var(--surface);border-radius:4px}
+.feat{display:block;padding:18px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);border-top:5px solid var(--lal);margin-top:-1px;text-decoration:none}
+.feat b{display:block;font-family:var(--serif);font-weight:400;font-size:1.3rem;margin-bottom:4px;line-height:1.25}
+.feat span{color:var(--ink-soft);font-size:.93rem}
+.feat:hover{background:var(--paper)}
+.rtiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin-top:18px}
+.rtile{font:inherit;text-align:left;cursor:pointer;border:1px solid var(--line);border-left:5px solid var(--lal);background:var(--surface);color:var(--ink);padding:14px;border-radius:4px}
+.rtile b{display:block;font-family:var(--serif);font-weight:400;font-size:1.25rem;line-height:1.25}
+.rtile span{color:var(--ink-soft);font-size:.9rem}
+.rtile:hover{background:var(--paper)}
+.hiw{margin:18px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.hiw li{display:flex;gap:12px;align-items:flex-start}
+.hiw b{display:block}
+.hiw span.t{color:var(--ink-soft);font-size:.93rem}
+.wgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;margin-top:18px}
+.wcard{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-top:5px solid var(--lal);border-radius:4px;overflow:hidden}
+.wcard.promo{border-color:var(--gold);border-top-color:var(--gold);background:var(--gold-soft)}
+.wcard.openslot{border-style:dashed;border-top-style:dashed;color:var(--ink-soft)}
+.wimg{aspect-ratio:4/5;background:var(--paper);overflow:hidden}
+.wimg img{width:100%;height:100%;object-fit:cover;display:block}
+.poster{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;padding:22px;color:#fff;background:linear-gradient(160deg,#C4122F,#6B0A1B);box-shadow:inset 0 0 0 7px rgba(255,255,255,.88),inset 0 0 0 10px #C4122F}
+.poster .pg{font-family:var(--serif);font-size:clamp(1.7rem,6vw,2.3rem);line-height:1.2}
+.poster .pt{font-size:.85rem;opacity:.92;max-width:16ch}
+.wbody{padding:12px 14px 14px;display:flex;flex-direction:column;gap:4px;flex:1}
+.wbody h3{margin:0;font-size:1.05rem;line-height:1.35}
+.wbuy{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:auto;padding-top:10px}
+.mapbtn{display:inline-flex;align-items:center;gap:4px;font-size:.8rem;font-weight:700;text-decoration:none;color:var(--lal-ink);background:var(--lal);border-radius:999px;padding:2px 11px 2px 8px;margin-left:8px;vertical-align:middle;white-space:nowrap}
+.mapbtn svg{width:14px;height:14px;fill:currentColor}
+.mapbtn:hover{filter:brightness(1.1)}
+.planner{margin-top:8px}
+.pl-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-top:18px}
+.pl-grid .fld{display:flex;flex-direction:column;gap:4px}
+.pl-grid label{font-weight:600;font-size:.92rem}
+.msel{position:relative}
+.msel-btn{width:100%;text-align:left;font-weight:600;cursor:pointer;padding:12px 14px}
+.msel-btn::after{content:"▾";float:right}
+.msel-panel{position:absolute;z-index:40;left:0;right:0;top:calc(100% + 4px);background:var(--surface);border:2px solid var(--ink);border-radius:8px;padding:10px;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.msel-list{max-height:min(340px,50vh);overflow:auto;margin-top:8px}
+.msel-list h4{margin:12px 0 4px;font-size:.78rem;letter-spacing:.04em;color:var(--ink-soft)}
+.msel-list label{display:flex;gap:10px;align-items:flex-start;padding:7px 4px;cursor:pointer;font-weight:400;font-size:.95rem}
+.msel-list input{margin-top:5px;flex:0 0 auto;width:auto}
+.msel-list small{color:var(--ink-soft);display:block}
+.msel-foot{display:flex;justify-content:space-between;gap:8px;margin-top:10px}
+.pl-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.pchip{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:4px 5px 4px 12px;font-size:.9rem}
+.pchip button{border:0;background:var(--line);color:var(--ink);border-radius:50%;width:22px;height:22px;cursor:pointer;line-height:1;font-size:1rem}
+.pl-sum{margin-top:18px;padding:12px 14px;border-left:6px solid var(--lal);background:var(--surface);border-radius:4px;font-weight:600}
+.pl-empty{margin-top:18px;padding:18px;border:1px dashed var(--line);border-radius:6px;color:var(--ink-soft)}
+.route{list-style:none;margin:12px 0 0;padding:0}
+.route .leg{margin:0 0 0 17px;padding:8px 0 8px 22px;border-left:3px dotted var(--lal);color:var(--ink-soft);font-size:.88rem}
+.route .stop{display:grid;grid-template-columns:36px 1fr auto;gap:12px;align-items:start;padding:10px 0}
+.route .stop h3{margin:0;font-size:1.08rem;font-weight:600;line-height:1.4}
+.num{width:36px;height:36px;border-radius:50%;background:var(--lal);color:var(--lal-ink);display:grid;place-items:center;font-weight:700}
+.times{text-align:right;font-weight:700;white-space:nowrap}
+.times span{display:block;font-weight:400;color:var(--ink-soft);font-size:.88rem}
+@media (max-width:620px){.route .stop{grid-template-columns:36px 1fr}.times{grid-column:2;text-align:left}}
+.enq-sec{border:2px solid var(--ink);border-radius:8px;background:var(--surface);margin-top:46px;padding:0}
+.contact-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.btn.wa{background:#1FA855;border-color:#1FA855;color:#fff}
+.fab{position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:25;display:flex;flex-direction:column;gap:8px;align-items:flex-end}
+body.has-trail .fab{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
+.fab .btn{box-shadow:0 2px 10px rgba(0,0,0,.28);padding:10px 16px}
+.rates{margin-top:22px;overflow-x:auto}
+.rates table{border-collapse:collapse;width:100%;min-width:520px;background:var(--surface)}
+.rates th,.rates td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);font-size:.93rem;vertical-align:top}
+.rates th{font-weight:700}
+.inline-sp{display:grid;grid-template-columns:1fr auto;gap:4px 18px;padding:14px 16px;background:var(--gold-soft);border-bottom:1px solid var(--line);border-left:4px solid var(--gold)}
+.inline-sp h3{margin:0;font-size:1.05rem}
+.inline-sp p{margin:0;color:var(--gold-ink);font-size:.92rem}
+
+/* tips */
+.tips{margin-top:46px}
+.tips h2{font-family:var(--serif);font-weight:400;font-size:clamp(1.7rem,4.6vw,2.3rem);margin:0 0 6px;line-height:1.2}
+.nights{margin:14px 0 0;padding:0;list-style:none;border-top:1px solid var(--line)}
+.nights li{display:grid;grid-template-columns:170px 1fr;gap:4px 18px;padding:12px 0;border-bottom:1px solid var(--line)}
+.nights b{font-weight:600}
+.legend{display:flex;flex-wrap:wrap;gap:16px;margin:12px 0 0;font-size:.9rem;color:var(--ink-soft);list-style:none;padding:0}
+.legend span{display:inline-flex;align-items:center;gap:7px}
+footer{margin:56px 0 0;padding:26px 0 120px;border-top:1px solid var(--line);color:var(--ink-soft);font-size:.9rem}
+footer p{max-width:72ch;margin:0 0 10px}
+
+/* trail bar */
+.trail{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--ink);color:var(--paper);padding:10px 20px calc(10px + env(safe-area-inset-bottom,0px));display:none}
+.trail.show{display:block}
+.trail .in{max-width:1040px;margin:0 auto;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+.trail .btn{background:var(--lal);color:var(--lal-ink);border-color:var(--lal)}
+.trail .btn.clear{background:transparent;color:var(--paper);border-color:var(--paper)}
+.trail span{font-weight:600}
+
+@media (max-width:620px){
+  body{font-size:16px}
+  .item{grid-template-columns:1fr}
+  .metro{align-items:flex-start;text-align:left;flex-direction:row;flex-wrap:wrap;gap:4px 10px}
+  .nights li{grid-template-columns:1fr}
+  .when>div{border-right:0;border-bottom:1px solid var(--line)}
+  .show{grid-template-columns:1fr}
+  .show .right{align-items:flex-start;text-align:left;flex-direction:row;flex-wrap:wrap;align-items:center}
+}
+</style>
+</head>
+<body>
+
+<div class="par" aria-hidden="true"></div>
+
+<header class="site-hdr" id="site-hdr">
+  <div class="wrap hdr-in">
+    <a class="brand" href="#/home"><span lang="bn" class="brand-bn">পুজো ২০২৬</span><span class="brand-name" data-i="brand"></span></a>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="en" aria-pressed="true">English</button>
+      <button type="button" data-lang="bn" aria-pressed="false" lang="bn">বাংলা</button>
+    </div>
+    <nav class="tabs" id="tabs" aria-label="Main">
+      <a href="#/home" data-nav="home" data-i="navHome"></a>
+      <a href="#/pandals" data-nav="pandals" data-i="navPandals"></a>
+      <a href="#/plan" data-nav="plan" data-i="navPlan"></a>
+      <a href="#/shows" data-nav="shows" data-i="navShows"></a>
+      <a href="#/wishes" data-nav="wishes" data-i="navWishes"></a>
+      <a href="#/advertise" data-nav="advertise" data-i="navAdvertise"></a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ HOME ============ -->
+<div class="view" data-view="home" id="v-home">
+  <div class="wrap hero">
+    <h1 lang="bn">পুজো ২০২৬</h1>
+    <p class="sub" data-i="sub"></p>
+    <p class="lede" data-i="lede"></p>
+    <p class="stats" id="home-stats"></p>
+    <div class="cta-row">
+      <a class="btn map big" href="#/plan" data-i="ctaPlan"></a>
+      <a class="btn big" href="#/pandals" data-i="ctaBrowse"></a>
+    </div>
+    <div class="contact-row" id="contact-row"></div>
+    <div class="when" id="when"></div>
+    <p class="note" data-i="dateNote"></p>
+  </div>
+  <div class="wrap">
+    <section class="sec" aria-labelledby="hf-h">
+      <h2 id="hf-h" data-i="featTitle"></h2>
+      <div class="feats" id="home-feats"></div>
+    </section>
+    <section class="sec" aria-labelledby="hr-h">
+      <h2 id="hr-h" data-i="regionsTitle"></h2>
+      <div class="rtiles" id="home-regions"></div>
+    </section>
+    <section class="sec" aria-labelledby="hh-h">
+      <h2 id="hh-h" data-i="hlTitle"></h2>
+      <p class="desc" data-i="hlDesc"></p>
+      <ul class="list" id="home-hl"></ul>
+      <p style="margin-top:14px"><a class="btn" href="#/pandals" data-i="seeAll"></a></p>
+    </section>
+    <section class="sec" aria-labelledby="hw-h">
+      <h2 id="hw-h" data-i="hiwTitle"></h2>
+      <ol class="hiw" id="home-hiw"></ol>
+    </section>
+  <section class="sponsor-band" id="sponsors" aria-labelledby="sp-h">
+    <span class="paid" data-i="paidBadge"></span>
+    <h2 id="sp-h" data-i="spTitle"></h2>
+    <p data-i="spNote"></p>
+    <div class="slots plat" id="slots-plat"></div>
+    <div class="slots gold" id="slots-gold"></div>
+    <p style="margin-top:16px"><a class="btn map" href="#/advertise" data-i="seePackages"></a></p>
+  </section>
+  </div>
+</div>
+
+<!-- ============ PANDALS ============ -->
+<div class="view" data-view="pandals" id="v-pandals" hidden>
+  <nav class="bar" aria-label="Filters">
+    <div class="wrap">
+      <div class="row">
+        <input id="q" class="search" type="search" data-ip="searchPh" aria-label="Search pandals">
+        <select id="line" class="sel" aria-label="Metro line"></select>
+      </div>
+      <div class="chips" id="chips" role="group" aria-label="Region"></div>
+    </div>
+  </nav>
+  <div class="wrap">
+    <div id="regions"></div>
+  </div>
+</div>
+
+<!-- ============ PLAN ============ -->
+<div class="view" data-view="plan" id="v-plan" hidden>
+  <div class="wrap">
+  <section class="sec planner" id="planner" aria-labelledby="pl-h">
+    <h2 id="pl-h" data-i="plTitle"></h2>
+    <p class="desc" data-i="plDesc"></p>
+    <div class="pl-grid">
+      <div class="fld" style="grid-column:1/-1">
+        <label id="l-msel" for="msel-btn"></label>
+        <div class="msel" id="msel">
+          <button type="button" class="sel msel-btn" id="msel-btn" aria-haspopup="true" aria-expanded="false" aria-controls="msel-panel"></button>
+          <div class="msel-panel" id="msel-panel" hidden>
+            <input type="search" id="msel-q" class="search" style="width:100%;flex:none" autocomplete="off">
+            <div class="msel-list" id="msel-list"></div>
+            <div class="msel-foot"><button type="button" class="btn ghost" id="msel-clear"></button><button type="button" class="btn map" id="msel-done"></button></div>
+          </div>
+        </div>
+      </div>
+      <div class="fld"><label id="l-day" for="pl-day"></label><select id="pl-day" class="sel"></select></div>
+      <div class="fld"><label id="l-start" for="pl-start"></label><input id="pl-start" class="sel" type="time" value="18:00"></div>
+      <div class="fld"><label id="l-dwell" for="pl-dwell"></label><select id="pl-dwell" class="sel"></select></div>
+      <div class="fld"><label id="l-first" for="pl-first"></label><select id="pl-first" class="sel"></select></div>
+    </div>
+    <div class="pl-chips" id="pl-chips"></div>
+    <p class="note" id="pl-daynote" style="margin-top:12px"></p>
+    <div id="pl-sum"></div>
+    <ol class="route" id="pl-out"></ol>
+    <div class="contact-row" id="pl-actions"></div>
+    <p class="note" data-i="plNote"></p>
+  </section>
+  <section class="tips" aria-labelledby="tips-h">
+    <h2 id="tips-h" data-i="tipsTitle"></h2>
+    <p class="meta" style="max-width:62ch" data-i="tipsIntro"></p>
+    <ol class="nights" id="nights"></ol>
+    <ul class="legend" id="legend"></ul>
+    <p class="note" data-i="metroNote"></p>
+  </section>
+  </div>
+</div>
+
+<!-- ============ SHOWS ============ -->
+<div class="view" data-view="shows" id="v-shows" hidden>
+  <div class="wrap">
+  <section class="sec" id="shows" aria-labelledby="sh-h">
+    <h2 id="sh-h" data-i="showsTitle"></h2>
+    <p class="desc" data-i="showsDesc"></p>
+    <p class="disc" data-i="showsDisc"></p>
+    <ul class="moments" id="moments"></ul>
+    <div class="sfilters">
+      <div class="chips" id="dchips" role="group" aria-label="Date" style="padding:0"></div>
+      <select id="scat" class="sel" aria-label="Show category"></select>
+    </div>
+    <ul class="shows" id="shows-list"></ul>
+    <div class="partners" id="partners"></div>
+    <div class="rates" id="show-rates"></div>
+  </section>
+  </div>
+</div>
+
+<!-- ============ WISHES ============ -->
+<div class="view" data-view="wishes" id="v-wishes" hidden>
+  <div class="wrap">
+    <section class="sec" aria-labelledby="wp-h">
+      <h2 id="wp-h" data-i="wpTitle"></h2>
+      <p class="desc" data-i="wpDesc"></p>
+      <p class="disc" data-i="wpDisc"></p>
+      <div class="sfilters">
+        <input id="wp-q" class="search" type="search" data-ip="wpSearch" aria-label="Search wishing posts" style="max-width:360px">
+        <select id="wp-sort" class="sel" aria-label="Sort"></select>
+      </div>
+      <div class="chips" id="wp-cats" role="group" aria-label="Occasion" style="padding:10px 0 0"></div>
+      <div class="wgrid" id="wp-grid"></div>
+    </section>
+  </div>
+</div>
+
+<!-- ============ ADVERTISE ============ -->
+<div class="view" data-view="advertise" id="v-advertise" hidden>
+  <div class="wrap">
+    <section class="sec" aria-labelledby="adv-h">
+      <h2 id="adv-h" data-i="advPageTitle"></h2>
+      <p class="desc" data-i="advDesc"></p>
+    <div class="rates" id="rates"></div>
+    </section>
+  <section class="sec enq enq-sec" id="enq" aria-labelledby="enq-h">
+  <form id="enq-form" novalidate>
+    <h2 id="enq-h"></h2>
+    <p class="meta" id="enq-sub" style="margin:0"></p>
+    <p class="meta" id="enq-contactline" style="margin:6px 0 0"></p>
+    <div class="row2">
+      <div class="fld"><label for="e-name" id="l-name"></label><input id="e-name" autocomplete="name"></div>
+      <div class="fld"><label for="e-org" id="l-org"></label><input id="e-org" autocomplete="organization"></div>
+    </div>
+    <div class="fld"><label for="e-contact" id="l-contact"></label><input id="e-contact" autocomplete="off"></div>
+    <div class="fld"><label for="e-pkg" id="l-pkg"></label><select id="e-pkg"></select></div>
+    <div id="e-showfields">
+      <div class="row2">
+        <div class="fld"><label for="e-sname" id="l-sname"></label><input id="e-sname"></div>
+        <div class="fld"><label for="e-sdate" id="l-sdate"></label><input id="e-sdate" type="date" min="2026-10-10" max="2026-11-30"></div>
+      </div>
+      <div class="row2">
+        <div class="fld"><label for="e-venue" id="l-venue"></label><input id="e-venue"></div>
+        <div class="fld"><label for="e-link" id="l-link"></label><input id="e-link" type="url" inputmode="url"></div>
+      </div>
+    </div>
+    <div class="fld"><label for="e-msg" id="l-msg"></label><textarea id="e-msg"></textarea></div>
+    <div class="err" id="e-err" role="alert"></div>
+    <div class="acts2">
+      <a class="btn map" id="e-gmail" target="_blank" rel="noopener" href="#"></a>
+      <a class="btn" id="e-mail" href="#"></a>
+      <a class="btn" id="e-wa" target="_blank" rel="noopener" href="#" hidden></a>
+      <button type="button" class="btn" id="e-copy"></button>
+    </div>
+    <p class="fallback" id="e-fallback"></p>
+  </form>
+</section>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <p id="copyright" style="color:var(--ink);font-weight:600"></p>
+    <p id="legal-links"></p>
+    <p data-i="footA"></p>
+    <p data-i="footB"></p>
+    <p data-i="footD"></p>
+  </div>
+</footer>
+
+
+<dialog class="enq" id="legal" aria-labelledby="legal-h">
+  <div style="position:relative;padding:20px">
+    <button type="button" class="x" id="legal-x" aria-label="Close">×</button>
+    <h2 id="legal-h"></h2>
+    <p class="meta" id="legal-upd" style="margin:0"></p>
+    <div id="legal-body"></div>
+  </div>
+</dialog>
+
+<dialog class="enq" id="linkfb" aria-labelledby="lf-h">
+  <div style="padding:20px">
+    <h2 id="lf-h"></h2>
+    <p class="meta" id="lf-p"></p>
+    <input id="lf-url" class="search" readonly style="width:100%;margin-top:12px">
+    <div class="acts2"><button type="button" class="btn map" id="lf-copy"></button><button type="button" class="btn" id="lf-close"></button></div>
+    <p class="err" id="lf-msg" role="status"></p>
+  </div>
+</dialog>
+
+<div class="fab" id="fab"></div>
+
+<div class="trail" id="trail" role="region" aria-label="My pandal trail">
+  <div class="in">
+    <span id="trail-count"></span>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <a class="btn" id="trail-plan" href="#/plan"></a>
+      <a class="btn" id="trail-go" target="_blank" rel="noopener" href="#"></a>
+      <button class="btn clear" id="trail-clear" type="button"></button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ====================== EDIT HERE: SPONSORS, SHOWS, AFFILIATES, RATES ====================== */
+const CONTACT_EMAIL = "meenineseven97@gmail.com";   // your sales email
+const SPONSOR_SUBJECT = "Sponsor listing: Kolkata Durga Puja 2026 guide";
+const WHATSAPP_NUMBER = "916291825728";   // optional, digits only with country code, e.g. 919800000000
+const OWNER_NAME = "Pandal Hopping Guide";        // your full name or business name, shown in the copyright line
+const COPYRIGHT_YEAR = "2026";
+const GOVERNING_LAW = "India";   // confirm with your lawyer, e.g. "India, with courts at Kolkata"
+const LEGAL_UPDATED = ["12 October 2026","১২ অক্টোবর ২০২৬"];
+
+/* Paid sponsor cards. Set active:true and fill the fields once a sponsor has paid. */
+const SPONSORS = [
+  {tier:"platinum", active:false, name:"", tagline:"", url:"", cta:"Visit"},
+  {tier:"platinum", active:false, name:"", tagline:"", url:"", cta:"Visit"},
+  {tier:"gold", active:false, name:"", tagline:"", url:"", cta:"Visit"},
+  {tier:"gold", active:false, name:"", tagline:"", url:"", cta:"Visit"},
+  {tier:"gold", active:false, name:"", tagline:"", url:"", cta:"Visit"},
+  {tier:"gold", active:false, name:"", tagline:"", url:"", cta:"Visit"}
+];
+/* Paid text listing inside a region (after the 3rd pandal). region: north|central|south|east|west|greater
+   Optional Bengali fields: name_bn, blurb_bn */
+const INLINE_SPONSORS = [
+  // {region:"north", name:"Your restaurant or hotel", blurb:"Two minutes from Shobhabazar Sutanuti metro.", name_bn:"", blurb_bn:"", url:"https://example.com", cta:"View"}
+];
+/* Pandals pinned to the top of their region as Sponsored. Use the exact pandal name from PANDALS. */
+const FEATURED_PANDALS = [ /* "Kumartuli Park Sarbojanin" */ ];
+
+/* ---- CULTURAL SHOWS ----
+   Add real, confirmed shows here. Nothing is listed until you add it.
+   cat: concert | theatre | dance | pandal | family | talks
+   date: "YYYY-MM-DD"   region: north|central|south|east|west|greater (optional)
+   url: booking link. For affiliate links paste your tracking URL and set affiliate:true
+   promoted:true = paid highlighted placement.
+   Example:
+   {title:"Show name", title_bn:"", cat:"concert", date:"2026-10-18", time:"7:00 pm", venue:"Venue name", area:"Area",
+    metro:"Rabindra Sadan", metro_bn:"রবীন্দ্র সদন", price:"₹500 onwards", org:"Organiser",
+    url:"https://partner.example/event?ref=YOURID", affiliate:true, promoted:true}
+*/
+const SHOWS = [];
+
+/* ---- WISHING POSTS (your own festive greeting posts) ----
+   Add each post you sell here. Nothing is shown until you add it.
+   The site does not take payment: url is the checkout or payment page where the visitor buys (https).
+   cat: mahalaya | shashthi | saptami | ashtami | navami | bijoya | sharodiya | business
+   img: link or data URI of a preview image (optional; a styled poster is shown if empty).
+   Example:
+   {title:"Shubho Bijoya family card", title_bn:"শুভ বিজয়া ফ্যামিলি কার্ড", cat:"bijoya",
+    format:"Image (JPG, 1080x1350)", price:"₹49", priceNum:49, img:"https://example.com/preview.jpg",
+    url:"https://your-checkout-link", featured:false, use:"Personal sharing on WhatsApp and social media",
+    use_bn:"ব্যক্তিগত ব্যবহার, হোয়াটসঅ্যাপ ও সোশ্যাল মিডিয়ায়", added:"2026-10-12"}
+*/
+const WISH_POSTS = [];
+
+/* Booking / ticketing partners (paid affiliate placements). */
+const AFFILIATE_PARTNERS = [
+  {active:false, name:"", blurb:"", blurb_bn:"", url:"", cta:"Book now"},
+  {active:false, name:"", blurb:"", blurb_bn:"", url:"", cta:"Book now"},
+  {active:false, name:"", blurb:"", blurb_bn:"", url:"", cta:"Book now"}
+];
+
+const RATES = [
+  {name:"Platinum partner", name_bn:"প্লাটিনাম পার্টনার", where:"Large card at the top of the guide, seen by every visitor", where_bn:"গাইডের শীর্ষে বড় কার্ড, প্রতিটি দর্শক দেখবেন", price:"₹25,000", slots:"2 slots", slots_bn:"২টি স্লট"},
+  {name:"Gold partner", name_bn:"গোল্ড পার্টনার", where:"Small card in the top partner band", where_bn:"শীর্ষ পার্টনার ব্যান্ডে ছোট কার্ড", price:"₹10,000", slots:"4 slots", slots_bn:"৪টি স্লট"},
+  {name:"Local listing", name_bn:"স্থানীয় তালিকা", where:"Text listing inside one region, between pandals", where_bn:"একটি অঞ্চলের তালিকায় প্যান্ডেলের মাঝে টেক্সট লিস্টিং", price:"₹4,000 / region", slots:"1 per region", slots_bn:"প্রতি অঞ্চলে ১টি"},
+  {name:"Featured pandal", name_bn:"ফিচার্ড প্যান্ডেল", where:"Pandal pinned to the top of its region with a Sponsored badge", where_bn:"'স্পনসরড' ব্যাজ সহ অঞ্চলের শীর্ষে পিন করা প্যান্ডেল", price:"₹6,000", slots:"3 per region", slots_bn:"প্রতি অঞ্চলে ৩টি"}
+];
+const SHOW_RATES = [
+  {name:"Promoted show", name_bn:"প্রচারিত শো", where:"Highlighted card with a Promoted badge and your ticket link", where_bn:"'প্রচারিত' ব্যাজ ও আপনার টিকিট লিংক সহ হাইলাইট করা কার্ড", price:"₹3,000 / show", slots:"Unlimited", slots_bn:"সীমাহীন"},
+  {name:"Pinned show", name_bn:"পিন করা শো", where:"Shown first for its date and category", where_bn:"তারিখ ও বিভাগে সবার আগে দেখানো", price:"₹7,500 / show", slots:"2 per date", slots_bn:"প্রতি তারিখে ২টি"},
+  {name:"Booking partner", name_bn:"বুকিং পার্টনার", where:"Ticketing or travel brand in the partner strip, paid per booking", where_bn:"পার্টনার স্ট্রিপে টিকিট বা ভ্রমণ ব্র্যান্ড, বুকিং প্রতি কমিশন", price:"Commission", slots:"3 slots", slots_bn:"৩টি স্লট"}
+];
+/* ========================================================================================= */
+
+/* ---------- UI strings ---------- */
+const UI = {
+ en:{
+  sub:"Kolkata Durga Puja pandal-hopping guide",
+  lede:"Pick a part of the city, see what each pandal is building this year, open it on the map, and get off at the right metro station.",
+  jPandals:"Pandals by region", jShows:"Cultural shows", jPartners:"Partners", jPlan:"Plan my route",
+  navWishes:"Wishes",
+  wpTitle:"Puja wishing posts", wpDesc:"Festive greeting posts for Shashthi to Bijoya, designed by us. Pick one you like and buy it in a few taps.",
+  wpDisc:"This site does not take payments itself. The Buy button opens our checkout page, where you pay and receive your post. Please read the details there before you pay.",
+  wpSearch:"Search wishing posts", wpAll:"All occasions", wpSortFeat:"Featured first", wpSortLow:"Price: low to high", wpSortHigh:"Price: high to low", wpSortNew:"Newest",
+  wpBuy:"Buy now", wpBy:"By ", wpFeatured:"Featured", wpNone:"No wishing posts match this filter. Try another occasion.", wpSoon:"New wishing posts are coming soon. Please check back shortly.",
+  wpPoster:{mahalaya:"শুভ মহালয়া",shashthi:"শুভ ষষ্ঠী",saptami:"শুভ সপ্তমী",ashtami:"শুভ অষ্টমী",navami:"শুভ নবমী",bijoya:"শুভ বিজয়া",sharodiya:"শুভ শারদীয়া",business:"শারদীয়ার শুভেচ্ছা"},
+  wpCats:{mahalaya:"Mahalaya",shashthi:"Shashthi",saptami:"Saptami",ashtami:"Ashtami",navami:"Navami",bijoya:"Bijoya Dashami",sharodiya:"Shubho Sharodiya",business:"For businesses"},
+  lfTitle:"This link could not open here", lfText:"The window you are viewing this in blocks links that open new tabs. Copy the link and paste it into your browser. Opening the site on its own page fixes this.", lfCopy:"Copy link", lfClose:"Close", lfCopied:"Copied. Paste it into your browser.",
+  brand:"Pandal Hopping Guide", navHome:"Home", navPandals:"Pandals", navPlan:"Plan route", navShows:"Shows", navAdvertise:"Advertise",
+  stats:(n,r)=>n+" pandals · "+r+" regions · nearest metro station listed · English and বাংলা",
+  ctaPlan:"Plan my route", ctaBrowse:"Browse pandals",
+  featTitle:"What you can do here",
+  feats:[["Plan your route","Pick pandals and get a visiting order with timings and map buttons.","#/plan"],["Pandals by region","North, Central, South, Eastern, Western and Greater Kolkata, each with its nearest metro.","#/pandals"],["Cultural shows","Concerts, theatre and dance evenings, with booking links.","#/shows"],["Wishing posts","Browse our festive greeting posts and buy the one you like.","#/wishes"],["Advertise with us","Sponsor listings, promoted shows and booking partner slots.","#/advertise"]],
+  regionsTitle:"Explore by region", regionsSub:(n)=>n+" pandals",
+  hlTitle:"Themes to look out for", hlDesc:"A few of the 2026 themes announced so far.", seeAll:"See all pandals",
+  hiwTitle:"How it works",
+  hiw:[["Choose","Pick the pandals you want to see, or browse by region."],["We order","We sort them by location and add travel times."],["Go","Open each stop in Maps and get off at the right metro station."]],
+  seePackages:"See packages and advertise", advPageTitle:"Advertise with us",
+  advDesc:"Reach people who are planning their pandal nights. Choose a package below, then send us an enquiry.",
+  plTitle:"Build your pandal route",
+  plDesc:"Pick the pandals you want to see. We put them in a sensible visiting order by location and give you a timeline with travel times and map buttons.",
+  plSelectLbl:"Pandals to visit", plSelect:(n)=>n?("Pandals selected: "+n+" (tap to change)"):"Select pandals from the list…", plSearch:"Search pandals", plDone:"Done", plClear:"Clear all",
+  plDay:"Night", plStart:"Start time", plDwell:"Time at each pandal", plMin:(m)=>m+" min", plFirst:"Start with", plAuto:"Best order (automatic)",
+  plEmpty:"Select at least two pandals and your route will appear here.", plOne:"Add one more pandal to get a route.",
+  plLegWalk:(m,k)=>"About "+m+" min on foot ("+k+" km)", plLegRide:(m,k)=>"About "+m+" min by cab or bus ("+k+" km)",
+  plTotal:(n,k,e)=>n+" pandals · about "+k+" km of travel · finishing around "+e, plLegs:(a,b)=>"Open stops "+a+" to "+b+" in Maps", plWa:"Share plan on WhatsApp", plRemove:"Remove",
+  plPast:"after midnight", plNote:"Distances are straight-line estimates scaled up for roads, and travel times assume festival traffic. Pandal locations are approximate, so confirm each stop with its map button.",
+  plShareHead:"My pandal plan", mapShort:"Map", trailPlan:"View plan",
+  dayNotes:["","","Ashtami is usually the busiest night. Allow extra time for queues, or visit after midnight.","","Many pandals wind down for immersion. Check timings with each committee."],
+  dateNote:"Dates follow most 2026 calendars; a few panchangs place Dashami on 20 Oct, so check your local committee. Themes are as announced by committees and press reports and can change. Pandals mostly open the evening before Shashthi.",
+  searchPh:"Search pandal, area, theme or metro station",
+  anyLine:"Any metro line", B:"Blue Line", G:"Green Line", P:"Purple Line", N:"No metro nearby", noMetroLine:"No metro close by",
+  allRegions:"All regions",
+  paidBadge:"Paid sponsor listings", spTitle:"Our festive partners",
+  spNote:"These placements are paid for by the brands shown. They do not change the order or content of the pandal listings.",
+  platOpen:"Platinum slot open", goldOpen:"Gold slot open", yourBrand:"Your brand here",
+  platPitch:"Reach pandal-hoppers planning each night of the festival.", goldPitch:"A small card in the top partner band.",
+  reserve:"Reserve this slot", sponsoredPlat:"Sponsored · Platinum", sponsoredGold:"Sponsored · Gold",
+  advertise:"Advertise with us", colPackage:"Package", colWhere:"Where it appears", colPrice:"Price", colAvail:"Availability", emailBook:"Email us to book a placement",
+  sponsored:"Sponsored", bonedi:"Bonedi bari", themeTbc:"Theme not confirmed. Check the committee page.",
+  cabBus:"Use cab, bus or local train", openMap:"Open map", walkMetro:"Walk from metro", addTrail:"Add to my trail", inTrail:"In my trail",
+  allPujas:"All pujas: ",
+  enqSecTitle:"Advertise, sponsor or list your show", btnWa:"WhatsApp us", btnMail:"Email us", btnEnq:"Send an enquiry", waHello:(o)=>"Hello, I would like to know about advertising on "+o+".", contactLine:(w,m)=>"WhatsApp: +"+w+"  ·  Email: "+m,
+  enqSub:"Message us on WhatsApp or email, or fill in this form and send it. It takes under a minute.", eName:"Your name", eOrg:"Business or organiser", eContact:"Phone or email", ePkg:"Interested in", eMsg:"Anything else we should know?",
+  eSname:"Show name", eSdate:"Show date", eVenue:"Venue", eLink:"Ticket link",
+  eGmail:"Send with Gmail", eMail:"Open email app", eWa:"Send on WhatsApp", eCopy:"Copy message", eCopied:"Copied. Paste it into your email or chat.",
+  eNeed:"Please add your name and a phone number or email first.",
+  eFallback:(m)=>"If a button does not open, copy the message and send it to "+m+".",
+  eTitles:{sponsor:"Reserve a sponsor placement",show:"List your show",partner:"Become a booking partner"},
+  ePk:{"Platinum partner":"Platinum partner","Gold partner":"Gold partner","Local listing":"Local listing","Featured pandal":"Featured pandal","Promoted show":"Promoted show","Pinned show":"Pinned show","Booking partner":"Booking partner"},
+  emptyRegion:"No pandals in this region match these filters. Clear the search or choose another metro line.",
+  trailN:(n)=>n+" pandal"+(n>1?"s":"")+" in your trail"+(n>9?" (Maps shows up to 9 stops, so the first 9 are used)":""),
+  trailGo:"Open trail route in Maps", trailClear:"Clear",
+  showsTitle:"Cultural shows in Kolkata",
+  showsDesc:"Concerts, theatre, dance and pandal-stage evenings during the festival. Pick a date to see what is on and book directly.",
+  showsDisc:"Affiliate disclosure: some “Book” links are affiliate links, and we may earn a commission if you book through them at no extra cost to you. Promoted listings are paid placements.",
+  moments:[
+    ["Pushpanjali","Ashtami morning, offered at most pandals"],
+    ["Sandhi Puja","The turn between Ashtami and Navami; ask the committee for its time"],
+    ["Cultural evenings","Many pujos host stage programmes, especially around Navami"],
+    ["Sindoor khela","Dashami, before the immersion processions"]
+  ],
+  momentsTitle:"Look out for",
+  allDates:"All dates", otherDates:"Other dates", allCats:"All types",
+  cats:{concert:"Concert & music",theatre:"Theatre & jatra",dance:"Dance",pandal:"Pandal-stage evening",family:"Family & kids",talks:"Film & talks"},
+  promoted:"Promoted", affiliate:"Affiliate link", bookTickets:"Book tickets", details:"View details", free:"Free entry",
+  noShows:"No shows listed for this date and type yet. Try another date, or list your show below.",
+  showSlotTitle:"Promoted show slot open", showSlotText:"Organising a concert, play or dance evening? Add it here with your ticket link so visitors can find it.",
+  listShow:"List your show",
+  partnersOpen:"Booking partner slot open", partnersPitch:"A ticketing or travel brand shown to people planning their festival nights.", partnersTitle:"Booking partners",
+  reservePartner:"Become a partner", sponsoredAff:"Paid partner · Affiliate",
+  tipsTitle:"A five-night plan that avoids the worst queues",
+  tipsIntro:"Ashtami queues can run for hours. Spread the big names across Shashthi, Saptami and Navami, and keep the outer areas for the busiest nights.",
+  nights:[
+    ["Shashthi, 17 Oct","North Kolkata heritage pujas. Start at Kumartuli and Sovabazar, then walk Hatibagan and Telengabagan."],
+    ["Saptami, 18 Oct","South Kolkata theme pandals. Ballygunge, Maddox Square, Deshapriya Park and Lake Pally sit on or near the Blue Line."],
+    ["Ashtami, 19 Oct","Go for pushpanjali in the morning, then pick outer areas like Behala or Dum Dum for the night, or arrive after midnight at the big names."],
+    ["Navami, 20 Oct","Central Kolkata and Salt Lake. The Salt Lake blocks are close enough to walk between."],
+    ["Dashami, 21 Oct","Bijoya and sindoor khela, then immersion processions towards the Hooghly in the evening."]
+  ],
+  legend:["Blue Line (Dakshineswar to Kavi Subhash)","Green Line (Howrah Maidan to Salt Lake Sector V)","Purple Line (Joka to Majerhat)","No metro close by"],
+  metroNote:"A “~” after a station means it is the closest station but still needs a rickshaw, auto or a long walk. Use the “Walk from metro” link for a live route. Check Kolkata Metro notices for festival-night timings and any line closures.",
+  footA:"How complete is this guide? Kolkata and its suburbs have thousands of pujas. This guide lists the major pandals, bonedi baris and crowd-pullers by region. Each region also has neighbourhood links that open a map search so you can find every smaller puja nearby.",
+  footB:"Locations open as Google Maps searches by pandal name, and exact venues or entry routes can shift on the day. Confirm barricades, one-way systems and last-mile access with local police notices.",
+  lTerms:"Terms of use", lPriv:"Privacy note", lClose:"Close", lUpdated:"Last updated: ",
+  terms:(o,l,m)=>[
+   ["About this guide","This is an independent, informational guide to Durga Puja 2026 pandals and cultural events in Kolkata, run by "+o+". It is not an official publication of any puja committee, government body or metro operator."],
+   ["Accuracy","Dates, themes, locations and metro stations are compiled from public reports and committee announcements. They can change or contain mistakes, and stations marked with ~ are approximate. Please confirm with the committee, Kolkata Police and Kolkata Metro before you travel. We are not responsible for any loss, delay or inconvenience from relying on this guide."],
+   ["Crowds and safety","Pandal visits involve large crowds. Follow instructions from the puja committee and police, and use your own judgement about timing and safety. Barricades, one-way systems and closures can change at short notice."],
+   ["Sponsored content and affiliate links","Paid placements are labelled Sponsored or Promoted. Some booking links are affiliate links, and we may earn a commission at no extra cost to you. Paid placements do not change the order of the pandal listings. Tickets, bookings and refunds are a matter between you and the seller or organiser, not us."],
+   ["Wishing posts","The wishing posts on this site are created and sold by "+o+". Payment and delivery happen on the checkout page that the Buy button opens, and its terms apply to your purchase. The posts, including their artwork, text and layout, remain our copyright. Unless a post says otherwise, you may use what you buy for personal, non-commercial sharing, and you may not resell, redistribute or claim it as your own."],
+   ["Sponsors, organisers and partners","Price, duration and placement are agreed in writing before a listing goes live. You are responsible for the accuracy and legality of what you submit, and for having the right to use any names, logos and images in it. We may refuse or remove content that is misleading, unlawful or infringes others' rights. We do not guarantee any number of views, visits or sales."],
+   ["Copyright and use of content","The design, code, text and layout of this guide are protected by copyright. Please do not copy, scrape or republish them without written permission. Pandal, committee and brand names, logos and themes belong to their owners and appear for information only."],
+   ["External links","Links to maps, ticketing sites and sponsors lead to third-party services that we do not control. Their own terms and privacy policies apply."],
+   ["Changes and governing law","We may update these terms and will change the date above when we do. These terms are governed by the laws of "+l+". Questions: "+m+"."]
+  ],
+  privacy:(o,l,m)=>[
+   ["What this page collects","You do not need an account to use this guide. The page does not run its own analytics or advertising trackers."],
+   ["Stored on your device","Your language choice and your \u201cmy trail\u201d list are saved in your browser on your own device. They are not sent to us. Clear your browser data to remove them."],
+   ["Enquiries","When you fill in an enquiry form, your name, business, phone or email and message are only used to build a message that you choose to send by Gmail, email or WhatsApp, or to copy. We receive it only when you send it, and we use it to reply to you."],
+   ["Third parties","Map and walking-route links open Google Maps. The page loads fonts from Google Fonts. Gmail, WhatsApp, ticketing, affiliate partners and the payment or checkout pages used for wishing posts have their own privacy policies and may use cookies or tracking when you open their sites. The platform that hosts this page may also record technical information such as IP address and device type under its own policies."],
+   ["Keeping and deleting data","We keep enquiry messages only as long as needed to discuss your listing or booking. To ask what we hold about you, or to have it corrected or deleted, write to "+m+"."],
+   ["Children","This guide is not directed at children, and we do not knowingly collect their personal information."],
+   ["Who is responsible","The guide is run by "+o+". Questions or complaints about your data: "+m+"."]
+  ],
+  footD:"Pandal, committee and brand names, logos and themes belong to their respective owners and are used for information only. This guide is independent and is not affiliated with or endorsed by any puja committee, metro operator or sponsor.",
+  copy:(y,o)=>"© "+y+" "+(o?o+". ":"")+"All rights reserved. The design, code, text and layout of this guide are protected by copyright"+(o?" and owned by "+o:"")+". Do not copy or republish without written permission.",
+  days:["Shashthi","Saptami","Ashtami","Navami","Dashami"],
+  cdBefore:(d)=>d+" day"+(d>1?"s":"")+" to Shashthi", cdBeforeS:"Pandals begin to open",
+  cdOn:(n)=>n+" is on", cdOnS:(i)=>"Day "+(i+1)+" of 5", cdEnd:"Puja 2026 has ended", cdEndS:"See you next year",
+  wd:["Sun","Mon","Tue","Wed","Thu","Fri","Sat"], mo:["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+ },
+ bn:{
+  sub:"কলকাতা দুর্গাপূজা প্যান্ডেল-হপিং গাইড",
+  lede:"শহরের একটি অংশ বেছে নিন, এ বছর প্রতিটি প্যান্ডেলে কী হচ্ছে দেখুন, ম্যাপে খুলুন, আর ঠিক মেট্রো স্টেশনে নামুন।",
+  jPandals:"অঞ্চল অনুযায়ী প্যান্ডেল", jShows:"সাংস্কৃতিক অনুষ্ঠান", jPartners:"সহযোগী", jPlan:"আমার রুট বানান",
+  navWishes:"শুভেচ্ছা",
+  wpTitle:"পুজোর শুভেচ্ছা পোস্ট", wpDesc:"ষষ্ঠী থেকে বিজয়া পর্যন্ত উৎসবের শুভেচ্ছা পোস্ট, আমাদের নিজের নকশায়। পছন্দের পোস্টটি বেছে কয়েকটি ট্যাপেই কিনে নিন।",
+  wpDisc:"এই সাইট নিজে টাকা নেয় না। “কিনুন” বোতাম আমাদের চেকআউট পেজ খোলে, সেখানেই দাম মিটিয়ে আপনার পোস্ট পাবেন। দাম দেওয়ার আগে সেখানকার বিবরণ পড়ে নিন।",
+  wpSearch:"শুভেচ্ছা পোস্ট খুঁজুন", wpAll:"সব উপলক্ষ", wpSortFeat:"বিশেষ আগে", wpSortLow:"দাম: কম থেকে বেশি", wpSortHigh:"দাম: বেশি থেকে কম", wpSortNew:"সবচেয়ে নতুন",
+  wpBuy:"এখনই কিনুন", wpBy:"নকশা: ", wpFeatured:"বিশেষ", wpNone:"এই ফিল্টারে কোনো শুভেচ্ছা পোস্ট মেলেনি। অন্য উপলক্ষ দেখুন।", wpSoon:"নতুন শুভেচ্ছা পোস্ট শীঘ্রই আসছে। একটু পরে আবার দেখুন।",
+  wpPoster:{mahalaya:"শুভ মহালয়া",shashthi:"শুভ ষষ্ঠী",saptami:"শুভ সপ্তমী",ashtami:"শুভ অষ্টমী",navami:"শুভ নবমী",bijoya:"শুভ বিজয়া",sharodiya:"শুভ শারদীয়া",business:"শারদীয়ার শুভেচ্ছা"},
+  wpCats:{mahalaya:"মহালয়া",shashthi:"ষষ্ঠী",saptami:"সপ্তমী",ashtami:"অষ্টমী",navami:"নবমী",bijoya:"বিজয়া দশমী",sharodiya:"শুভ শারদীয়া",business:"ব্যবসার জন্য"},
+  lfTitle:"এখানে লিংকটি খোলা গেল না", lfText:"আপনি যে উইন্ডোতে দেখছেন সেটি নতুন ট্যাবে খোলা লিংক আটকে দেয়। লিংকটি কপি করে ব্রাউজারে পেস্ট করুন। সাইটটি আলাদা পেজে খুললে এই সমস্যা থাকে না।", lfCopy:"লিংক কপি করুন", lfClose:"বন্ধ করুন", lfCopied:"কপি হয়েছে। ব্রাউজারে পেস্ট করুন।",
+  brand:"প্যান্ডেল হপিং গাইড", navHome:"হোম", navPandals:"প্যান্ডেল", navPlan:"রুট প্ল্যান", navShows:"অনুষ্ঠান", navAdvertise:"বিজ্ঞাপন",
+  stats:(n,r)=>toBn(n)+"টি প্যান্ডেল · "+toBn(r)+"টি অঞ্চল · কাছের মেট্রো স্টেশন দেওয়া · ইংরেজি ও বাংলা",
+  ctaPlan:"আমার রুট বানান", ctaBrowse:"প্যান্ডেল দেখুন",
+  featTitle:"এখানে কী করতে পারেন",
+  feats:[["রুট বানান","প্যান্ডেল বেছে নিন, সময় ও ম্যাপ বোতাম সহ দেখার ক্রম পান।","#/plan"],["অঞ্চল অনুযায়ী প্যান্ডেল","উত্তর, মধ্য, দক্ষিণ, পূর্ব, পশ্চিম ও বৃহত্তর কলকাতা, প্রতিটির কাছের মেট্রো সহ।","#/pandals"],["সাংস্কৃতিক অনুষ্ঠান","কনসার্ট, নাটক ও নাচের সন্ধ্যা, বুকিং লিংক সহ।","#/shows"],["শুভেচ্ছা পোস্ট","আমাদের উৎসবের শুভেচ্ছা পোস্ট দেখুন, পছন্দেরটি কিনুন।","#/wishes"],["আমাদের সঙ্গে বিজ্ঞাপন দিন","স্পনসর তালিকা, প্রচারিত অনুষ্ঠান ও বুকিং পার্টনার স্লট।","#/advertise"]],
+  regionsTitle:"অঞ্চল ধরে খুঁজুন", regionsSub:(n)=>toBn(n)+"টি প্যান্ডেল",
+  hlTitle:"যে থিমগুলি দেখতে ভুলবেন না", hlDesc:"এ পর্যন্ত ঘোষিত ২০২৬-এর কয়েকটি থিম।", seeAll:"সব প্যান্ডেল দেখুন",
+  hiwTitle:"কীভাবে কাজ করে",
+  hiw:[["বেছে নিন","যে প্যান্ডেলগুলি দেখতে চান বেছে নিন, বা অঞ্চল ধরে খুঁজুন।"],["আমরা সাজাই","অবস্থান অনুযায়ী সাজিয়ে যাতায়াতের সময় যোগ করি।"],["বেরিয়ে পড়ুন","প্রতিটি স্টপ ম্যাপে খুলুন আর ঠিক মেট্রো স্টেশনে নামুন।"]],
+  seePackages:"প্যাকেজ দেখুন ও বিজ্ঞাপন দিন", advPageTitle:"আমাদের সঙ্গে বিজ্ঞাপন দিন",
+  advDesc:"যাঁরা পুজোর রাতের পরিকল্পনা করছেন, তাঁদের কাছে পৌঁছান। নিচে একটি প্যাকেজ বেছে নিয়ে আমাদের অনুসন্ধান পাঠান।",
+  plTitle:"আপনার প্যান্ডেল রুট বানান",
+  plDesc:"যে প্যান্ডেলগুলি দেখতে চান বেছে নিন। অবস্থান অনুযায়ী আমরা সেগুলি দেখার সুবিধাজনক ক্রমে সাজিয়ে, যাতায়াতের সময় ও ম্যাপ বোতাম সহ একটি সময়সূচি দেব।",
+  plSelectLbl:"যে প্যান্ডেলগুলি দেখবেন", plSelect:(n)=>n?("বাছাই করা প্যান্ডেল: "+toBn(n)+" (বদলাতে ছুঁয়ে দেখুন)"):"তালিকা থেকে প্যান্ডেল বেছে নিন…", plSearch:"প্যান্ডেল খুঁজুন", plDone:"হয়েছে", plClear:"সব মুছুন",
+  plDay:"কোন রাত", plStart:"শুরুর সময়", plDwell:"প্রতি প্যান্ডেলে সময়", plMin:(m)=>toBn(m)+" মিনিট", plFirst:"কোথা থেকে শুরু", plAuto:"সেরা ক্রম (স্বয়ংক্রিয়)",
+  plEmpty:"অন্তত দুটি প্যান্ডেল বেছে নিন, এখানে আপনার রুট দেখা যাবে।", plOne:"রুট পেতে আরও একটি প্যান্ডেল যোগ করুন।",
+  plLegWalk:(m,k)=>"প্রায় "+toBn(m)+" মিনিট হাঁটা ("+toBn(k)+" কিমি)", plLegRide:(m,k)=>"ক্যাব বা বাসে প্রায় "+toBn(m)+" মিনিট ("+toBn(k)+" কিমি)",
+  plTotal:(n,k,e)=>toBn(n)+"টি প্যান্ডেল · প্রায় "+toBn(k)+" কিমি যাতায়াত · শেষ হবে আনুমানিক "+e, plLegs:(a,b)=>toBn(a)+" থেকে "+toBn(b)+" নম্বর স্টপ ম্যাপে খুলুন", plWa:"হোয়াটসঅ্যাপে প্ল্যান শেয়ার করুন", plRemove:"সরান",
+  plPast:"মধ্যরাতের পরে", plNote:"দূরত্ব সরলরেখার আনুমানিক হিসাব, রাস্তার জন্য বাড়িয়ে ধরা; যাতায়াতের সময় উৎসবের ট্রাফিক ধরে। প্যান্ডেলের অবস্থান আনুমানিক, তাই প্রতিটি স্টপ ম্যাপ বোতামে মিলিয়ে নিন।",
+  plShareHead:"আমার প্যান্ডেল প্ল্যান", mapShort:"ম্যাপ", trailPlan:"প্ল্যান দেখুন",
+  dayNotes:["","","অষ্টমী সাধারণত সবচেয়ে ভিড়ের রাত। লাইনের জন্য বাড়তি সময় রাখুন, বা মাঝরাতের পরে যান।","","বিসর্জনের জন্য অনেক প্যান্ডেল তাড়াতাড়ি গুটিয়ে নেয়। প্রতিটি কমিটির কাছে সময় জেনে নিন।"],
+  dateNote:"বেশিরভাগ ২০২৬ পঞ্জিকা অনুযায়ী তারিখ দেওয়া হয়েছে। কিছু পঞ্জিকায় দশমী ২০ অক্টোবর, তাই স্থানীয় কমিটির সঙ্গে মিলিয়ে নিন। থিম কমিটির ঘোষণা ও সংবাদ প্রতিবেদন অনুযায়ী, বদলাতে পারে। প্যান্ডেল সাধারণত ষষ্ঠীর আগের সন্ধ্যা থেকে খোলে।",
+  searchPh:"প্যান্ডেল, এলাকা, থিম বা মেট্রো স্টেশন খুঁজুন",
+  anyLine:"যেকোনো মেট্রো লাইন", B:"নীল লাইন", G:"সবুজ লাইন", P:"বেগুনি লাইন", N:"কাছে মেট্রো নেই", noMetroLine:"কাছে মেট্রো নেই",
+  allRegions:"সব অঞ্চল",
+  paidBadge:"অর্থপ্রদত্ত স্পনসর তালিকা", spTitle:"আমাদের উৎসবের সহযোগী",
+  spNote:"এই স্থানগুলির জন্য সংশ্লিষ্ট ব্র্যান্ড অর্থ দিয়েছে। প্যান্ডেল তালিকার ক্রম বা বিষয়বস্তুতে এর কোনো প্রভাব নেই।",
+  platOpen:"প্লাটিনাম স্লট খালি", goldOpen:"গোল্ড স্লট খালি", yourBrand:"আপনার ব্র্যান্ড এখানে",
+  platPitch:"উৎসবের প্রতি রাতের পরিকল্পনা করা প্যান্ডেল-ভ্রমণকারীদের কাছে পৌঁছান।", goldPitch:"শীর্ষ পার্টনার ব্যান্ডে একটি ছোট কার্ড।",
+  reserve:"এই স্লট বুক করুন", sponsoredPlat:"স্পনসরড · প্লাটিনাম", sponsoredGold:"স্পনসরড · গোল্ড",
+  advertise:"আমাদের সঙ্গে বিজ্ঞাপন দিন", colPackage:"প্যাকেজ", colWhere:"কোথায় দেখাবে", colPrice:"মূল্য", colAvail:"প্রাপ্যতা", emailBook:"বুক করতে ইমেল করুন",
+  sponsored:"স্পনসরড", bonedi:"বনেদি বাড়ি", themeTbc:"থিম নিশ্চিত নয়। কমিটির পেজ দেখুন।",
+  cabBus:"ক্যাব, বাস বা লোকাল ট্রেন নিন", openMap:"ম্যাপে খুলুন", walkMetro:"মেট্রো থেকে হাঁটা", addTrail:"আমার ট্রেইলে যোগ করুন", inTrail:"ট্রেইলে আছে",
+  allPujas:"সব পুজো: ",
+  enqSecTitle:"বিজ্ঞাপন, স্পনসর বা আপনার অনুষ্ঠান জুড়ুন", btnWa:"হোয়াটসঅ্যাপে বার্তা দিন", btnMail:"ইমেল করুন", btnEnq:"অনুসন্ধান পাঠান", waHello:(o)=>"নমস্কার, "+o+"-এ বিজ্ঞাপন দেওয়ার বিষয়ে জানতে চাই।", contactLine:(w,m)=>"হোয়াটসঅ্যাপ: +"+w+"  ·  ইমেল: "+m,
+  enqSub:"হোয়াটসঅ্যাপ বা ইমেলে বার্তা দিন, অথবা এই ফর্মটি পূরণ করে পাঠান। এক মিনিটও লাগবে না।", eName:"আপনার নাম", eOrg:"ব্যবসা বা আয়োজক", eContact:"ফোন বা ইমেল", ePkg:"কোন প্যাকেজে আগ্রহী", eMsg:"আর কিছু জানাতে চান?",
+  eSname:"অনুষ্ঠানের নাম", eSdate:"অনুষ্ঠানের তারিখ", eVenue:"ভেন্যু", eLink:"টিকিটের লিংক",
+  eGmail:"জিমেইলে পাঠান", eMail:"ইমেল অ্যাপ খুলুন", eWa:"হোয়াটসঅ্যাপে পাঠান", eCopy:"বার্তা কপি করুন", eCopied:"কপি হয়েছে। ইমেল বা চ্যাটে পেস্ট করুন।",
+  eNeed:"আগে আপনার নাম এবং ফোন নম্বর বা ইমেল দিন।",
+  eFallback:(m)=>"কোনো বোতাম না খুললে বার্তাটি কপি করে "+m+" ঠিকানায় পাঠিয়ে দিন।",
+  eTitles:{sponsor:"স্পনসর স্থান বুক করুন",show:"আপনার অনুষ্ঠান জুড়ুন",partner:"বুকিং পার্টনার হন"},
+  ePk:{"Platinum partner":"প্লাটিনাম পার্টনার","Gold partner":"গোল্ড পার্টনার","Local listing":"স্থানীয় তালিকা","Featured pandal":"ফিচার্ড প্যান্ডেল","Promoted show":"প্রচারিত শো","Pinned show":"পিন করা শো","Booking partner":"বুকিং পার্টনার"},
+  emptyRegion:"এই অঞ্চলে ফিল্টারের সঙ্গে মেলে এমন কোনো প্যান্ডেল নেই। সার্চ মুছুন বা অন্য মেট্রো লাইন বেছে নিন।",
+  trailN:(n)=>toBn(n)+"টি প্যান্ডেল আপনার ট্রেইলে"+(n>9?" (ম্যাপে সর্বোচ্চ ৯টি স্টপ, তাই প্রথম ৯টি নেওয়া হয়েছে)":""),
+  trailGo:"ম্যাপে ট্রেইলের রুট খুলুন", trailClear:"মুছুন",
+  showsTitle:"কলকাতার সাংস্কৃতিক অনুষ্ঠান",
+  showsDesc:"উৎসবের সময় কনসার্ট, নাটক, নাচ ও প্যান্ডেল-মঞ্চের সন্ধ্যা। তারিখ বেছে কী হচ্ছে দেখুন ও সরাসরি বুক করুন।",
+  showsDisc:"অ্যাফিলিয়েট ঘোষণা: কিছু “বুক” লিংক অ্যাফিলিয়েট লিংক। এগুলি দিয়ে বুক করলে আপনার কোনো বাড়তি খরচ ছাড়াই আমরা কমিশন পেতে পারি। “প্রচারিত” তালিকাগুলি অর্থপ্রদত্ত।",
+  moments:[
+    ["পুষ্পাঞ্জলি","অষ্টমীর সকালে, বেশিরভাগ প্যান্ডেলে"],
+    ["সন্ধিপূজা","অষ্টমী ও নবমীর সন্ধিক্ষণে; সময় কমিটির কাছে জেনে নিন"],
+    ["সাংস্কৃতিক সন্ধ্যা","অনেক পুজোয় মঞ্চ অনুষ্ঠান, বিশেষ করে নবমীর আশপাশে"],
+    ["সিঁদুর খেলা","দশমীতে, বিসর্জনের শোভাযাত্রার আগে"]
+  ],
+  momentsTitle:"যা দেখতে ভুলবেন না",
+  allDates:"সব তারিখ", otherDates:"অন্য তারিখ", allCats:"সব ধরন",
+  cats:{concert:"সংগীত ও কনসার্ট",theatre:"থিয়েটার ও যাত্রা",dance:"নৃত্য",pandal:"প্যান্ডেল মঞ্চের সন্ধ্যা",family:"পরিবার ও শিশু",talks:"চলচ্চিত্র ও আলোচনা"},
+  promoted:"প্রচারিত", affiliate:"অ্যাফিলিয়েট লিংক", bookTickets:"টিকিট বুক করুন", details:"বিস্তারিত দেখুন", free:"প্রবেশ বিনামূল্যে",
+  noShows:"এই তারিখ ও ধরনের কোনো অনুষ্ঠান এখনও তালিকায় নেই। অন্য তারিখ দেখুন, বা নিচে আপনার অনুষ্ঠান জুড়ুন।",
+  showSlotTitle:"প্রচারিত অনুষ্ঠানের স্লট খালি", showSlotText:"কনসার্ট, নাটক বা নাচের সন্ধ্যা আয়োজন করছেন? টিকিট লিংক সহ এখানে যোগ করুন, দর্শকেরা খুঁজে পাবেন।",
+  listShow:"আপনার অনুষ্ঠান জুড়ুন",
+  partnersOpen:"বুকিং পার্টনার স্লট খালি", partnersPitch:"যাঁরা উৎসবের রাতের পরিকল্পনা করছেন, তাঁদের সামনে একটি টিকিট বা ভ্রমণ ব্র্যান্ড।", partnersTitle:"বুকিং পার্টনার",
+  reservePartner:"পার্টনার হন", sponsoredAff:"অর্থপ্রদত্ত পার্টনার · অ্যাফিলিয়েট",
+  tipsTitle:"ভিড় এড়িয়ে পাঁচ রাতের পরিকল্পনা",
+  tipsIntro:"অষ্টমীতে লাইন কয়েক ঘণ্টার হতে পারে। বড় নামগুলি ষষ্ঠী, সপ্তমী ও নবমীতে ভাগ করে নিন, আর ভিড়ের রাতের জন্য বাইরের এলাকা রাখুন।",
+  nights:[
+    ["ষষ্ঠী, ১৭ অক্টোবর","উত্তর কলকাতার ঐতিহ্যবাহী পুজো। কুমোরটুলি ও শোভাবাজার দিয়ে শুরু করে হাতিবাগান ও তেলেঙ্গাবাগান হেঁটে ঘুরুন।"],
+    ["সপ্তমী, ১৮ অক্টোবর","দক্ষিণ কলকাতার থিম প্যান্ডেল। বালিগঞ্জ, ম্যাডক্স স্কোয়ার, দেশপ্রিয় পার্ক ও লেক পল্লী নীল লাইনের ধারে বা কাছে।"],
+    ["অষ্টমী, ১৯ অক্টোবর","সকালে পুষ্পাঞ্জলি, রাতে বেহালা বা দমদমের মতো বাইরের এলাকা বেছে নিন, নয়তো বড় নামগুলিতে মাঝরাতের পরে যান।"],
+    ["নবমী, ২০ অক্টোবর","মধ্য কলকাতা ও সল্টলেক। সল্টলেকের ব্লকগুলি হেঁটে যাওয়া যায়।"],
+    ["দশমী, ২১ অক্টোবর","বিজয়া ও সিঁদুর খেলা, সন্ধ্যায় হুগলি নদীর দিকে বিসর্জনের শোভাযাত্রা।"]
+  ],
+  legend:["নীল লাইন (দক্ষিণেশ্বর থেকে কবি সুভাষ)","সবুজ লাইন (হাওড়া ময়দান থেকে সল্টলেক সেক্টর ৫)","বেগুনি লাইন (জোকা থেকে মাঝেরহাট)","কাছে মেট্রো নেই"],
+  metroNote:"স্টেশনের পরে “~” মানে সেটি সবচেয়ে কাছের স্টেশন, কিন্তু রিকশা, অটো বা অনেকটা হাঁটা লাগবে। সরাসরি রুটের জন্য “মেট্রো থেকে হাঁটা” লিংক ব্যবহার করুন। উৎসবের রাতের সময়সূচি ও লাইন বন্ধের খবর কলকাতা মেট্রোর বিজ্ঞপ্তিতে দেখে নিন।",
+  footA:"এই গাইড কতটা সম্পূর্ণ? কলকাতা ও শহরতলিতে হাজার হাজার পুজো হয়। এই গাইডে অঞ্চল অনুযায়ী প্রধান প্যান্ডেল, বনেদি বাড়ি ও ভিড়-টানা পুজোগুলি আছে। প্রতিটি অঞ্চলে এলাকার লিংকও আছে, যা ম্যাপ সার্চ খোলে, ফলে আশপাশের ছোট পুজোগুলিও খুঁজে পাবেন।",
+  footB:"অবস্থান গুগল ম্যাপে প্যান্ডেলের নামে সার্চ হিসেবে খোলে; আসল জায়গা বা ঢোকার পথ সেদিন বদলাতে পারে। ব্যারিকেড, একমুখী রাস্তা ও শেষ পথের যাতায়াত সম্পর্কে স্থানীয় পুলিশের বিজ্ঞপ্তি দেখে নিন।",
+  lTerms:"ব্যবহারের শর্তাবলি", lPriv:"গোপনীয়তা নোট", lClose:"বন্ধ করুন", lUpdated:"সর্বশেষ হালনাগাদ: ",
+  terms:(o,l,m)=>[
+   ["এই গাইড সম্পর্কে","এটি কলকাতার দুর্গাপূজা ২০২৬-এর প্যান্ডেল ও সাংস্কৃতিক অনুষ্ঠানের একটি স্বাধীন, তথ্যভিত্তিক গাইড, যা পরিচালনা করেন "+o+"। এটি কোনো পুজো কমিটি, সরকারি সংস্থা বা মেট্রো কর্তৃপক্ষের সরকারি প্রকাশনা নয়।"],
+   ["তথ্যের নির্ভুলতা","তারিখ, থিম, অবস্থান ও মেট্রো স্টেশন প্রকাশ্য প্রতিবেদন ও কমিটির ঘোষণা থেকে সংগ্রহ করা। এগুলি বদলাতে পারে বা ভুল থাকতে পারে, আর ~ চিহ্নিত স্টেশন আনুমানিক। যাত্রার আগে কমিটি, কলকাতা পুলিশ ও কলকাতা মেট্রোর সঙ্গে মিলিয়ে নিন। এই গাইডের ওপর নির্ভর করে কোনো ক্ষতি, দেরি বা অসুবিধা হলে আমরা দায়ী নই।"],
+   ["ভিড় ও নিরাপত্তা","প্যান্ডেল দর্শনে বিশাল ভিড় থাকে। পুজো কমিটি ও পুলিশের নির্দেশ মানুন, এবং সময় ও নিরাপত্তা নিয়ে নিজের বিবেচনা ব্যবহার করুন। ব্যারিকেড, একমুখী রাস্তা ও বন্ধের ব্যবস্থা হঠাৎ বদলাতে পারে।"],
+   ["স্পনসরড কনটেন্ট ও অ্যাফিলিয়েট লিংক","অর্থপ্রদত্ত স্থানগুলি “স্পনসরড” বা “প্রচারিত” হিসেবে চিহ্নিত। কিছু বুকিং লিংক অ্যাফিলিয়েট লিংক, তাতে আপনার বাড়তি খরচ ছাড়াই আমরা কমিশন পেতে পারি। অর্থপ্রদত্ত স্থান প্যান্ডেল তালিকার ক্রম বদলায় না। টিকিট, বুকিং ও টাকা ফেরত আপনার ও বিক্রেতা বা আয়োজকের মধ্যের বিষয়, আমাদের নয়।"],
+   ["শুভেচ্ছা পোস্ট","এই সাইটের শুভেচ্ছা পোস্টগুলি "+o+" তৈরি করেন ও বিক্রি করেন। “কিনুন” বোতাম যে চেকআউট পেজ খোলে, সেখানেই পেমেন্ট ও ডেলিভারি হয়, এবং আপনার কেনাকাটায় সেখানকার শর্ত প্রযোজ্য। শিল্পকর্ম, লেখা ও বিন্যাস সহ পোস্টগুলির কপিরাইট আমাদের। কোনো পোস্টে অন্য কিছু না লেখা থাকলে, কেনা পোস্ট আপনি ব্যক্তিগত, অবাণিজ্যিক শেয়ারে ব্যবহার করতে পারবেন; পুনরায় বিক্রি, বিতরণ বা নিজের বলে দাবি করা যাবে না।"],
+   ["স্পনসর, আয়োজক ও পার্টনার","তালিকা চালু হওয়ার আগে মূল্য, সময়কাল ও স্থান লিখিতভাবে ঠিক হয়। আপনি যা জমা দেবেন তার নির্ভুলতা ও বৈধতার দায়, এবং তাতে ব্যবহৃত নাম, লোগো ও ছবি ব্যবহারের অধিকার থাকার দায় আপনার। বিভ্রান্তিকর, বেআইনি বা অন্যের অধিকার লঙ্ঘনকারী বিষয়বস্তু আমরা প্রত্যাখ্যান বা সরিয়ে দিতে পারি। কত দর্শন, ভিজিট বা বিক্রি হবে তার কোনো নিশ্চয়তা আমরা দিই না।"],
+   ["কপিরাইট ও বিষয়বস্তুর ব্যবহার","এই গাইডের নকশা, কোড, লেখা ও বিন্যাস কপিরাইট দ্বারা সুরক্ষিত। লিখিত অনুমতি ছাড়া অনুলিপি, স্ক্র্যাপ বা পুনঃপ্রকাশ করবেন না। প্যান্ডেল, কমিটি ও ব্র্যান্ডের নাম, লোগো এবং থিম সংশ্লিষ্ট মালিকদের, শুধু তথ্যের জন্য দেখানো হয়েছে।"],
+   ["বাইরের লিংক","ম্যাপ, টিকিট সাইট ও স্পনসরের লিংক তৃতীয় পক্ষের পরিষেবায় নিয়ে যায়, যার ওপর আমাদের নিয়ন্ত্রণ নেই। তাদের নিজস্ব শর্ত ও গোপনীয়তা নীতি প্রযোজ্য।"],
+   ["পরিবর্তন ও প্রযোজ্য আইন","আমরা এই শর্ত হালনাগাদ করতে পারি, করলে ওপরের তারিখ বদলে দেব। এই শর্ত "+l+"-এর আইন দ্বারা পরিচালিত। প্রশ্ন থাকলে: "+m+"।"]
+  ],
+  privacy:(o,l,m)=>[
+   ["এই পেজ কী সংগ্রহ করে","গাইডটি ব্যবহার করতে অ্যাকাউন্ট লাগে না। এই পেজ নিজস্ব অ্যানালিটিক্স বা বিজ্ঞাপনের ট্র্যাকার চালায় না।"],
+   ["আপনার ডিভাইসে যা সংরক্ষিত","আপনার ভাষার পছন্দ ও “আমার ট্রেইল” তালিকা আপনার নিজের ডিভাইসের ব্রাউজারে সংরক্ষিত থাকে। এগুলি আমাদের কাছে পাঠানো হয় না। মুছতে ব্রাউজারের ডেটা মুছে দিন।"],
+   ["অনুসন্ধান","অনুসন্ধান ফর্মে আপনার নাম, ব্যবসা, ফোন বা ইমেল ও বার্তা শুধু এমন একটি বার্তা তৈরিতে ব্যবহৃত হয়, যা আপনি জিমেইল, ইমেল বা হোয়াটসঅ্যাপে পাঠাতে বা কপি করতে বেছে নেন। আপনি পাঠালে তবেই আমরা তা পাই, এবং আপনাকে উত্তর দিতে ব্যবহার করি।"],
+   ["তৃতীয় পক্ষ","ম্যাপ ও হাঁটার রুটের লিংক গুগল ম্যাপ খোলে। পেজটি গুগল ফন্টস থেকে ফন্ট লোড করে। জিমেইল, হোয়াটসঅ্যাপ, টিকিট, অ্যাফিলিয়েট পার্টনার এবং শুভেচ্ছা পোস্ট কেনার পেমেন্ট বা চেকআউট পেজের নিজস্ব গোপনীয়তা নীতি আছে, তাদের সাইট খুললে কুকি বা ট্র্যাকিং ব্যবহার হতে পারে। এই পেজ যে প্ল্যাটফর্মে হোস্ট করা, তারাও নিজস্ব নীতি অনুযায়ী আইপি ঠিকানা ও ডিভাইসের ধরনের মতো প্রযুক্তিগত তথ্য রেকর্ড করতে পারে।"],
+   ["তথ্য রাখা ও মোছা","আপনার তালিকা বা বুকিং নিয়ে আলোচনার জন্য যতদিন দরকার, ততদিনই অনুসন্ধানের বার্তা রাখি। আপনার সম্পর্কে আমাদের কাছে কী আছে জানতে, বা তা সংশোধন বা মুছে ফেলতে "+m+" ঠিকানায় লিখুন।"],
+   ["শিশু","এই গাইড শিশুদের জন্য নয়, এবং আমরা জেনেশুনে শিশুদের ব্যক্তিগত তথ্য সংগ্রহ করি না।"],
+   ["কে দায়িত্বে","গাইডটি পরিচালনা করেন "+o+"। আপনার তথ্য নিয়ে প্রশ্ন বা অভিযোগ: "+m+"।"]
+  ],
+  footD:"প্যান্ডেল, কমিটি ও ব্র্যান্ডের নাম, লোগো এবং থিম সংশ্লিষ্ট মালিকদের; এগুলি শুধু তথ্যের জন্য ব্যবহৃত। এই গাইড স্বাধীন, কোনো পুজো কমিটি, মেট্রো কর্তৃপক্ষ বা স্পনসরের সঙ্গে যুক্ত বা তাদের দ্বারা অনুমোদিত নয়।",
+  copy:(y,o)=>"© "+toBn(y)+" "+(o?o+"। ":"")+"সর্বস্বত্ব সংরক্ষিত। এই গাইডের নকশা, কোড, লেখা ও বিন্যাস কপিরাইট দ্বারা সুরক্ষিত"+(o?" এবং "+o+"-এর মালিকানাধীন":"")+"। লিখিত অনুমতি ছাড়া অনুলিপি বা পুনঃপ্রকাশ করা যাবে না।",
+  days:["ষষ্ঠী","সপ্তমী","অষ্টমী","নবমী","দশমী"],
+  cdBefore:(d)=>"ষষ্ঠীর আর "+toBn(d)+" দিন", cdBeforeS:"প্যান্ডেল খুলতে শুরু করবে",
+  cdOn:(n)=>n+" চলছে", cdOnS:(i)=>"পাঁচ দিনের "+toBn(i+1)+" নম্বর দিন", cdEnd:"পুজো ২০২৬ শেষ", cdEndS:"আসছে বছর আবার হবে",
+  wd:["রবি","সোম","মঙ্গল","বুধ","বৃহঃ","শুক্র","শনি"], mo:["জানু","ফেব্রু","মার্চ","এপ্রিল","মে","জুন","জুলাই","আগস্ট","সেপ্টে","অক্টো","নভে","ডিসে"]
+ }
+};
+function toBn(x){return String(x).replace(/\d/g,d=>"০১২৩৪৫৬৭৮৯"[d]);}
+
+/* ---------- regions ---------- */
+const REGIONS = [
+ {id:"north",en:"North Kolkata",bn:"উত্তর কলকাতা",
+  desc:"Old Calcutta: bonedi baris, narrow lanes, clay-idol workshops and some of the oldest community pujas. Best on foot.",
+  desc_bn:"পুরনো কলকাতা: বনেদি বাড়ি, সরু গলি, কুমোরটুলির প্রতিমা-কারখানা আর সবচেয়ে প্রাচীন কিছু সার্বজনীন পুজো। হেঁটে ঘোরাই সেরা।",
+  hoods:[["Kumartuli & Ahiritola","কুমোরটুলি ও আহিরীটোলা"],["Bagbazar & Shyambazar","বাগবাজার ও শ্যামবাজার"],["Hatibagan & Beadon Street","হাতিবাগান ও বিডন স্ট্রিট"],["Jorabagan & Pathuriaghata","জোড়াবাগান ও পাথুরিয়াঘাটা"],["College Street","কলেজ স্ট্রিট"],["Tala & Belgachia","টালা ও বেলগাছিয়া"],["Maniktala & Ultadanga","মানিকতলা ও উল্টোডাঙা"]]},
+ {id:"central",en:"Central Kolkata",bn:"মধ্য কলকাতা",
+  desc:"Around Sealdah, Maniktala and the Esplanade: big-budget theme pandals close to the Green Line.",
+  desc_bn:"শিয়ালদহ, মানিকতলা ও এসপ্ল্যানেডের আশপাশ: সবুজ লাইনের কাছে বড় বাজেটের থিম প্যান্ডেল।",
+  hoods:[["Sealdah & Lebutala","শিয়ালদহ ও লেবুতলা"],["Maniktala","মানিকতলা"],["Beliaghata","বেলেঘাটা"],["Esplanade & Janbazar","এসপ্ল্যানেড ও জানবাজার"],["Park Circus","পার্ক সার্কাস"]]},
+ {id:"south",en:"South Kolkata",bn:"দক্ষিণ কলকাতা",
+  desc:"The theme-pandal capital. Ballygunge, Gariahat, Kalighat and Rashbehari are strung along the Blue Line.",
+  desc_bn:"থিম প্যান্ডেলের রাজধানী। বালিগঞ্জ, গড়িয়াহাট, কালীঘাট ও রাসবিহারী নীল লাইন ধরে সাজানো।",
+  hoods:[["Ballygunge","বালিগঞ্জ"],["Gariahat & Hindustan Park","গড়িয়াহাট ও হিন্দুস্তান পার্ক"],["Kalighat & Mudiali","কালীঘাট ও মুদিয়ালি"],["Rashbehari & Deshapriya Park","রাসবিহারী ও দেশপ্রিয় পার্ক"],["Chetla & Alipore","চেতলা ও আলিপুর"],["New Alipore","নিউ আলিপুর"],["Tollygunge & Naktala","টালিগঞ্জ ও নাকতলা"],["Garia & Jadavpur","গড়িয়া ও যাদবপুর"]]},
+ {id:"east",en:"Eastern Kolkata",bn:"পূর্ব কলকাতা",
+  desc:"Salt Lake's planned blocks, Lake Town and the bypass side. The Salt Lake block pujas are walkable from each other.",
+  desc_bn:"সল্টলেকের পরিকল্পিত ব্লক, লেক টাউন ও বাইপাসের দিক। সল্টলেকের ব্লকের পুজোগুলি হেঁটে যাওয়া যায়।",
+  hoods:[["Salt Lake blocks","সল্টলেকের ব্লক"],["Lake Town","লেক টাউন"],["EM Bypass","ই এম বাইপাস"],["Rajarhat & New Town","রাজারহাট ও নিউ টাউন"]]},
+ {id:"west",en:"Western Kolkata",bn:"পশ্চিম কলকাতা",
+  desc:"Behala, Barisha and Thakurpukur: a string of big pujas along the Purple Line corridor, good for a calmer family night.",
+  desc_bn:"বেহালা, বড়িশা ও ঠাকুরপুকুর: বেগুনি লাইনের ধারে বড় পুজোর সারি, পরিবার নিয়ে শান্ত রাতের জন্য ভালো।",
+  hoods:[["Behala","বেহালা"],["Barisha","বড়িশা"],["Thakurpukur","ঠাকুরপুকুর"],["Haridevpur","হরিদেবপুর"],["Taratala & Garden Reach","তারাতলা ও গার্ডেন রিচ"]]},
+ {id:"greater",en:"Greater Kolkata",bn:"বৃহত্তর কলকাতা",
+  desc:"Dum Dum, Kestopur and the suburbs, plus Howrah across the river. Often quieter, and worth a night of their own.",
+  desc_bn:"দমদম, কেষ্টপুর ও শহরতলি, সঙ্গে নদীর ওপারে হাওড়া। ভিড় কম, আলাদা একটা রাত রাখার মতো।",
+  hoods:[["Dum Dum Park","দমদম পার্ক"],["Kestopur","কেষ্টপুর"],["Baguiati","বাগুইআটি"],["Barasat","বারাসাত"],["Howrah & Shibpur","হাওড়া ও শিবপুর"],["Barrackpore","ব্যারাকপুর"]]}
+];
+
+/* ---------- Bengali lookups (fall back to English when missing) ---------- */
+const BN_NAME = {
+ "Kumartuli Park Sarbojanin":"কুমোরটুলি পার্ক সার্বজনীন","Sovabazar Rajbari":"শোভাবাজার রাজবাড়ি","Chorebagan Sarbojanin":"চোরবাগান সার্বজনীন","Jagat Mukherjee Park":"জগৎ মুখার্জি পার্ক","Tala Prattoy":"টালা প্রত্যয়","Tala Barowari":"টালা বারোয়ারি","Telengabagan Sarbojanin":"তেলেঙ্গাবাগান সার্বজনীন","Hatibagan Sarbojanin":"হাতিবাগান সার্বজনীন","Hatibagan Nabinpally":"হাতিবাগান নবীনপল্লী","College Square Sarbojanin":"কলেজ স্কোয়ার সার্বজনীন","Shyambazar Athchala":"শ্যামবাজার আটচালা","Jorasanko Daw Bari":"জোড়াসাঁকো দাঁ বাড়ি","Bagbazar Sarbojanin":"বাগবাজার সার্বজনীন",
+ "Santosh Mitra Square":"সন্তোষ মিত্র স্কোয়ার","Chaltabagan Sarbojanin":"চালতাবাগান সার্বজনীন","Beliaghata 33 Pally":"বেলেঘাটা ৩৩ পল্লী","Sikdar Bagan Sadharan":"শিকদার বাগান সাধারণ","Wellington Square Sarbojanin":"ওয়েলিংটন স্কোয়ার সার্বজনীন","Janbazar Rajbari":"জানবাজার রাজবাড়ি",
+ "Ballygunge Cultural Association":"বালিগঞ্জ কালচারাল অ্যাসোসিয়েশন","Ballygunge Samaj Sebi Sangha":"বালিগঞ্জ সমাজসেবী সংঘ","Suruchi Sangha":"সুরুচি সংঘ","Alipore Sarbojanin":"আলিপুর সার্বজনীন","Chetla Agrani":"চেতলা অগ্রণী","Shibmandir Sarbojanin Durgotsav":"শিবমন্দির সার্বজনীন দুর্গোৎসব","Mudiali Club":"মুদিয়ালি ক্লাব","Maddox Square":"ম্যাডক্স স্কোয়ার","Hindustan Park Sarbojanin":"হিন্দুস্তান পার্ক সার্বজনীন","Singhi Park Sarbojanin":"সিংহী পার্ক সার্বজনীন","Deshapriya Park Sarbojanin":"দেশপ্রিয় পার্ক সার্বজনীন","Tridhara Sammilani":"ত্রিধারা সম্মিলনী","Lake Pally Sarbojanin":"লেক পল্লী সার্বজনীন","Ekdalia Evergreen":"একডালিয়া এভারগ্রিন","Bakulbagan Sarbojanin":"বকুলবাগান সার্বজনীন","South City Mall Durga Puja":"সাউথ সিটি মল দুর্গাপূজা","Naktala Udayan Sangha":"নাকতলা উদয়ন সংঘ","Garia Nabadurga":"গড়িয়া নবদুর্গা",
+ "Sreebhumi Sporting Club":"শ্রীভূমি স্পোর্টিং ক্লাব",
+ "Barisha Club":"বড়িশা ক্লাব","Behala Club":"বেহালা ক্লাব","Behala Natun Dal":"বেহালা নতুন দল","25 Pally":"২৫ পল্লী","SB Park Sarbojanin":"এসবি পার্ক সার্বজনীন",
+ "Dum Dum Park Tarun Sangha":"দমদম পার্ক তরুণ সংঘ","Dum Dum Park Sarbojanin":"দমদম পার্ক সার্বজনীন","Dum Dum Park Tarun Dal":"দমদম পার্ক তরুণ দল","Dum Dum Park Yubak Brinda":"দমদম পার্ক যুবক বৃন্দ","Dum Dum Park Bharat Chakra":"দমদম পার্ক ভারত চক্র","Aswininagar Bandhu Mahal":"অশ্বিনীনগর বন্ধু মহল","Kestopur Prafullakanan":"কেষ্টপুর প্রফুল্লকানন","Rail Pukur United":"রেলপুকুর ইউনাইটেড","New Town Sarbojanin":"নিউ টাউন সার্বজনীন"
+};
+const BN_AREA = {
+ "Kumartuli":"কুমোরটুলি","Shobhabazar":"শোভাবাজার","Chorebagan":"চোরবাগান","Jatindra Mohan Avenue":"যতীন্দ্র মোহন অ্যাভিনিউ","Tala":"টালা","Telengabagan, Belgachia":"তেলেঙ্গাবাগান, বেলগাছিয়া","Hatibagan":"হাতিবাগান","College Street":"কলেজ স্ট্রিট","Shyambazar":"শ্যামবাজার","Jorasanko":"জোড়াসাঁকো","Bagbazar":"বাগবাজার",
+ "Lebutala, near Sealdah":"লেবুতলা, শিয়ালদহের কাছে","Maniktala":"মানিকতলা","Beliaghata":"বেলেঘাটা","Sikdar Bagan, Maniktala":"শিকদার বাগান, মানিকতলা","Wellington Square":"ওয়েলিংটন স্কোয়ার","Janbazar":"জানবাজার",
+ "Ballygunge":"বালিগঞ্জ","New Alipore":"নিউ আলিপুর","Chetla":"চেতলা","Kalighat belt":"কালীঘাট এলাকা","Mudiali, Kalighat":"মুদিয়ালি, কালীঘাট","Maddox Square, Gariahat":"ম্যাডক্স স্কোয়ার, গড়িয়াহাট","Hindustan Park, Gariahat":"হিন্দুস্তান পার্ক, গড়িয়াহাট","Singhi Park, Ballygunge":"সিংহী পার্ক, বালিগঞ্জ","Deshapriya Park, Rashbehari":"দেশপ্রিয় পার্ক, রাসবিহারী","Rashbehari Avenue":"রাসবিহারী অ্যাভিনিউ","Lake Pally":"লেক পল্লী","Ekdalia":"একডালিয়া","Bhowanipore":"ভবানীপুর","Prince Anwar Shah Road":"প্রিন্স আনোয়ার শাহ রোড","Naktala":"নাকতলা","Garia":"গড়িয়া",
+ "Lake Town":"লেক টাউন","Salt Lake, Sector III":"সল্টলেক, সেক্টর ৩","Salt Lake":"সল্টলেক",
+ "Barisha":"বড়িশা","Behala":"বেহালা","Dum Dum Park":"দমদম পার্ক","Aswininagar, Baguiati":"অশ্বিনীনগর, বাগুইআটি","Kestopur":"কেষ্টপুর","New Town, Rajarhat":"নিউ টাউন, রাজারহাট"
+};
+const BN_METRO = {
+ "Shobhabazar Sutanuti":"শোভাবাজার সুতানুটি","Mahatma Gandhi Road":"মহাত্মা গান্ধী রোড","Girish Park":"গিরিশ পার্ক","Shyambazar":"শ্যামবাজার","Belgachia":"বেলগাছিয়া","Sealdah":"শিয়ালদহ","Phoolbagan":"ফুলবাগান","Esplanade":"এসপ্ল্যানেড","Jatin Das Park":"যতীন দাস পার্ক","Majerhat":"মাঝেরহাট","Kalighat":"কালীঘাট","Rabindra Sarobar":"রবীন্দ্র সরোবর","Netaji Bhavan":"নেতাজি ভবন","Gitanjali":"গীতাঞ্জলি","Netaji":"নেতাজি","Kavi Subhash":"কবি সুভাষ","Salt Lake Stadium":"সল্টলেক স্টেডিয়াম","Karunamoyee":"করুণাময়ী","Central Park":"সেন্ট্রাল পার্ক","City Centre":"সিটি সেন্টার","Sakherbazar":"সখেরবাজার","Behala Chowrasta":"বেহালা চৌরাস্তা","Dum Dum":"দমদম","Salt Lake Sector V":"সল্টলেক সেক্টর ৫"
+};
+const BN_THEME = {
+ "“Gangotri to Ganga”, a river-themed installation next to the idol-makers' quarter":"“গঙ্গোত্রী থেকে গঙ্গা”, মৃৎশিল্পীদের পাড়ার পাশে নদীভাবনার স্থাপনা",
+ "Century-old family puja of the Sovabazar Raj family":"শোভাবাজার রাজবাড়ির শতাব্দীপ্রাচীন পারিবারিক পুজো",
+ "“Akal Bodhon”, its 91st year":"“অকালবোধন”, ৯১তম বর্ষ",
+ "Tribute to dance pioneer Uday Shankar, 90th year":"নৃত্যশিল্পী উদয়শংকরের প্রতি শ্রদ্ধার্ঘ্য, ৯০তম বর্ষ",
+ "“Biyojon” (Separation), 101st year":"“বিয়োজন”, ১০১তম বর্ষ",
+ "Family puja of the Daw household":"দাঁ পরিবারের পারিবারিক পুজো",
+ "“Sanatani Chetanay Vande Mataram”":"“সনাতনী চেতনায় বন্দে মাতরম”",
+ "Historic Rani Rashmoni family puja":"রানি রাসমণির ঐতিহাসিক পারিবারিক পুজো",
+ "“Jojon” (Joining)":"“যোজন”",
+ "Uttam Kumar centenary tribute, built around 208 posters":"উত্তমকুমারের জন্মশতবর্ষে শ্রদ্ধার্ঘ্য, ২০৮টি পোস্টার দিয়ে গড়া",
+ "“Utsho” (The Source), with a lotus motif":"“উৎস”, পদ্মের মোটিফ সহ",
+ "“Ramayana: An Epic Woven in Time”, 81st year":"“রামায়ণ: সময়ের বুননে মহাকাব্য”, ৮১তম বর্ষ",
+ "“Porob: The Celebration of Togetherness”, 90th year":"“পরব: একসঙ্গে থাকার উদযাপন”, ৯০তম বর্ষ",
+ "A Somnath temple recreation":"সোমনাথ মন্দিরের প্রতিরূপ",
+ "Pandal and idol inspired by painter Shanu Lahiri":"শিল্পী শানু লাহিড়ীর জীবন ও কাজ থেকে অনুপ্রাণিত প্যান্ডেল ও প্রতিমা",
+ "“Jatra”, the mall's first puja":"“যাত্রা”, মলের প্রথম পুজো",
+ "A Hawa Mahal recreation":"হাওয়া মহলের প্রতিরূপ",
+ "“The Rainbow Kaleidoscope”, a colour-and-light installation":"“দ্য রেনবো ক্যালাইডোস্কোপ”, রং ও আলোর স্থাপনা",
+ "“Talpatar Sepai”":"“তালপাতার সেপাই”",
+ "“Banijje Basate Lakkhi”, Bengal's maritime trade history":"“বাণিজ্যে বসতে লক্ষ্মী”, বাংলার সমুদ্রবাণিজ্যের ইতিহাস"
+};
+
+/* P(region, name, area, theme, metroStation, line[B|G|P|N], approx, flags) */
+const P = (r,n,a,t,m,l,ap,f)=>({r,n,a,t:t||"",m,l,ap:!!ap,f:f||""});
+const PANDALS = [
+  P("north","Kumartuli Park Sarbojanin","Kumartuli","“Gangotri to Ganga”, a river-themed installation next to the idol-makers' quarter","Shobhabazar Sutanuti","B"),
+  P("north","Sovabazar Rajbari","Shobhabazar","Century-old family puja of the Sovabazar Raj family","Shobhabazar Sutanuti","B",0,"bonedi"),
+  P("north","Chorebagan Sarbojanin","Chorebagan","“Akal Bodhon”, its 91st year","Mahatma Gandhi Road","B",1),
+  P("north","Jagat Mukherjee Park","Jatindra Mohan Avenue","Tribute to dance pioneer Uday Shankar, 90th year","Girish Park","B",1),
+  P("north","Tala Prattoy","Tala","“Biyojon” (Separation), 101st year","Shyambazar","B",1),
+  P("north","Tala Barowari","Tala","","Shyambazar","B",1),
+  P("north","Telengabagan Sarbojanin","Telengabagan, Belgachia","","Belgachia","B",1),
+  P("north","Hatibagan Sarbojanin","Hatibagan","","Girish Park","B",1),
+  P("north","Hatibagan Nabinpally","Hatibagan","","Girish Park","B",1),
+  P("north","College Square Sarbojanin","College Street","","Mahatma Gandhi Road","B",1),
+  P("north","Shyambazar Athchala","Shyambazar","","Shyambazar","B"),
+  P("north","Jorasanko Daw Bari","Jorasanko","Family puja of the Daw household","Girish Park","B",1,"bonedi"),
+  P("north","Bagbazar Sarbojanin","Bagbazar","","Shobhabazar Sutanuti","B",1),
+  P("central","Santosh Mitra Square","Lebutala, near Sealdah","“Sanatani Chetanay Vande Mataram”","Sealdah","G",1),
+  P("central","Chaltabagan Sarbojanin","Maniktala","","Phoolbagan","G",1),
+  P("central","Beliaghata 33 Pally","Beliaghata","","Phoolbagan","G",1),
+  P("central","Sikdar Bagan Sadharan","Sikdar Bagan, Maniktala","","Phoolbagan","G",1),
+  P("central","Wellington Square Sarbojanin","Wellington Square","","Esplanade","B",1),
+  P("central","Janbazar Rajbari","Janbazar","Historic Rani Rashmoni family puja","Esplanade","B",1,"bonedi"),
+  P("south","Ballygunge Cultural Association","Ballygunge","“Jojon” (Joining)","Jatin Das Park","B",1),
+  P("south","Ballygunge Samaj Sebi Sangha","Ballygunge","Uttam Kumar centenary tribute, built around 208 posters","Jatin Das Park","B",1),
+  P("south","Suruchi Sangha","New Alipore","“Utsho” (The Source), with a lotus motif","Majerhat","P",1),
+  P("south","Alipore Sarbojanin","Chetla","“Ramayana: An Epic Woven in Time”, 81st year","Kalighat","B",1),
+  P("south","Chetla Agrani","Chetla","","Kalighat","B",1),
+  P("south","Shibmandir Sarbojanin Durgotsav","Kalighat belt","“Porob: The Celebration of Togetherness”, 90th year","Kalighat","B",1),
+  P("south","Mudiali Club","Mudiali, Kalighat","","Kalighat","B"),
+  P("south","Maddox Square","Maddox Square, Gariahat","","Jatin Das Park","B"),
+  P("south","Hindustan Park Sarbojanin","Hindustan Park, Gariahat","","Jatin Das Park","B",1),
+  P("south","Singhi Park Sarbojanin","Singhi Park, Ballygunge","","Jatin Das Park","B",1),
+  P("south","Deshapriya Park Sarbojanin","Deshapriya Park, Rashbehari","","Kalighat","B",1),
+  P("south","Tridhara Sammilani","Rashbehari Avenue","","Kalighat","B",1),
+  P("south","Lake Pally Sarbojanin","Lake Pally","","Rabindra Sarobar","B",1),
+  P("south","Ekdalia Evergreen","Ekdalia","A Somnath temple recreation","Jatin Das Park","B",1),
+  P("south","Bakulbagan Sarbojanin","Bhowanipore","Pandal and idol inspired by painter Shanu Lahiri","Netaji Bhavan","B",1),
+  P("south","South City Mall Durga Puja","Prince Anwar Shah Road","“Jatra”, the mall's first puja","Gitanjali","B",1),
+  P("south","Naktala Udayan Sangha","Naktala","","Netaji","B",1),
+  P("south","Garia Nabadurga","Garia","","Kavi Subhash","B",1),
+  P("east","Sreebhumi Sporting Club","Lake Town","A Hawa Mahal recreation","Salt Lake Stadium","G",1),
+  P("east","Salt Lake FD Block","Salt Lake, Sector III","“The Rainbow Kaleidoscope”, a colour-and-light installation","Karunamoyee","G",1),
+  P("east","Salt Lake BJ Block","Salt Lake","","Karunamoyee","G",1),
+  P("east","Salt Lake AK Block","Salt Lake","","Karunamoyee","G",1),
+  P("east","Salt Lake EC Block","Salt Lake","","Central Park","G",1),
+  P("east","Salt Lake DB Block","Salt Lake","","City Centre","G",1),
+  P("east","Salt Lake AJ Block","Salt Lake","","Central Park","G",1),
+  P("east","Salt Lake BD Block","Salt Lake","","Central Park","G",1),
+  P("east","Salt Lake BL Block","Salt Lake","","City Centre","G",1),
+  P("west","Barisha Club","Barisha","“Talpatar Sepai”","Sakherbazar","P",1),
+  P("west","Behala Club","Behala","","Behala Chowrasta","P",1),
+  P("west","Behala Natun Dal","Behala","","Behala Chowrasta","P",1),
+  P("west","25 Pally","Behala","","Behala Chowrasta","P",1),
+  P("west","SB Park Sarbojanin","Behala","","Behala Chowrasta","P",1),
+  P("greater","Dum Dum Park Tarun Sangha","Dum Dum Park","“Banijje Basate Lakkhi”, Bengal's maritime trade history","Dum Dum","B",1),
+  P("greater","Dum Dum Park Sarbojanin","Dum Dum Park","","Dum Dum","B",1),
+  P("greater","Dum Dum Park Tarun Dal","Dum Dum Park","","Dum Dum","B",1),
+  P("greater","Dum Dum Park Yubak Brinda","Dum Dum Park","","Dum Dum","B",1),
+  P("greater","Dum Dum Park Bharat Chakra","Dum Dum Park","","Dum Dum","B",1),
+  P("greater","Aswininagar Bandhu Mahal","Aswininagar, Baguiati","","","N"),
+  P("greater","Kestopur Prafullakanan","Kestopur","","","N"),
+  P("greater","Rail Pukur United","Kestopur","","","N"),
+  P("greater","New Town Sarbojanin","New Town, Rajarhat","","Salt Lake Sector V","G",1)
+];
+
+/* ---------- language state ---------- */
+let lang = "en";
+try{ const s=localStorage.getItem("pujo26-lang"); if(s==="bn"||s==="en") lang=s; else if((navigator.language||"").toLowerCase().startsWith("bn")) lang="bn"; }catch(e){}
+const T = (k)=>{const v=UI[lang][k]; return v===undefined?UI.en[k]:v;};
+const pick = (en,bn)=> (lang==="bn" && bn) ? bn : en;
+const nameL = p => lang==="bn" ? (BN_NAME[p.n] || p.n.replace(/^Salt Lake (\w+) Block$/,"সল্টলেক $1 ব্লক")) : p.n;
+const areaL = p => lang==="bn" ? (BN_AREA[p.a]||p.a) : p.a;
+const themeL = p => lang==="bn" ? (BN_THEME[p.t]||p.t) : p.t;
+const metroL = p => lang==="bn" ? (BN_METRO[p.m]||p.m) : p.m;
+const regionName = R => pick(R.en,R.bn);
+
+const esc = s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const mapUrl = p=>"https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(p.n+" Durga Puja, "+p.a+", Kolkata");
+const metroWalkUrl = p=>"https://www.google.com/maps/dir/?api=1&travelmode=walking&origin="+encodeURIComponent(p.m+" Metro Station, Kolkata")+"&destination="+encodeURIComponent(p.n+" Durga Puja, "+p.a+", Kolkata");
+const hoodUrl = h=>"https://www.google.com/maps/search/?api=1&query="+encodeURIComponent("Durga Puja pandal "+h+", Kolkata");
+const venueUrl = s=>"https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(s.venue+", "+(s.area||"")+", Kolkata");
+const mailto = sub=>"mailto:"+CONTACT_EMAIL+"?subject="+encodeURIComponent(sub||SPONSOR_SUBJECT);
+
+/* ---------- trail ---------- */
+let trail = [];
+try{ const t=JSON.parse(localStorage.getItem("pujo26-trail")||"[]"); if(Array.isArray(t)) trail=t; }catch(e){}
+trail=trail.filter(n=>PANDALS.some(p=>p.n===n));
+function saveTrail(){ try{ localStorage.setItem("pujo26-trail",JSON.stringify(trail)); }catch(e){} }
+
+/* ---------- state ---------- */
+let region="all", query="", lineF="", showDate="all", showCat="all", legalKind="";
+
+function hay(p){ return (p.n+" "+p.a+" "+p.t+" "+p.m+" "+nameL(p)+" "+areaL(p)+" "+themeL(p)+" "+metroL(p)).toLowerCase(); }
+function matches(p){
+  if(region!=="all" && p.r!==region) return false;
+  if(lineF && p.l!==lineF) return false;
+  if(query && !hay(p).includes(query)) return false;
+  return true;
+}
+
+/* ---------- pandal list ---------- */
+function itemHTML(p){
+  const feat = FEATURED_PANDALS.includes(p.n);
+  const inTrail = trail.includes(p.n);
+  const bonedi = p.f.includes("bonedi") ? '<span class="tag">'+T("bonedi")+'</span>' : "";
+  const sp = feat ? '<span class="tag sp">'+T("sponsored")+'</span>' : "";
+  const theme = p.t ? '<div class="theme">'+esc(themeL(p))+'</div>' : '<div class="theme tbc">'+T("themeTbc")+'</div>';
+  const metro = p.l==="N"
+    ? '<div class="metro"><span class="mline"><i class="dot"></i>'+T("noMetroLine")+'</span><small>'+T("cabBus")+'</small></div>'
+    : '<div class="metro"><span class="mline"><i class="dot '+p.l+'"></i>'+esc(metroL(p))+(p.ap?" ~":"")+'</span><small>'+T(p.l)+'</small></div>';
+  const walk = p.l==="N" ? "" : '<a class="btn ghost" target="_blank" rel="noopener" href="'+metroWalkUrl(p)+'">'+T("walkMetro")+'</a>';
+  return '<li class="item"><div><h3>'+esc(nameL(p))+mapBtn(p)+sp+bonedi+'</h3><div class="meta">'+esc(areaL(p))+'</div>'+theme+'</div>'+metro+
+    '<div class="acts">'+walk+
+    '<button type="button" class="btn add" data-name="'+esc(p.n)+'" aria-pressed="'+inTrail+'">'+(inTrail?T("inTrail"):T("addTrail"))+'</button></div></li>';
+}
+function inlineSponsorHTML(r){
+  return INLINE_SPONSORS.filter(s=>s.region===r).map(s=>
+    '<li class="inline-sp"><div><span class="tag sp" style="margin:0 0 4px">'+T("sponsored")+'</span><h3>'+esc(pick(s.name,s.name_bn))+'</h3><p>'+esc(pick(s.blurb,s.blurb_bn))+'</p></div>'+
+    '<a class="btn" style="align-self:center" target="_blank" rel="sponsored noopener" href="'+esc(s.url)+'">'+esc(s.cta||"View")+'</a></li>').join("");
+}
+function renderRegions(){
+  const out=[];
+  REGIONS.forEach(R=>{
+    if(region!=="all" && R.id!==region) return;
+    let items=PANDALS.filter(p=>p.r===R.id && matches(p));
+    items.sort((a,b)=>(FEATURED_PANDALS.includes(b.n)?1:0)-(FEATURED_PANDALS.includes(a.n)?1:0));
+    const hoods='<div class="hoods">'+R.hoods.map(h=>'<a target="_blank" rel="noopener" href="'+hoodUrl(h[0])+'">'+T("allPujas")+esc(pick(h[0],h[1]))+'</a>').join("")+'</div>';
+    let list="";
+    if(items.length){
+      const parts=items.map((p,i)=>itemHTML(p)+(i===2?inlineSponsorHTML(R.id):""));
+      if(items.length<3) parts.push(inlineSponsorHTML(R.id));
+      list='<ul class="list">'+parts.join("")+'</ul>';
+    } else list='<div class="empty">'+T("emptyRegion")+'</div>';
+    out.push('<section class="region" id="r-'+R.id+'" aria-labelledby="h-'+R.id+'"><h2 id="h-'+R.id+'">'+esc(regionName(R))+'</h2><p class="desc">'+esc(pick(R.desc,R.desc_bn))+'</p>'+hoods+list+'</section>');
+  });
+  document.getElementById("regions").innerHTML=out.join("");
+}
+function renderChips(){
+  const base=PANDALS.filter(p=>(!lineF||p.l===lineF)&&(!query||hay(p).includes(query)));
+  const mk=(id,label,n)=>'<button type="button" class="chip" data-r="'+id+'" aria-pressed="'+(region===id)+'">'+esc(label)+'<small>'+(lang==="bn"?toBn(n):n)+'</small></button>';
+  document.getElementById("chips").innerHTML=mk("all",T("allRegions"),base.length)+REGIONS.map(R=>mk(R.id,regionName(R),base.filter(p=>p.r===R.id).length)).join("");
+}
+function renderLineSelect(){
+  const sel=document.getElementById("line");
+  const opts=[["",T("anyLine")],["B",T("B")],["G",T("G")],["P",T("P")],["N",T("N")]];
+  sel.innerHTML=opts.map(o=>'<option value="'+o[0]+'"'+(lineF===o[0]?" selected":"")+'>'+esc(o[1])+'</option>').join("");
+}
+
+/* ---------- trail bar ---------- */
+function renderTrail(){
+  const el=document.getElementById("trail");
+  document.getElementById("trail-go").textContent=T("trailGo");
+  document.getElementById("trail-clear").textContent=T("trailClear");
+  document.body.classList.toggle("has-trail",trail.length>0);
+  if(!trail.length){ el.classList.remove("show"); return; }
+  el.classList.add("show");
+  document.getElementById("trail-count").textContent=T("trailN")(trail.length);
+  document.getElementById("trail-plan").textContent=T("trailPlan");
+  const ord=planOrder(trail,"auto");
+  document.getElementById("trail-go").href = ord.length>1 ? legUrl(ord.slice(0,9)) : (ord[0]?mapUrl(ord[0]):"#");
+}
+
+/* ---------- sponsors ---------- */
+function renderSponsors(){
+  const slot=s=>{
+    const plat=s.tier==="platinum";
+    if(s.active && s.name){
+      return '<div class="slot '+(plat?"plat":"")+'"><span class="tier">'+T(plat?"sponsoredPlat":"sponsoredGold")+'</span><h3>'+esc(pick(s.name,s.name_bn))+'</h3><p>'+esc(pick(s.tagline,s.tagline_bn))+'</p><a class="go" target="_blank" rel="sponsored noopener" href="'+esc(s.url)+'">'+esc(s.cta||"Visit")+'</a></div>';
+    }
+    return '<div class="slot open '+(plat?"plat":"")+'"><span class="tier">'+T(plat?"platOpen":"goldOpen")+'</span><h3>'+T("yourBrand")+'</h3><p>'+T(plat?"platPitch":"goldPitch")+'</p><button type="button" class="go linkbtn" data-enq="sponsor" data-label="'+(plat?"Platinum partner":"Gold partner")+'">'+T("reserve")+'</button></div>';
+  };
+  document.getElementById("slots-plat").innerHTML=SPONSORS.filter(s=>s.tier==="platinum").map(slot).join("");
+  document.getElementById("slots-gold").innerHTML=SPONSORS.filter(s=>s.tier==="gold").map(slot).join("");
+  document.getElementById("rates").innerHTML=rateTable(RATES,T("advertise"),T("emailBook"),"sponsor");
+}
+function rateTable(rows,cap,btn,type){
+  return '<table><caption style="text-align:left;font-weight:700;padding:0 0 8px">'+esc(cap)+'</caption><thead><tr><th>'+T("colPackage")+'</th><th>'+T("colWhere")+'</th><th>'+T("colPrice")+'</th><th>'+T("colAvail")+'</th></tr></thead><tbody>'+
+   rows.map(r=>'<tr><td><strong>'+esc(pick(r.name,r.name_bn))+'</strong></td><td>'+esc(pick(r.where,r.where_bn))+'</td><td>'+esc(r.price)+'</td><td>'+esc(pick(r.slots,r.slots_bn))+'</td></tr>').join("")+
+   '</tbody></table><p style="margin-top:12px"><button type="button" class="btn map" data-enq="'+type+'">'+esc(btn)+'</button></p>';
+}
+
+/* ---------- shows ---------- */
+const PUJA_DAYS=["2026-10-17","2026-10-18","2026-10-19","2026-10-20","2026-10-21"];
+function fmtDate(iso){
+  const [y,m,d]=iso.split("-").map(Number);
+  const dow=new Date(Date.UTC(y,m-1,d)).getUTCDay();
+  const n=T("wd")[dow]+" "+(lang==="bn"?toBn(d):d)+" "+T("mo")[m-1];
+  return n;
+}
+function todayIST(){ const d=new Date(Date.now()+5.5*3600*1000); return d.toISOString().slice(0,10); }
+function renderMoments(){
+  document.getElementById("moments").innerHTML=T("moments").map(m=>'<li><b>'+esc(m[0])+'</b><span>'+esc(m[1])+'</span></li>').join("");
+}
+function renderShowControls(){
+  const dc=[["all",T("allDates")]].concat(PUJA_DAYS.map(d=>[d,fmtDate(d)])).concat([["other",T("otherDates")]]);
+  document.getElementById("dchips").innerHTML=dc.map(c=>'<button type="button" class="chip" data-d="'+c[0]+'" aria-pressed="'+(showDate===c[0])+'">'+esc(c[1])+'</button>').join("");
+  const cats=[["all",T("allCats")]].concat(Object.keys(UI.en.cats).map(k=>[k,T("cats")[k]]));
+  document.getElementById("scat").innerHTML=cats.map(c=>'<option value="'+c[0]+'"'+(showCat===c[0]?" selected":"")+'>'+esc(c[1])+'</option>').join("");
+}
+function showHTML(s){
+  const promo=!!s.promoted, aff=!!s.affiliate;
+  const tags=(promo?'<span class="tag sp">'+T("promoted")+'</span>':"")+'<span class="tag">'+esc(T("cats")[s.cat]||s.cat)+'</span>';
+  const metro=s.metro?'<div class="meta">'+esc(pick(s.metro,s.metro_bn))+' ~</div>':"";
+  const rel=(promo||aff)?"sponsored noopener":"noopener";
+  const cta=s.url?'<a class="btn map" target="_blank" rel="'+rel+'" href="'+esc(s.url)+'">'+T(aff?"bookTickets":"details")+'</a>':"";
+  const disc=aff?'<span class="meta" style="font-size:.78rem">'+T("affiliate")+'</span>':"";
+  return '<li class="show'+(promo?" promo":"")+'"><div class="when2"><b>'+esc(fmtDate(s.date))+'</b><span>'+esc(s.time||"")+'</span></div>'+
+   '<div><h3>'+esc(pick(s.title,s.title_bn))+tags+'</h3><div class="meta">'+(s.org?esc(s.org)+" · ":"")+'<a href="'+venueUrl(s)+'" target="_blank" rel="noopener">'+esc(s.venue)+(s.area?", "+esc(s.area):"")+'</a></div>'+metro+'</div>'+
+   '<div class="right"><span class="price">'+esc(s.price||"")+'</span>'+cta+disc+'</div></li>';
+}
+function openSlotHTML(){
+  return '<li class="show openslot"><div class="when2"><b>'+T("promoted")+'</b><span>—</span></div><div><h3>'+T("showSlotTitle")+'</h3><div class="meta">'+T("showSlotText")+'</div></div><div class="right"><button type="button" class="btn map" data-enq="show">'+T("listShow")+'</button></div></li>';
+}
+function renderShows(){
+  renderShowControls();
+  const today=todayIST();
+  let list=SHOWS.filter(s=>s.date>=today);
+  if(showCat!=="all") list=list.filter(s=>s.cat===showCat);
+  if(showDate==="other") list=list.filter(s=>!PUJA_DAYS.includes(s.date));
+  else if(showDate!=="all") list=list.filter(s=>s.date===showDate);
+  list.sort((a,b)=>(b.pinned?1:0)-(a.pinned?1:0)||(b.promoted?1:0)-(a.promoted?1:0)||a.date.localeCompare(b.date));
+  let html=list.map(showHTML).join("");
+  if(!list.length) html='<li class="show" style="grid-template-columns:1fr;color:var(--ink-soft)">'+T("noShows")+'</li>';
+  html+=openSlotHTML();
+  document.getElementById("shows-list").innerHTML=html;
+  // partners
+  const part=AFFILIATE_PARTNERS.map(a=>{
+    if(a.active&&a.name) return '<div class="slot"><span class="tier">'+T("sponsoredAff")+'</span><h3>'+esc(a.name)+'</h3><p>'+esc(pick(a.blurb,a.blurb_bn))+'</p><a class="go" target="_blank" rel="sponsored noopener" href="'+esc(a.url)+'">'+esc(a.cta||"Book now")+'</a></div>';
+    return '<div class="slot open"><span class="tier">'+T("partnersOpen")+'</span><h3>'+T("yourBrand")+'</h3><p>'+T("partnersPitch")+'</p><button type="button" class="go linkbtn" data-enq="partner">'+T("reservePartner")+'</button></div>';
+  }).join("");
+  document.getElementById("partners").innerHTML=part;
+  document.getElementById("show-rates").innerHTML=rateTable(SHOW_RATES,T("partnersTitle"),T("listShow"),"show");
+}
+
+/* ---------- static text, tips, countdown ---------- */
+function renderStatic(){
+  document.documentElement.lang=lang;
+  document.querySelectorAll("[data-i]").forEach(el=>{el.textContent=T(el.dataset.i);});
+  document.querySelectorAll("[data-ip]").forEach(el=>{el.placeholder=T(el.dataset.ip);});
+  document.getElementById("copyright").textContent=T("copy")(COPYRIGHT_YEAR,OWNER_NAME);
+  document.getElementById("legal-links").innerHTML='<button type="button" class="linkbtn" data-legal="terms">'+esc(T("lTerms"))+'</button> &nbsp;|&nbsp; <button type="button" class="linkbtn" data-legal="privacy">'+esc(T("lPriv"))+'</button>';
+  if(legalKind) renderLegal();
+  renderContact();
+  document.getElementById("nights").innerHTML=T("nights").map(n=>'<li><b>'+esc(n[0])+'</b><span>'+esc(n[1])+'</span></li>').join("");
+  const dots=["B","G","P","N"];
+  document.getElementById("legend").innerHTML=T("legend").map((t,i)=>'<li><span><i class="dot '+(dots[i]==="N"?"":dots[i])+'"></i>'+esc(t)+'</span></li>').join("");
+  document.querySelectorAll(".lang button").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.lang===lang)));
+  // moments title
+  const mt=document.getElementById("moments"); mt.setAttribute("aria-label",T("momentsTitle"));
+}
+function renderWhen(){
+  const days=T("days");
+  const dates=[17,18,19,20,21];
+  const wd=[6,0,1,2,3];
+  const cells=days.map((d,i)=>'<div><b>'+d+'</b><span>'+T("wd")[wd[i]]+" "+(lang==="bn"?toBn(dates[i]):dates[i])+" "+T("mo")[9]+'</span></div>').join("");
+  document.getElementById("when").innerHTML='<div id="countdown" class="now"></div>'+cells;
+  renderCountdown();
+}
+function renderCountdown(){
+  const box=document.getElementById("countdown"); if(!box) return;
+  const now=Date.now();
+  const ist=n=>Date.UTC(2026,9,n,0,0,0)-5.5*3600*1000;
+  const days=T("days");
+  let b,s;
+  if(now<ist(17)){ const d=Math.ceil((ist(17)-now)/86400000); b=T("cdBefore")(d); s=T("cdBeforeS"); }
+  else if(now<ist(22)){ const i=Math.min(4,Math.floor((now-ist(17))/86400000)); b=T("cdOn")(days[i]); s=T("cdOnS")(i); }
+  else { b=T("cdEnd"); s=T("cdEndS"); }
+  box.innerHTML="<b>"+b+"</b><span>"+s+"</span>";
+}
+
+function renderContact(){
+  const wa=WHATSAPP_NUMBER?'<a class="btn wa" target="_blank" rel="noopener" href="https://wa.me/'+WHATSAPP_NUMBER+'?text='+encodeURIComponent(T("waHello")(OWNER_NAME||"the guide"))+'">'+esc(T("btnWa"))+'</a>':"";
+  const mail='<a class="btn" target="_blank" rel="noopener" href="'+gmailUrl(SPONSOR_SUBJECT,"")+'">'+esc(T("btnMail"))+'</a>';
+  const enq='<button type="button" class="btn map" data-enq="sponsor">'+esc(T("btnEnq"))+'</button>';
+  $("contact-row").innerHTML=wa+mail+enq;
+  $("fab").innerHTML=wa+mail;
+}
+function renderAll(){
+  renderStatic(); renderWhen(); renderLineSelect(); renderSponsors();
+  renderRegions(); renderChips(); renderTrail(); renderMoments(); renderShows(); initEnquiry(); renderContact(); renderPlannerAll(); renderHome(); renderWishes(); setHdr();
+}
+
+/* ---------- enquiry form (visible section) ---------- */
+const PKGS = {
+  sponsor:["Platinum partner","Gold partner","Local listing","Featured pandal"],
+  show:["Promoted show","Pinned show"],
+  partner:["Booking partner"]
+};
+const ALL_PK=[].concat(PKGS.sponsor,PKGS.show,PKGS.partner);
+const typeOfPkg=k=>PKGS.show.includes(k)?"show":(PKGS.partner.includes(k)?"partner":"sponsor");
+let enqType="sponsor";
+const $ = id=>document.getElementById(id);
+function enqMessage(){
+  const L=[];
+  const pk=$("e-pkg").value;
+  L.push("Enquiry: "+SPONSOR_SUBJECT.replace("Sponsor listing: ","")+" — "+pk);
+  L.push("Name: "+$("e-name").value.trim());
+  if($("e-org").value.trim()) L.push("Business/organiser: "+$("e-org").value.trim());
+  L.push("Contact: "+$("e-contact").value.trim());
+  if(enqType==="show"){
+    if($("e-sname").value.trim()) L.push("Show: "+$("e-sname").value.trim());
+    if($("e-sdate").value) L.push("Date: "+$("e-sdate").value);
+    if($("e-venue").value.trim()) L.push("Venue: "+$("e-venue").value.trim());
+    if($("e-link").value.trim()) L.push("Ticket link: "+$("e-link").value.trim());
+  }
+  if($("e-msg").value.trim()) L.push("Notes: "+$("e-msg").value.trim());
+  return L.join("\n");
+}
+function enqSubject(){ return "["+$("e-pkg").value+"] "+SPONSOR_SUBJECT; }
+const gmailUrl=(sub,body)=>"https://mail.google.com/mail/?view=cm&fs=1&to="+encodeURIComponent(CONTACT_EMAIL)+"&su="+encodeURIComponent(sub)+"&body="+encodeURIComponent(body||"");
+function enqLinks(){
+  const body=enqMessage(), sub=enqSubject();
+  $("e-gmail").href=gmailUrl(sub,body);
+  $("e-mail").href="mailto:"+CONTACT_EMAIL+"?subject="+encodeURIComponent(sub)+"&body="+encodeURIComponent(body);
+  if(WHATSAPP_NUMBER){ $("e-wa").hidden=false; $("e-wa").href="https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(body); }
+}
+function enqReady(){ return $("e-name").value.trim() && $("e-contact").value.trim(); }
+function syncEnqType(){ enqType=typeOfPkg($("e-pkg").value); $("e-showfields").hidden = enqType!=="show"; }
+function enqTexts(){
+  const cur=$("e-pkg").value;
+  $("e-pkg").innerHTML=ALL_PK.map(k=>'<option value="'+k+'">'+esc(T("ePk")[k]||k)+'</option>').join("");
+  if(cur && ALL_PK.includes(cur)) $("e-pkg").value=cur;
+  syncEnqType();
+  $("enq-h").textContent=T("enqSecTitle"); $("enq-sub").textContent=T("enqSub");
+  $("enq-contactline").textContent=WHATSAPP_NUMBER?T("contactLine")(WHATSAPP_NUMBER,CONTACT_EMAIL):"Email: "+CONTACT_EMAIL;
+  $("l-name").textContent=T("eName"); $("l-org").textContent=T("eOrg"); $("l-contact").textContent=T("eContact"); $("l-pkg").textContent=T("ePkg"); $("l-msg").textContent=T("eMsg");
+  $("l-sname").textContent=T("eSname"); $("l-sdate").textContent=T("eSdate"); $("l-venue").textContent=T("eVenue"); $("l-link").textContent=T("eLink");
+  $("e-gmail").textContent=T("eGmail"); $("e-mail").textContent=T("eMail"); $("e-wa").textContent=T("eWa"); $("e-copy").textContent=T("eCopy");
+  $("e-fallback").textContent=T("eFallback")(CONTACT_EMAIL);
+}
+function initEnquiry(){ enqTexts(); enqLinks(); }
+function openEnquiry(type,label){
+  const pk=(label && ALL_PK.includes(label))?label:PKGS[type][0];
+  $("e-pkg").value=pk; syncEnqType(); $("e-err").textContent=""; enqLinks();
+  goto("advertise",()=>{
+    $("enq").scrollIntoView({behavior:"smooth",block:"start"});
+    setTimeout(()=>{ try{ $("e-name").focus({preventScroll:true}); }catch(err){ $("e-name").focus(); } },500);
+  });
+}
+document.addEventListener("click",e=>{
+  const b=e.target.closest("[data-enq]"); if(!b) return;
+  e.preventDefault();
+  openEnquiry(b.dataset.enq,b.dataset.label||"");
+});
+$("e-pkg").addEventListener("change",()=>{ syncEnqType(); enqLinks(); });
+$("enq-form").addEventListener("input",()=>{ enqLinks(); $("e-err").textContent=""; $("e-err").style.color=""; });
+$("enq-form").addEventListener("submit",e=>e.preventDefault());
+["e-gmail","e-mail","e-wa"].forEach(id=>$(id).addEventListener("click",e=>{
+  enqLinks();
+  if(!enqReady()){ e.preventDefault(); $("e-err").style.color=""; $("e-err").textContent=T("eNeed"); }
+}));
+$("e-copy").addEventListener("click",()=>{
+  if(!enqReady()){ $("e-err").style.color=""; $("e-err").textContent=T("eNeed"); return; }
+  const text=enqMessage();
+  const done=()=>{ $("e-err").style.color="var(--green)"; $("e-err").textContent=T("eCopied"); };
+  const fallback=()=>{ const ta=document.createElement("textarea"); ta.value=text; ta.style.position="fixed"; ta.style.opacity="0"; document.body.appendChild(ta); ta.select(); let ok=false; try{ok=document.execCommand("copy");}catch(err){} ta.remove(); if(ok) done(); else { $("e-msg").value=text; $("e-msg").select(); $("e-err").textContent=T("eCopied"); } };
+  if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(text).then(done,fallback); } else fallback();
+});
+
+const COORDS={
+  "Kumartuli Park Sarbojanin":[22.5996,88.3642],
+  "Sovabazar Rajbari":[22.5983,88.3626],
+  "Chorebagan Sarbojanin":[22.5877,88.36],
+  "Jagat Mukherjee Park":[22.596,88.365],
+  "Tala Prattoy":[22.6055,88.37],
+  "Tala Barowari":[22.6048,88.3685],
+  "Telengabagan Sarbojanin":[22.605,88.383],
+  "Hatibagan Sarbojanin":[22.5935,88.37],
+  "Hatibagan Nabinpally":[22.5942,88.369],
+  "College Square Sarbojanin":[22.5747,88.3641],
+  "Shyambazar Athchala":[22.6015,88.3737],
+  "Jorasanko Daw Bari":[22.583,88.358],
+  "Bagbazar Sarbojanin":[22.6005,88.362],
+  "Santosh Mitra Square":[22.565,88.372],
+  "Chaltabagan Sarbojanin":[22.5872,88.3692],
+  "Beliaghata 33 Pally":[22.5668,88.3896],
+  "Sikdar Bagan Sadharan":[22.582,88.378],
+  "Wellington Square Sarbojanin":[22.563,88.359],
+  "Janbazar Rajbari":[22.5592,88.3548],
+  "Ballygunge Cultural Association":[22.5285,88.3655],
+  "Ballygunge Samaj Sebi Sangha":[22.5265,88.366],
+  "Suruchi Sangha":[22.5148,88.3315],
+  "Alipore Sarbojanin":[22.523,88.341],
+  "Chetla Agrani":[22.5205,88.3405],
+  "Shibmandir Sarbojanin Durgotsav":[22.523,88.3475],
+  "Mudiali Club":[22.513,88.347],
+  "Maddox Square":[22.528,88.3545],
+  "Hindustan Park Sarbojanin":[22.516,88.36],
+  "Singhi Park Sarbojanin":[22.5258,88.3705],
+  "Deshapriya Park Sarbojanin":[22.516,88.351],
+  "Tridhara Sammilani":[22.5145,88.3525],
+  "Lake Pally Sarbojanin":[22.511,88.356],
+  "Ekdalia Evergreen":[22.518,88.363],
+  "Bakulbagan Sarbojanin":[22.534,88.347],
+  "South City Mall Durga Puja":[22.5017,88.3608],
+  "Naktala Udayan Sangha":[22.4925,88.3715],
+  "Garia Nabadurga":[22.463,88.384],
+  "Sreebhumi Sporting Club":[22.603,88.4],
+  "Salt Lake FD Block":[22.5745,88.421],
+  "Salt Lake BJ Block":[22.588,88.412],
+  "Salt Lake AK Block":[22.5865,88.4075],
+  "Salt Lake EC Block":[22.5775,88.4015],
+  "Salt Lake DB Block":[22.5815,88.4115],
+  "Salt Lake AJ Block":[22.589,88.419],
+  "Salt Lake BD Block":[22.574,88.4085],
+  "Salt Lake BL Block":[22.581,88.416],
+  "Barisha Club":[22.4825,88.319],
+  "Behala Club":[22.4985,88.317],
+  "Behala Natun Dal":[22.495,88.315],
+  "25 Pally":[22.498,88.311],
+  "SB Park Sarbojanin":[22.487,88.308],
+  "Dum Dum Park Tarun Sangha":[22.6185,88.4065],
+  "Dum Dum Park Sarbojanin":[22.618,88.4055],
+  "Dum Dum Park Tarun Dal":[22.619,88.407],
+  "Dum Dum Park Yubak Brinda":[22.6175,88.4062],
+  "Dum Dum Park Bharat Chakra":[22.6183,88.405],
+  "Aswininagar Bandhu Mahal":[22.62,88.431],
+  "Kestopur Prafullakanan":[22.6055,88.4235],
+  "Rail Pukur United":[22.61,88.423],
+  "New Town Sarbojanin":[22.578,88.47]
+};
+const PIN='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>';
+const mapBtn=p=>'<a class="mapbtn" target="_blank" rel="noopener" href="'+mapUrl(p)+'" aria-label="'+esc(T("openMap")+": "+nameL(p))+'">'+PIN+T("mapShort")+'</a>';
+const nb=n=>lang==="bn"?toBn(n):String(n);
+
+/* ---------- route planner ---------- */
+const rad=x=>x*Math.PI/180;
+function hav(a,b){const R=6371,dLat=rad(b[0]-a[0]),dLng=rad(b[1]-a[1]);const s=Math.sin(dLat/2)**2+Math.cos(rad(a[0]))*Math.cos(rad(b[0]))*Math.sin(dLng/2)**2;return 2*R*Math.asin(Math.sqrt(s));}
+const pByName=n=>PANDALS.find(p=>p.n===n);
+const dist=(a,b)=>hav(COORDS[a.n],COORDS[b.n])*1.35;   // straight line scaled for roads
+function planOrder(names,first){
+  const pts=names.map(pByName).filter(Boolean);
+  const n=pts.length;
+  if(n<3){ if(n===2&&first!=="auto"&&pts[1].n===first) pts.reverse(); else if(n===2&&first==="auto"&&COORDS[pts[1].n][0]>COORDS[pts[0].n][0]) pts.reverse(); return pts; }
+  const D=pts.map(a=>pts.map(b=>dist(a,b)));
+  const len=o=>{let s=0;for(let i=0;i<o.length-1;i++)s+=D[o[i]][o[i+1]];return s;};
+  const nn=s=>{const o=[s],left=new Set(pts.map((_,i)=>i));left.delete(s);while(left.size){const l=o[o.length-1];let b=-1,bd=1e9;left.forEach(j=>{if(D[l][j]<bd){bd=D[l][j];b=j;}});o.push(b);left.delete(b);}return o;};
+  const opt=(o,fixed)=>{let best=o,bl=len(o),imp=true;const st=fixed?1:0;while(imp){imp=false;for(let i=st;i<best.length-1;i++)for(let k=i+1;k<best.length;k++){const c=best.slice(0,i).concat(best.slice(i,k+1).reverse(),best.slice(k+1));const l=len(c);if(l<bl-1e-9){best=c;bl=l;imp=true;}}}return best;};
+  const fixedIdx=first==="auto"?-1:pts.findIndex(p=>p.n===first);
+  const starts=fixedIdx>=0?[fixedIdx]:pts.map((_,i)=>i);
+  let bestO=null,bestL=1e9;
+  starts.forEach(s=>{const o=opt(nn(s),fixedIdx>=0);const l=len(o);if(l<bestL-1e-9){bestL=l;bestO=o;}});
+  if(fixedIdx<0){ const a=pts[bestO[0]],b=pts[bestO[bestO.length-1]]; if(COORDS[b.n][0]>COORDS[a.n][0]) bestO=bestO.slice().reverse(); } // north to south
+  return bestO.map(i=>pts[i]);
+}
+const q=p=>p.n+" Durga Puja, "+p.a+", Kolkata";
+function legUrl(stops){
+  const o=q(stops[0]), d=q(stops[stops.length-1]), w=stops.slice(1,-1).map(q).join("|");
+  return "https://www.google.com/maps/dir/?api=1&origin="+encodeURIComponent(o)+"&destination="+encodeURIComponent(d)+(w?"&waypoints="+encodeURIComponent(w):"")+"&travelmode=driving";
+}
+let plan={day:0,dwell:45,first:"auto"};
+{ const now=Date.now(); const ist=n=>Date.UTC(2026,9,n,0,0,0)-5.5*3600*1000; if(now>=ist(17)&&now<ist(22)) plan.day=Math.min(4,Math.floor((now-ist(17))/86400000)); }
+function fmtTime(mins){
+  const past=mins>=1440, m=mins%1440, h=Math.floor(m/60), mm=m%60, h12=((h+11)%12)+1, mmS=String(mm).padStart(2,"0");
+  let s;
+  if(lang==="bn"){ const per=h<4?"রাত":h<6?"ভোর":h<12?"সকাল":h<16?"দুপুর":h<18?"বিকেল":h<20?"সন্ধ্যা":"রাত"; s=per+" "+toBn(h12+":"+mmS); }
+  else s=h12+":"+mmS+" "+(h<12?"am":"pm");
+  return {s,past};
+}
+const tStr=t=>fmtTime(t).s+(fmtTime(t).past?" ("+T("plPast")+")":"");
+function timeline(order){
+  const [hh,mi]=($("pl-start").value||"18:00").split(":").map(Number);
+  let t=hh*60+mi, total=0; const out=[];
+  order.forEach((p,i)=>{
+    let leg=null;
+    if(i>0){ const km=dist(order[i-1],p), walk=km<1.2, mins=Math.max(3,Math.round(km/(walk?4.5:14)*60)); t+=mins; total+=km; leg={km,mins,walk}; }
+    const arrive=t; t+=plan.dwell; out.push({p,leg,arrive,leave:t});
+  });
+  return {stops:out,km:total,end:t};
+}
+let mselQuery="";
+function buildMselList(){
+  const qq=mselQuery.trim().toLowerCase();
+  const out=[];
+  REGIONS.forEach(R=>{
+    const items=PANDALS.filter(p=>p.r===R.id && (!qq||hay(p).includes(qq)));
+    if(!items.length) return;
+    out.push('<h4>'+esc(regionName(R))+'</h4>'+items.map(p=>'<label><input type="checkbox" data-name="'+esc(p.n)+'"'+(trail.includes(p.n)?" checked":"")+'><span>'+esc(nameL(p))+'<small>'+esc(areaL(p))+'</small></span></label>').join(""));
+  });
+  $("msel-list").innerHTML=out.join("")||'<p class="meta">—</p>';
+}
+function syncMsel(){ $("msel-list").querySelectorAll("input[type=checkbox]").forEach(c=>{c.checked=trail.includes(c.dataset.name);}); }
+function setMsel(open){ $("msel-panel").hidden=!open; $("msel-btn").setAttribute("aria-expanded",String(open)); if(open) setTimeout(()=>$("msel-q").focus({preventScroll:true}),30); }
+function renderPlannerStatic(){
+  $("l-msel").textContent=T("plSelectLbl"); $("msel-q").placeholder=T("plSearch"); $("msel-q").setAttribute("aria-label",T("plSearch"));
+  $("msel-done").textContent=T("plDone"); $("msel-clear").textContent=T("plClear");
+  $("l-day").textContent=T("plDay"); $("l-start").textContent=T("plStart"); $("l-dwell").textContent=T("plDwell"); $("l-first").textContent=T("plFirst");
+  const dates=[17,18,19,20,21];
+  $("pl-day").innerHTML=T("days").map((d,i)=>'<option value="'+i+'"'+(plan.day===i?" selected":"")+'>'+esc(d+" · "+nb(dates[i])+" "+T("mo")[9])+'</option>').join("");
+  $("pl-dwell").innerHTML=[20,30,45,60,90].map(m=>'<option value="'+m+'"'+(plan.dwell===m?" selected":"")+'>'+esc(T("plMin")(m))+'</option>').join("");
+}
+function updatePlanner(){
+  // selection button + chips
+  $("msel-btn").textContent=T("plSelect")(trail.length);
+  $("pl-chips").innerHTML=trail.map(n=>{const p=pByName(n);return '<span class="pchip">'+esc(nameL(p))+'<button type="button" data-rm="'+esc(n)+'" aria-label="'+esc(T("plRemove")+": "+nameL(p))+'">×</button></span>';}).join("");
+  syncMsel();
+  // start-with select
+  const firstSel=$("pl-first");
+  if(plan.first!=="auto" && !trail.includes(plan.first)) plan.first="auto";
+  firstSel.innerHTML='<option value="auto">'+esc(T("plAuto"))+'</option>'+trail.map(n=>'<option value="'+esc(n)+'"'+(plan.first===n?" selected":"")+'>'+esc(nameL(pByName(n)))+'</option>').join("");
+  firstSel.value=plan.first;
+  $("pl-daynote").textContent=T("dayNotes")[plan.day]||"";
+  const out=$("pl-out"), sum=$("pl-sum"), act=$("pl-actions");
+  if(trail.length<2){
+    out.innerHTML=""; act.innerHTML="";
+    sum.innerHTML='<div class="pl-empty">'+esc(T(trail.length===1?"plOne":"plEmpty"))+'</div>';
+    return;
+  }
+  const order=planOrder(trail,plan.first);
+  const tl=timeline(order);
+  sum.innerHTML='<div class="pl-sum">'+esc(T("plTotal")(order.length,nb(tl.km.toFixed(1)),tStr(tl.end)))+'</div>';
+  out.innerHTML=tl.stops.map((s,i)=>{
+    const p=s.p;
+    const leg=s.leg?'<div class="leg">'+esc(s.leg.walk?T("plLegWalk")(s.leg.mins,s.leg.km.toFixed(1)):T("plLegRide")(s.leg.mins,s.leg.km.toFixed(1)))+'</div>':"";
+    const metro=p.l==="N"?esc(T("noMetroLine")):'<i class="dot '+p.l+'" style="display:inline-block;vertical-align:middle;margin-right:5px"></i>'+esc(metroL(p))+(p.ap?" ~":"");
+    return '<li>'+leg+'<div class="stop"><span class="num">'+nb(i+1)+'</span><div><h3>'+esc(nameL(p))+mapBtn(p)+'</h3><div class="meta">'+esc(areaL(p))+' · '+metro+'</div></div><div class="times">'+esc(tStr(s.arrive))+'<span>→ '+esc(tStr(s.leave))+'</span></div></div></li>';
+  }).join("");
+  // route buttons (Google Maps takes ~9 stops per link)
+  const btns=[];
+  for(let i=0;i<order.length-1;i+=8){ const leg=order.slice(i,i+9); btns.push('<a class="btn map" target="_blank" rel="noopener" href="'+legUrl(leg)+'">'+esc(T("plLegs")(i+1,i+leg.length))+'</a>'); }
+  const dates=[17,18,19,20,21];
+  const lines=tl.stops.map((s,i)=>(i+1)+". "+tStr(s.arrive)+"  "+nameL(s.p)+" ("+areaL(s.p)+")");
+  const share=T("plShareHead")+" – "+T("days")[plan.day]+" "+nb(dates[plan.day])+" "+T("mo")[9]+"\n"+lines.join("\n")+"\n"+(location.href.startsWith("http")?location.href:"");
+  btns.push('<a class="btn wa" target="_blank" rel="noopener" href="https://wa.me/?text='+encodeURIComponent(share)+'">'+esc(T("plWa"))+'</a>');
+  act.innerHTML=btns.join("");
+}
+function toggleTrail(name,on){
+  const i=trail.indexOf(name);
+  if(on&&i===-1) trail.push(name); if(!on&&i>-1) trail.splice(i,1);
+  saveTrail(); renderRegions(); renderTrail(); updatePlanner();
+}
+function renderPlannerAll(){ renderPlannerStatic(); buildMselList(); updatePlanner(); }
+$("msel-btn").addEventListener("click",()=>setMsel($("msel-panel").hidden));
+$("msel-done").addEventListener("click",()=>{ setMsel(false); $("msel-btn").focus(); });
+$("msel-clear").addEventListener("click",()=>{ trail=[]; saveTrail(); renderRegions(); renderTrail(); updatePlanner(); });
+$("msel-q").addEventListener("input",e=>{ mselQuery=e.target.value; buildMselList(); });
+$("msel-list").addEventListener("change",e=>{ const c=e.target.closest("input[type=checkbox]"); if(c) toggleTrail(c.dataset.name,c.checked); });
+$("pl-chips").addEventListener("click",e=>{ const b=e.target.closest("[data-rm]"); if(b) toggleTrail(b.dataset.rm,false); });
+$("pl-day").addEventListener("change",e=>{ plan.day=Number(e.target.value); updatePlanner(); });
+$("pl-start").addEventListener("input",updatePlanner);
+$("pl-dwell").addEventListener("change",e=>{ plan.dwell=Number(e.target.value); updatePlanner(); });
+$("pl-first").addEventListener("change",e=>{ plan.first=e.target.value; updatePlanner(); });
+document.addEventListener("click",e=>{ if(!$("msel-panel").hidden && !e.target.closest("#msel")) setMsel(false); });
+document.addEventListener("keydown",e=>{ if(e.key==="Escape" && !$("msel-panel").hidden){ setMsel(false); $("msel-btn").focus(); } });
+
+/* ---------- legal dialog ---------- */
+function renderLegal(){
+  const o=OWNER_NAME||pick("the owner of this guide","এই গাইডের মালিক");
+  const arr=T(legalKind==="terms"?"terms":"privacy")(o,GOVERNING_LAW,CONTACT_EMAIL);
+  $("legal-h").textContent=T(legalKind==="terms"?"lTerms":"lPriv");
+  $("legal-upd").textContent=T("lUpdated")+(lang==="bn"?LEGAL_UPDATED[1]:LEGAL_UPDATED[0]);
+  $("legal-x").setAttribute("aria-label",T("lClose"));
+  $("legal-body").innerHTML=arr.map(s=>'<h3 style="margin:16px 0 4px;font-size:1.05rem">'+esc(s[0])+'</h3><p style="margin:0">'+esc(s[1])+'</p>').join("");
+}
+function openLegal(k){
+  legalKind=k; renderLegal();
+  const d=$("legal");
+  if(typeof d.showModal==="function") d.showModal(); else d.setAttribute("open","");
+}
+function closeLegal(){ const d=$("legal"); if(typeof d.close==="function") d.close(); else d.removeAttribute("open"); legalKind=""; }
+document.addEventListener("click",e=>{ const b=e.target.closest("[data-legal]"); if(!b) return; e.preventDefault(); openLegal(b.dataset.legal); });
+$("legal-x").addEventListener("click",closeLegal);
+$("legal").addEventListener("click",e=>{ if(e.target===$("legal")) closeLegal(); });
+$("legal").addEventListener("close",()=>{legalKind="";});
+
+/* ---------- home page + view routing ---------- */
+const VIEWS=["home","pandals","plan","shows","wishes","advertise"];
+const LEGACY={planner:"plan",regions:"pandals",shows:"shows",sponsors:"home",enq:"advertise",home:"home"};
+let currentView="";
+function routeFromHash(){
+  let r=(location.hash||"").replace(/^#\/?/,"");
+  if(LEGACY[r]) r=LEGACY[r];
+  return VIEWS.includes(r)?r:"home";
+}
+function showView(v){
+  const changed=v!==currentView;
+  currentView=v;
+  document.querySelectorAll(".view").forEach(el=>{ el.hidden = el.dataset.view!==v; });
+  document.querySelectorAll("#tabs a").forEach(a=>{ if(a.dataset.nav===v) a.setAttribute("aria-current","page"); else a.removeAttribute("aria-current"); });
+  document.body.dataset.view=v;
+  if(changed) window.scrollTo(0,0);
+}
+function goto(v,cb){
+  if(currentView!==v){ showView(v); try{ history.pushState(null,"","#/"+v); }catch(e){} }
+  if(cb) setTimeout(cb,40);
+}
+window.addEventListener("hashchange",()=>showView(routeFromHash()));
+window.addEventListener("popstate",()=>showView(routeFromHash()));
+const HOME_HL=["Kumartuli Park Sarbojanin","Santosh Mitra Square","Ballygunge Samaj Sebi Sangha","Suruchi Sangha","Sreebhumi Sporting Club","Salt Lake FD Block"];
+function renderHome(){
+  $("home-stats").textContent=T("stats")(PANDALS.length,REGIONS.length);
+  $("home-feats").innerHTML=T("feats").map(f=>'<a class="feat" href="'+f[2]+'"><b>'+esc(f[0])+'</b><span>'+esc(f[1])+'</span></a>').join("");
+  $("home-regions").innerHTML=REGIONS.map(R=>'<button type="button" class="rtile" data-region-go="'+R.id+'"><b>'+esc(regionName(R))+'</b><span>'+esc(T("regionsSub")(PANDALS.filter(p=>p.r===R.id).length))+'</span></button>').join("");
+  $("home-hl").innerHTML=HOME_HL.map(pByName).filter(Boolean).map(itemHTML).join("");
+  $("home-hiw").innerHTML=T("hiw").map((s,i)=>'<li><span class="num">'+nb(i+1)+'</span><div><b>'+esc(s[0])+'</b><span class="t">'+esc(s[1])+'</span></div></li>').join("");
+}
+document.addEventListener("click",e=>{
+  const b=e.target.closest("[data-region-go]"); if(!b) return;
+  region=b.dataset.regionGo; query=""; lineF=""; $("q").value=""; renderLineSelect(); renderRegions(); renderChips();
+  goto("pandals",()=>{ const el=$("r-"+region); if(el) el.scrollIntoView(); });
+});
+function setHdr(){ const hd=$("site-hdr"); if(hd) document.documentElement.style.setProperty("--hdr",hd.offsetHeight+"px"); }
+window.addEventListener("resize",setHdr);
+if(window.ResizeObserver){ new ResizeObserver(setHdr).observe($("site-hdr")); }
+
+/* ---------- wishing posts page ---------- */
+const WISH_CAT_IDS=["mahalaya","shashthi","saptami","ashtami","navami","bijoya","sharodiya","business"];
+let wishCat="all", wishQ="", wishSort="feat";
+const safeUrl=u=>/^https?:\/\//i.test(String(u||""))?String(u):"";
+function wishCard(w){
+  const link=safeUrl(w.url), img=safeUrl(w.img);
+  const title=pick(w.title,w.title_bn);
+  const visual=img?'<img src="'+esc(img)+'" alt="'+esc(title)+'" loading="lazy">':'<div class="poster"><span class="pg">'+esc(T("wpPoster")[w.cat]||T("wpPoster").sharodiya)+'</span><span class="pt">'+esc(title)+'</span></div>';
+  const buy=link?'<a class="btn map" target="_blank" rel="noopener" href="'+esc(link)+'">'+T("wpBuy")+'</a>':"";
+  return '<article class="wcard'+(w.featured?" promo":"")+'"><div class="wimg">'+visual+'</div><div class="wbody"><div><span class="tag" style="margin:0">'+esc(T("wpCats")[w.cat]||w.cat)+'</span>'+(w.featured?'<span class="tag sp">'+T("wpFeatured")+'</span>':"")+'</div><h3>'+esc(title)+'</h3>'+(w.format?'<div class="meta">'+esc(w.format)+'</div>':"")+(w.use?'<div class="meta">'+esc(pick(w.use,w.use_bn))+'</div>':"")+'<div class="wbuy"><span class="price">'+esc(w.price||"")+'</span>'+buy+'</div></div></article>';
+}
+function renderWishes(){
+  $("wp-cats").innerHTML=[["all",T("wpAll")]].concat(WISH_CAT_IDS.map(c=>[c,T("wpCats")[c]])).map(c=>'<button type="button" class="chip" data-wc="'+c[0]+'" aria-pressed="'+(wishCat===c[0])+'">'+esc(c[1])+'</button>').join("");
+  $("wp-sort").innerHTML=[["feat",T("wpSortFeat")],["low",T("wpSortLow")],["high",T("wpSortHigh")],["new",T("wpSortNew")]].map(o=>'<option value="'+o[0]+'"'+(wishSort===o[0]?" selected":"")+'>'+esc(o[1])+'</option>').join("");
+  let list=WISH_POSTS.filter(w=>wishCat==="all"||w.cat===wishCat);
+  const qq=wishQ.trim().toLowerCase();
+  if(qq) list=list.filter(w=>((w.title||"")+" "+(w.title_bn||"")+" "+(w.format||"")).toLowerCase().includes(qq));
+  const num=w=>typeof w.priceNum==="number"?w.priceNum:1e12;
+  list=list.slice().sort((a,b)=> wishSort==="low"?num(a)-num(b) : wishSort==="high"?(num(b)===1e12?-1:0)||num(b)-num(a) : wishSort==="new"?String(b.added||"").localeCompare(String(a.added||"")) : (b.featured?1:0)-(a.featured?1:0)||String(b.added||"").localeCompare(String(a.added||"")));
+  $("wp-grid").innerHTML = list.length ? list.map(wishCard).join("") : '<p class="empty" style="grid-column:1/-1">'+T(WISH_POSTS.length?"wpNone":"wpSoon")+'</p>';
+}
+$("wp-cats").addEventListener("click",e=>{ const b=e.target.closest("[data-wc]"); if(!b) return; wishCat=b.dataset.wc; renderWishes(); });
+$("wp-q").addEventListener("input",e=>{ wishQ=e.target.value; renderWishes(); });
+$("wp-sort").addEventListener("change",e=>{ wishSort=e.target.value; renderWishes(); });
+// if a preview image cannot load, fall back to the styled poster
+document.addEventListener("error",e=>{
+  const im=e.target; if(!im||im.tagName!=="IMG"||!im.closest(".wimg")) return;
+  const alt=im.getAttribute("alt")||"";
+  im.closest(".wimg").innerHTML='<div class="poster"><span class="pg">'+esc(T("wpPoster").sharodiya)+'</span><span class="pt">'+esc(alt)+'</span></div>';
+},true);
+
+/* ---------- links that must work inside restricted viewers ---------- */
+// In-page navigation without relying on the browser following "#/page" links
+document.addEventListener("click",e=>{
+  const a=e.target.closest('a[href^="#/"]'); if(!a||e.defaultPrevented) return;
+  e.preventDefault();
+  const v=a.getAttribute("href").slice(2);
+  goto(VIEWS.includes(v)?v:"home");
+});
+// External links: open in a new tab, or show a copyable link if the viewer blocks it
+function showLinkFallback(url){
+  $("lf-h").textContent=T("lfTitle"); $("lf-p").textContent=T("lfText");
+  $("lf-copy").textContent=T("lfCopy"); $("lf-close").textContent=T("lfClose");
+  $("lf-url").value=url; $("lf-msg").textContent=""; $("lf-msg").style.color="";
+  const d=$("linkfb"); if(typeof d.showModal==="function") d.showModal(); else d.setAttribute("open","");
+  setTimeout(()=>{ $("lf-url").select(); },30);
+}
+document.addEventListener("click",e=>{
+  const a=e.target.closest('a[target="_blank"]'); if(!a||e.defaultPrevented) return;
+  const href=a.href; const raw=a.getAttribute("href")||"";
+  if(!raw||raw==="#"||raw.startsWith("#")) { e.preventDefault(); return; }
+  e.preventDefault();
+  let w=null;
+  try{ w=window.open(href,"_blank"); }catch(err){}
+  if(w){ try{ w.opener=null; }catch(err){} } else showLinkFallback(href);
+});
+$("lf-close").addEventListener("click",()=>$("linkfb").close());
+$("lf-copy").addEventListener("click",()=>{
+  const url=$("lf-url").value;
+  const ok=()=>{ $("lf-msg").style.color="var(--green)"; $("lf-msg").textContent=T("lfCopied"); };
+  const fb=()=>{ $("lf-url").select(); let r=false; try{ r=document.execCommand("copy"); }catch(err){} if(r) ok(); else $("lf-msg").textContent=T("lfCopied"); };
+  if(navigator.clipboard&&navigator.clipboard.writeText) navigator.clipboard.writeText(url).then(ok,fb); else fb();
+});
+
+/* ---------- events ---------- */
+document.querySelector(".lang").addEventListener("click",e=>{
+  const b=e.target.closest("button[data-lang]"); if(!b||b.dataset.lang===lang) return;
+  lang=b.dataset.lang;
+  try{ localStorage.setItem("pujo26-lang",lang); }catch(err){}
+  renderAll();
+});
+document.getElementById("chips").addEventListener("click",e=>{
+  const b=e.target.closest(".chip"); if(!b) return;
+  region=b.dataset.r; renderRegions(); renderChips();
+  if(region!=="all"){ const el=document.getElementById("r-"+region); if(el) el.scrollIntoView(); }
+});
+document.getElementById("q").addEventListener("input",e=>{query=e.target.value.trim().toLowerCase();renderRegions();renderChips();});
+document.getElementById("line").addEventListener("change",e=>{lineF=e.target.value;renderRegions();renderChips();});
+document.addEventListener("click",e=>{
+  const b=e.target.closest(".btn.add"); if(!b) return;
+  const n=b.dataset.name, i=trail.indexOf(n);
+  if(i>-1) trail.splice(i,1); else trail.push(n);
+  saveTrail();
+  document.querySelectorAll('.btn.add').forEach(x=>{ if(x.dataset.name===n){ x.setAttribute("aria-pressed",String(i===-1)); x.textContent = i===-1 ? T("inTrail") : T("addTrail"); } });
+  renderTrail(); updatePlanner();
+});
+document.getElementById("trail-clear").addEventListener("click",()=>{trail=[];saveTrail();renderRegions();renderTrail();updatePlanner();});
+document.getElementById("dchips").addEventListener("click",e=>{const b=e.target.closest(".chip"); if(!b) return; showDate=b.dataset.d; renderShows();});
+document.getElementById("scat").addEventListener("change",e=>{showCat=e.target.value;renderShows();});
+
+renderAll();
+showView(routeFromHash());
+setHdr();
+</script>
+</body>
+</html>
