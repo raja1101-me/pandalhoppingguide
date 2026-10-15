@@ -500,7 +500,7 @@ footer p{max-width:72ch;margin:0 0 10px}
     <h2 id="iv-h" style="font-size:1.25rem;padding-right:34px"></h2>
     <img id="iv-img" alt="">
     <p class="meta" id="iv-hint" style="margin-top:10px"></p>
-    <div class="acts2"><a class="btn map" id="iv-dl" href="#" download></a><button type="button" class="btn" id="iv-close"></button></div>
+    <div class="acts2"><button type="button" class="btn map" id="iv-dl"></button><button type="button" class="btn" id="iv-close"></button></div>
   </div>
 </dialog>
 
@@ -1556,7 +1556,7 @@ function wishCard(w){
   const title=pick(w.title,w.title_bn);
   const visual=img?'<button type="button" class="wimg wimg-btn" data-iv="'+esc(w.id||title)+'" aria-label="'+esc(T("wpView")+": "+title)+'"><img src="'+esc(img)+'" alt="'+esc(w.alt||title)+'" loading="lazy"></button>':'<div class="wimg"><div class="poster"><span class="pg">'+esc(T("wpPoster")[w.cat]||T("wpPoster").sharodiya)+'</span><span class="pt">'+esc(title)+'</span></div></div>';
   const buy=link?'<a class="btn map" target="_blank" rel="noopener" href="'+esc(link)+'">'+T("wpBuy")+'</a>':"";
-  const down=dl?'<a class="btn map" href="'+esc(dl)+'" download="'+esc(w.file||"wishing-post.jpg")+'">'+T("wpDownload")+'</a>':"";
+  const down=dl?'<button type="button" class="btn map" data-dl="'+esc(w.id||title)+'">'+T("wpDownload")+'</button>':"";
   const price=w.free?T("wpFree"):(w.price||"");
   return '<article class="wcard'+(w.featured?" promo":"")+'">'+visual+'<div class="wbody"><div><span class="tag" style="margin:0">'+esc(T("wpCats")[w.cat]||w.cat)+'</span>'+(w.featured?'<span class="tag sp">'+T("wpFeatured")+'</span>':"")+'</div><h3>'+esc(title)+'</h3>'+(w.format?'<div class="meta">'+esc(w.format)+'</div>':"")+(w.use?'<div class="meta">'+esc(pick(w.use,w.use_bn))+'</div>':"")+'<div class="wbuy" style="flex-wrap:wrap"><span class="price">'+esc(price)+'</span><span style="display:flex;gap:8px;flex-wrap:wrap">'+down+buy+'</span></div></div></article>';
 }
@@ -1581,13 +1581,42 @@ document.addEventListener("error",e=>{
   wrap.innerHTML='<div class="poster"><span class="pg">'+esc(T("wpPoster").sharodiya)+'</span><span class="pt">'+esc(alt)+'</span></div>';
 },true);
 
+/* ---------- saving images (works as a normal download; in restricted viewers it also opens the image to save by hand) ---------- */
+function dataUriToBlob(u){
+  const m=/^data:([^;,]+);base64,([\s\S]*)$/.exec(u); if(!m) return null;
+  const bin=atob(m[2]), arr=new Uint8Array(bin.length);
+  for(let i=0;i<bin.length;i++) arr[i]=bin.charCodeAt(i);
+  return new Blob([arr],{type:m[1]});
+}
+async function saveAsset(src,name){
+  let blob=null;
+  if(src.startsWith("data:")) blob=dataUriToBlob(src);
+  else { try{ const r=await fetch(src); if(r.ok) blob=await r.blob(); }catch(err){} }
+  const a=document.createElement("a");
+  const url=blob?URL.createObjectURL(blob):src;
+  a.href=url; a.download=name; a.rel="noopener"; a.style.display="none";
+  document.body.appendChild(a); a.click();
+  setTimeout(()=>{ a.remove(); if(blob) URL.revokeObjectURL(url); },4000);
+}
+const embedded=(()=>{ try{ return window.self!==window.top; }catch(e){ return true; } })();
+document.addEventListener("click",e=>{
+  const b=e.target.closest("[data-dl]"); if(!b) return;
+  e.preventDefault();
+  const id=b.dataset.dl;
+  const w=WISH_POSTS.find(x=>(x.id||pick(x.title,x.title_bn))===id); if(!w) return;
+  const src=safeAsset(w.download); if(!src) return;
+  saveAsset(src,w.file||"wishing-post.jpg");
+  // Some viewers block downloads without any message, so also show the image with save instructions
+  if(embedded && b.id!=="iv-dl") setTimeout(()=>openImage(id),150);
+});
+
 /* ---------- full-size image viewer with download ---------- */
 function openImage(id){
   const w=WISH_POSTS.find(x=>(x.id||pick(x.title,x.title_bn))===id); if(!w) return;
   const title=pick(w.title,w.title_bn), img=safeAsset(w.img), dl=safeAsset(w.download);
   $("iv-h").textContent=title; $("iv-img").src=img; $("iv-img").alt=w.alt||title;
   $("iv-hint").textContent=T("wpHint"); $("iv-close").textContent=T("lfClose"); $("iv-x").setAttribute("aria-label",T("lfClose"));
-  const a=$("iv-dl"); if(dl){ a.hidden=false; a.href=dl; a.setAttribute("download",w.file||"wishing-post.jpg"); a.textContent=T("wpDownload"); } else a.hidden=true;
+  const a=$("iv-dl"); if(dl){ a.hidden=false; a.dataset.dl=w.id||pick(w.title,w.title_bn); a.textContent=T("wpDownload"); } else a.hidden=true;
   const d=$("imgview"); if(typeof d.showModal==="function") d.showModal(); else d.setAttribute("open","");
 }
 document.addEventListener("click",e=>{ const b=e.target.closest("[data-iv]"); if(b){ e.preventDefault(); openImage(b.dataset.iv); } });
