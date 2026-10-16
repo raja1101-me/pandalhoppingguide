@@ -270,6 +270,272 @@ footer p{max-width:72ch;margin:0 0 10px}
   .show{grid-template-columns:1fr}
   .show .right{align-items:flex-start;text-align:left;flex-direction:row;flex-wrap:wrap;align-items:center}
 }
+
+/* ===================== MODERN SKIN ===================== */
+:root{
+  --paper:#F4F3FA; --ink:#16142E; --ink-soft:#585B7A; --line:#E2E1EF;
+  --lal:#D4193C; --gold:#FFB627;
+  --r-lg:22px; --r-md:16px; --r-sm:11px;
+  --sh1:0 1px 2px rgba(22,20,46,.06),0 6px 18px rgba(22,20,46,.07);
+  --sh2:0 10px 34px rgba(22,20,46,.16);
+  --ease:cubic-bezier(.2,.8,.2,1);
+}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes viewIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@keyframes dlgIn{from{opacity:0;transform:translateY(14px) scale(.96)}to{opacity:1;transform:none}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes twinkle{0%{opacity:.3;transform:scale(.8)}100%{opacity:1;transform:scale(1.15)}}
+@keyframes pop{0%{transform:scale(1)}40%{transform:scale(1.14)}100%{transform:scale(1)}}
+@keyframes bump{0%{transform:scale(1)}40%{transform:scale(1.08)}100%{transform:scale(1)}}
+@keyframes stopIn{from{opacity:0;transform:translateX(-14px)}to{opacity:1;transform:none}}
+@keyframes pinHop{0%,100%{transform:translateY(0)}40%{transform:translateY(-3px)}70%{transform:translateY(0)}}
+
+body{background:var(--paper)}
+.view.enter{animation:viewIn .34s var(--ease)}
+
+/* header: frosted glass, sliding tab marker */
+.site-hdr{background:var(--paper);background:color-mix(in srgb,var(--paper) 78%,transparent);-webkit-backdrop-filter:saturate(1.5) blur(16px);backdrop-filter:saturate(1.5) blur(16px);border-bottom:1px solid color-mix(in srgb,var(--line) 70%,transparent)}
+.brand-name{letter-spacing:.01em}
+.tabs{position:relative;padding-bottom:7px}
+.tabs a{border-bottom:0;border-radius:10px;padding:9px 14px;transition:color .2s,background .2s}
+.tabs a:hover{background:color-mix(in srgb,var(--lal) 9%,transparent)}
+.tabs a[aria-current="page"]{color:var(--lal)}
+.tab-ind{position:absolute;left:0;bottom:0;height:3px;width:20px;border-radius:3px;background:linear-gradient(90deg,var(--lal),var(--gold));transition:transform .4s var(--ease),width .4s var(--ease)}
+.lang{border:0;background:var(--line);border-radius:999px;padding:3px;overflow:visible}
+.lang button{border-radius:999px;padding:7px 14px;transition:background .25s,color .25s}
+
+/* buttons */
+.btn{border-radius:12px;border-width:1.5px;transition:transform .16s var(--ease),box-shadow .2s,background .2s,color .2s,filter .2s}
+.btn:hover{transform:translateY(-1px);box-shadow:var(--sh1)}
+.btn:active{transform:scale(.96);box-shadow:none}
+.btn.map{background:linear-gradient(135deg,var(--lal),#B3102E);border-color:transparent;color:#fff;box-shadow:0 5px 16px color-mix(in srgb,var(--lal) 32%,transparent)}
+.btn.wa{background:linear-gradient(135deg,#25C26B,#16944F);border-color:transparent}
+.btn.add[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.btn.pop,.btn.add.pop{animation:pop .38s var(--ease)}
+.chip{transition:background .22s,color .22s,border-color .22s,transform .15s var(--ease);border-color:var(--line)}
+.chip:hover{border-color:var(--lal)}
+.chip:active{transform:scale(.95)}
+.chip[aria-pressed="true"]{box-shadow:0 4px 12px color-mix(in srgb,var(--ink) 25%,transparent)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--lal);box-shadow:0 0 0 4px color-mix(in srgb,var(--lal) 18%,transparent)}
+.search,.sel{border-radius:12px;transition:border-color .2s,box-shadow .2s}
+
+/* hero: a pandal at night */
+.hero-band{position:relative;overflow:hidden;color:#fff;padding:70px 0 40px;
+  background:
+   radial-gradient(60% 80% at 85% 0%,rgba(255,182,39,.30),transparent 62%),
+   radial-gradient(55% 70% at 0% 100%,rgba(212,25,60,.38),transparent 62%),
+   linear-gradient(160deg,#14112E,#26103F 68%,#3C0F36)}
+.hero-band::after{content:"";position:absolute;left:0;right:0;bottom:0;height:12px;background:linear-gradient(#D4193C,#D4193C) 0 0/100% 6px no-repeat,linear-gradient(#D4193C,#D4193C) 0 9px/100% 2px no-repeat}
+.hero-band .hero{position:relative;padding-top:10px;padding-bottom:20px}
+.hero-band .hero h1{color:#fff;font-size:clamp(3.8rem,14vw,8rem);text-shadow:0 0 46px rgba(255,182,39,.4)}
+.hero-band .sub{color:#fff}
+.hero-band .lede{color:rgba(255,255,255,.84)}
+.hero-band .stats{color:#FFD98A}
+.hero-band .note{color:rgba(255,255,255,.66)}
+.hero-band .btn{background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.35);color:#fff;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);box-shadow:none}
+.hero-band .btn.map{background:linear-gradient(135deg,#FFCB52,#FFA800);border-color:transparent;color:#2A1B00;box-shadow:0 8px 26px rgba(255,170,0,.38)}
+.hero-band .btn.wa{background:linear-gradient(135deg,#25C26B,#16944F);border-color:transparent}
+.hero-band .when{display:grid;grid-template-columns:repeat(auto-fit,minmax(128px,1fr));gap:10px;border:0;border-radius:0;background:transparent}
+.hero-band .when>div{flex:none;border:1px solid rgba(255,255,255,.16);border-radius:16px;background:rgba(255,255,255,.07);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.hero-band .when span{color:rgba(255,255,255,.7)}
+.hero-band .when .now{background:linear-gradient(135deg,#E5214A,#B3102E);border-color:transparent;color:#fff}
+.hero-band .when .now span{color:rgba(255,255,255,.92)}
+.lights{position:absolute;left:0;right:0;top:0;height:46px;pointer-events:none}
+.swag{position:absolute;left:0;top:0;width:100%;height:40px}
+.bulb{position:absolute;width:9px;height:9px;margin-left:-4px;border-radius:50%;background:var(--c);box-shadow:0 0 10px 3px var(--c);animation:twinkle 2.6s ease-in-out infinite alternate;animation-delay:var(--d,0s)}
+.hero-band.intro .hero>*{animation:rise .85s var(--ease) both}
+.hero-band.intro .hero>*:nth-child(1){animation-delay:.05s}
+.hero-band.intro .hero>*:nth-child(2){animation-delay:.14s}
+.hero-band.intro .hero>*:nth-child(3){animation-delay:.22s}
+.hero-band.intro .hero>*:nth-child(4){animation-delay:.30s}
+.hero-band.intro .hero>*:nth-child(5){animation-delay:.38s}
+.hero-band.intro .hero>*:nth-child(6){animation-delay:.46s}
+.hero-band.intro .hero>*:nth-child(7){animation-delay:.54s}
+.hero-band.intro .hero>*:nth-child(8){animation-delay:.62s}
+
+/* home tiles */
+.sec h2,.region h2{letter-spacing:-.01em}
+.feats{border:0;gap:14px;background:transparent;border-radius:0}
+.feat{position:relative;overflow:hidden;margin:0;border:1px solid var(--line);border-top:1px solid var(--line);border-radius:var(--r-lg);background:var(--surface);box-shadow:var(--sh1);padding:22px;transition:transform .28s var(--ease),box-shadow .28s,border-color .28s}
+.feat:hover{transform:translateY(-4px);box-shadow:var(--sh2);border-color:color-mix(in srgb,var(--lal) 30%,var(--line))}
+.feat:active{transform:scale(.98)}
+.fico{display:grid;place-items:center;width:46px;height:46px;border-radius:14px;margin-bottom:14px;background:linear-gradient(135deg,color-mix(in srgb,var(--lal) 16%,transparent),color-mix(in srgb,var(--gold) 26%,transparent));color:var(--lal);transition:transform .3s var(--ease)}
+.fico svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.feat:hover .fico{transform:rotate(-6deg) scale(1.08)}
+.rtile{border-radius:var(--r-md);box-shadow:var(--sh1);transition:transform .25s var(--ease),box-shadow .25s,border-left-width .2s}
+.rtile:hover{transform:translateY(-3px);box-shadow:var(--sh2);border-left-width:9px}
+.rtile:active{transform:scale(.97)}
+
+/* listings as soft cards */
+.list{border-top:0;display:grid;gap:12px;margin-top:18px}
+.item{position:relative;border:1px solid var(--line);border-left:1px solid var(--line);border-radius:var(--r-md);background:var(--surface);padding:16px 18px 16px 24px;box-shadow:var(--sh1);transition:transform .25s var(--ease),box-shadow .25s,border-color .25s}
+.item::before{content:"";position:absolute;left:0;top:14px;bottom:14px;width:4px;border-radius:0 4px 4px 0;background:linear-gradient(var(--lal),var(--gold))}
+.item:hover{transform:translateY(-2px);box-shadow:var(--sh2);border-color:color-mix(in srgb,var(--lal) 30%,var(--line))}
+.metro .mline{background:color-mix(in srgb,var(--none) 12%,transparent);padding:4px 11px;border-radius:999px}
+.mapbtn{transition:transform .2s var(--ease),filter .2s;box-shadow:0 3px 10px color-mix(in srgb,var(--lal) 28%,transparent)}
+.mapbtn:hover svg{animation:pinHop .5s var(--ease)}
+.mapbtn:active{transform:scale(.94)}
+.hoods a{transition:background .2s,border-color .2s,color .2s}
+.hoods a:hover{background:color-mix(in srgb,var(--lal) 8%,transparent)}
+.inline-sp{border-radius:var(--r-md)}
+
+/* planner */
+.msel-btn{border-radius:14px;box-shadow:var(--sh1);transition:box-shadow .2s,border-color .2s}
+.msel-panel{border-radius:var(--r-md);border-width:1.5px;animation:dlgIn .22s var(--ease);transform-origin:top center}
+.msel-list label{border-radius:10px;transition:background .15s}
+.msel-list label:hover{background:color-mix(in srgb,var(--lal) 7%,transparent)}
+.pchip{animation:pop .3s var(--ease)}
+.pl-sum{border-radius:var(--r-md);border-left-width:6px;background:linear-gradient(90deg,color-mix(in srgb,var(--lal) 9%,var(--surface)),var(--surface));box-shadow:var(--sh1)}
+.route .stop{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:12px 14px;box-shadow:var(--sh1)}
+.route.anim li{animation:stopIn .45s var(--ease) both;animation-delay:calc(var(--i,0)*70ms)}
+.num{background:linear-gradient(135deg,var(--lal),#B3102E);box-shadow:0 4px 12px color-mix(in srgb,var(--lal) 30%,transparent)}
+.pl-empty{border-radius:var(--r-md)}
+
+/* shows, wishes, sponsors, forms */
+.shows{border-top:0}
+.show{border:1px solid var(--line);border-radius:var(--r-md);background:var(--surface);padding:16px 18px;box-shadow:var(--sh1);margin-bottom:12px;transition:transform .25s var(--ease),box-shadow .25s}
+.show:hover{transform:translateY(-2px);box-shadow:var(--sh2)}
+.show.promo{background:var(--gold-soft)}
+.moments,.disc{border-radius:var(--r-md)}
+.wcard{border-radius:var(--r-lg);border:1px solid var(--line);border-top:1px solid var(--line);box-shadow:var(--sh1);transition:transform .3s var(--ease),box-shadow .3s}
+.wcard:hover{transform:translateY(-4px);box-shadow:var(--sh2)}
+.wcard.promo{border-color:var(--gold)}
+.wimg img{transition:transform .6s var(--ease)}
+.wcard:hover .wimg img{transform:scale(1.05)}
+.sponsor-band{border-radius:26px;border:1.5px solid color-mix(in srgb,var(--gold) 70%,transparent);background:linear-gradient(160deg,var(--gold-soft),color-mix(in srgb,var(--gold-soft) 60%,var(--paper)))}
+.slot{border-radius:var(--r-md);box-shadow:var(--sh1);transition:transform .25s var(--ease),box-shadow .25s}
+.slot:hover{transform:translateY(-3px);box-shadow:var(--sh2)}
+.simg{border-radius:12px}
+.rates table{border-radius:var(--r-md);overflow:hidden}
+.enq-sec{border-radius:26px;border:1px solid var(--line);box-shadow:var(--sh2)}
+dialog.enq{border:0;border-radius:var(--r-lg);box-shadow:0 30px 90px rgba(10,8,30,.5)}
+dialog.enq[open]{animation:dlgIn .28s var(--ease)}
+dialog.enq[open]::backdrop{background:rgba(14,12,36,.58);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);animation:fadeIn .25s}
+
+/* floating bars, toast */
+.trail{display:block;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));padding:12px 16px;border-radius:20px;background:var(--ink);box-shadow:var(--sh2);transform:translateY(170%);opacity:0;visibility:hidden;pointer-events:none;transition:transform .5s cubic-bezier(.2,.9,.25,1.1),opacity .3s,visibility 0s linear .5s}
+.trail.show{transform:none;opacity:1;visibility:visible;pointer-events:auto;transition-delay:0s}
+.trail .btn{background:linear-gradient(135deg,var(--lal),#B3102E);color:#fff}
+.trail .btn.clear{background:transparent;color:var(--paper)}
+#trail-count.bump{display:inline-block;animation:bump .4s var(--ease)}
+.fab{right:14px}
+body.has-trail .fab{bottom:calc(92px + env(safe-area-inset-bottom,0px))}
+.fab .btn{border-radius:999px;box-shadow:0 6px 20px rgba(14,12,36,.3)}
+.toast{position:fixed;left:50%;bottom:calc(22px + env(safe-area-inset-bottom,0px));z-index:60;max-width:calc(100% - 32px);padding:11px 20px;border-radius:999px;background:var(--ink);color:var(--paper);font-weight:600;font-size:.93rem;box-shadow:var(--sh2);opacity:0;transform:translate(-50%,24px);pointer-events:none;transition:transform .4s cubic-bezier(.2,.9,.25,1.2),opacity .25s}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+body.has-trail .toast{bottom:calc(96px + env(safe-area-inset-bottom,0px))}
+
+/* footer */
+footer{margin-top:72px;border-top:0;background:#14122B;color:#B9BBD6;padding:44px 0 140px}
+footer #copyright{color:#fff!important}
+footer .linkbtn{color:#fff}
+
+/* layout fixes */
+.feats{grid-template-columns:repeat(auto-fit,minmax(176px,1fr))}
+.rtiles{grid-template-columns:repeat(auto-fit,minmax(148px,1fr))}
+.tabs a{padding:9px 12px}
+@media (max-width:1400px){.brand-bn{display:none}}
+
+@media (max-width:620px){.lang button{padding:6px 10px;font-size:.84rem}.brand-name{font-size:.95rem}.hdr-in{gap:2px 10px}}
+
+/* toast sits under the header so it never collides with the trail bar */
+.toast{top:calc(env(safe-area-inset-top,0px) + var(--hdr,60px) + 14px);bottom:auto;width:max-content;transform:translate(-50%,-18px)}
+.toast.show{transform:translate(-50%,0)}
+body.has-trail .toast{bottom:auto}
+@media (max-width:620px){
+  .fab .btn:not(.wa){display:none}
+  .trail{padding:10px 12px}
+  .trail .btn{padding:8px 12px;font-size:.85rem}
+  body.has-trail .fab{bottom:calc(150px + env(safe-area-inset-bottom,0px))}
+}
+
+/* ===================== TRADITIONAL PALETTE: haldi yellow, sindoor red, gold ===================== */
+:root{
+  --paper:#FFF6DC; --surface:#FFFDF6; --ink:#3B0A10; --ink-soft:#6E4B44; --line:#EBD59A;
+  --lal:#C1121F; --lal-ink:#FFFFFF; --gold:#F5B301; --gold-soft:#FFE9A6; --gold-ink:#5A3600;
+  --sh1:0 1px 2px rgba(59,10,16,.07),0 6px 18px rgba(120,40,20,.10);
+  --sh2:0 12px 34px rgba(90,20,15,.22);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#25090D; --surface:#341119; --ink:#FFF0CC; --ink-soft:#DDBBA3; --line:#552B22;
+    --lal:#FF5A5F; --lal-ink:#2A0508; --gold:#FFC83D; --gold-soft:#3A2A09; --gold-ink:#FFE3A0;
+    --sh1:0 1px 2px rgba(0,0,0,.35),0 6px 18px rgba(0,0,0,.28); --sh2:0 12px 34px rgba(0,0,0,.5);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#25090D; --surface:#341119; --ink:#FFF0CC; --ink-soft:#DDBBA3; --line:#552B22;
+  --lal:#FF5A5F; --lal-ink:#2A0508; --gold:#FFC83D; --gold-soft:#3A2A09; --gold-ink:#FFE3A0;
+  --sh1:0 1px 2px rgba(0,0,0,.35),0 6px 18px rgba(0,0,0,.28); --sh2:0 12px 34px rgba(0,0,0,.5);
+}
+::selection{background:#F5B301;color:#3B0A10}
+
+/* saree border: red band, gold thread, red band */
+.par{height:22px;background:
+  linear-gradient(#C1121F,#C1121F) 0 0/100% 9px no-repeat,
+  linear-gradient(#F5B301,#F5B301) 0 12px/100% 2px no-repeat,
+  linear-gradient(#C1121F,#C1121F) 0 17px/100% 4px no-repeat,
+  var(--surface)}
+
+/* section headings echo the saree border */
+.sec h2::after,.region h2::after{content:"";display:block;width:76px;height:5px;margin-top:10px;border-radius:5px;background:linear-gradient(90deg,#C1121F 0 58%,#F5B301 58% 100%)}
+
+/* buttons stay vermilion in light and dark */
+.btn.map{background:linear-gradient(135deg,#CE1626,#A00E1A);color:#fff;box-shadow:0 5px 16px rgba(193,18,31,.30)}
+.num{background:linear-gradient(135deg,#CE1626,#A00E1A);color:#fff}
+.trail .btn{background:linear-gradient(135deg,#CE1626,#A00E1A);color:#fff}
+
+/* hero: vermilion with a haldi glow, gold dot field and an alpona ring */
+.hero-band{background:
+  radial-gradient(circle,rgba(255,214,102,.17) 1.5px,transparent 2px) 0 0/26px 26px,
+  radial-gradient(55% 75% at 88% 0%,rgba(255,200,40,.45),transparent 62%),
+  radial-gradient(50% 60% at 0% 100%,rgba(255,130,30,.24),transparent 60%),
+  linear-gradient(160deg,#B3121F 0%,#8D0B18 55%,#600812 100%)}
+.hero-band::before{content:"";position:absolute;right:-140px;top:30px;width:560px;height:560px;border-radius:50%;pointer-events:none;
+  background:repeating-radial-gradient(circle,transparent 0 26px,rgba(255,206,70,.22) 26px 28px);
+  -webkit-mask-image:radial-gradient(circle,#000 28%,transparent 72%);mask-image:radial-gradient(circle,#000 28%,transparent 72%)}
+.hero-band::after{height:12px;background:linear-gradient(#FFC83D,#FFC83D) 0 0/100% 5px no-repeat,linear-gradient(#FFC83D,#FFC83D) 0 9px/100% 2px no-repeat}
+.hero-band .hero{z-index:1}
+.hero-band .hero h1{text-shadow:0 0 50px rgba(255,200,40,.5)}
+.hero-band .stats{color:#FFE08A}
+.hero-band .when .now{background:linear-gradient(135deg,#FFD24D,#FFAE00);color:#3B0A10;border-color:transparent}
+.hero-band .when .now span{color:#5A3600}
+.hero-band .btn.map{background:linear-gradient(135deg,#FFD24D,#FFAE00);color:#3B0A10;box-shadow:0 8px 26px rgba(255,170,0,.42)}
+.hero-band .btn{border-color:rgba(255,224,138,.5)}
+@media (max-width:620px){.hero-band::before{width:380px;height:380px;right:-170px;top:150px}}
+
+/* tiles, bands, footer */
+.feat:hover,.rtile:hover,.item:hover,.slot:hover,.show:hover,.wcard:hover{border-color:color-mix(in srgb,var(--lal) 35%,var(--line))}
+.sponsor-band{background:linear-gradient(160deg,var(--gold-soft),color-mix(in srgb,var(--gold) 26%,var(--surface)));border-color:var(--gold)}
+.tag.sp,.paid{background:#F5B301;color:#3B0A10}
+.chip[aria-pressed="true"]{background:#8D0B18;border-color:#8D0B18;color:#FFF3CF;box-shadow:0 4px 12px rgba(141,11,24,.3)}
+.pl-sum{background:linear-gradient(90deg,color-mix(in srgb,var(--gold) 26%,var(--surface)),var(--surface))}
+footer{background:#3B0A10;color:#E9CDAA}
+footer #copyright{color:#FFE9B0!important}
+footer .linkbtn{color:#FFE9B0}
+
+/* stories */
+.sgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:16px;margin-top:18px}
+.scard{position:relative;display:flex;flex-direction:column;gap:8px;text-align:left;font:inherit;color:var(--ink);cursor:pointer;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:22px 22px 18px;box-shadow:var(--sh1);transition:transform .28s var(--ease),box-shadow .28s,border-color .28s;overflow:hidden}
+.scard::before{content:"";position:absolute;left:0;right:0;top:0;height:5px;background:linear-gradient(90deg,#C1121F,#F5B301)}
+.scard.blog::before{background:linear-gradient(90deg,#F5B301,#C1121F)}
+.scard:hover{transform:translateY(-4px);box-shadow:var(--sh2);border-color:color-mix(in srgb,var(--lal) 35%,var(--line))}
+.scard:active{transform:scale(.98)}
+.scard h3{margin:4px 0 0;font-family:var(--serif);font-weight:400;font-size:1.45rem;line-height:1.45}
+.scard .en{color:var(--ink-soft);font-size:.9rem;margin:0}
+.scard .ex{margin:0;color:var(--ink-soft);display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden;font-family:var(--serif);line-height:1.9}
+.scard .foot{margin-top:auto;padding-top:8px;display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:.88rem;color:var(--ink-soft)}
+.scard .read{font-weight:700;color:var(--lal)}
+#reader{max-width:700px}
+.rtitle{font-size:clamp(1.6rem,5vw,2.2rem)!important;line-height:1.45!important;padding-right:34px}
+.rmeta{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:.88rem;color:var(--ink-soft);margin-bottom:6px}
+.rbody{font-family:var(--serif);font-size:var(--rfs,1.2rem);line-height:2.05;margin-top:16px}
+.rbody p{margin:0 0 1.1em}
+.rbar{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
+.rsize{display:flex;gap:8px}
+/* tabs fit with seven items */
+@media (min-width:900px){.tabs a{padding:9px 10px;font-size:.93rem}.tabs{margin-left:8px}}
+.feats{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
 </style>
 </head>
 <body>
@@ -284,11 +550,13 @@ footer p{max-width:72ch;margin:0 0 10px}
       <button type="button" data-lang="bn" aria-pressed="false" lang="bn">বাংলা</button>
     </div>
     <nav class="tabs" id="tabs" aria-label="Main">
+      <span class="tab-ind" id="tab-ind" aria-hidden="true"></span>
       <a href="#/home" data-nav="home" data-i="navHome"></a>
       <a href="#/pandals" data-nav="pandals" data-i="navPandals"></a>
       <a href="#/plan" data-nav="plan" data-i="navPlan"></a>
       <a href="#/shows" data-nav="shows" data-i="navShows"></a>
       <a href="#/wishes" data-nav="wishes" data-i="navWishes"></a>
+      <a href="#/stories" data-nav="stories" data-i="navStories"></a>
       <a href="#/advertise" data-nav="advertise" data-i="navAdvertise"></a>
     </nav>
   </div>
@@ -296,6 +564,8 @@ footer p{max-width:72ch;margin:0 0 10px}
 
 <!-- ============ HOME ============ -->
 <div class="view" data-view="home" id="v-home">
+  <div class="hero-band" id="hero-band">
+   <div class="lights" id="lights" aria-hidden="true"><svg class="swag" viewBox="0 0 1200 40" preserveAspectRatio="none"><path d="M0 4 Q150 40 300 4 Q450 40 600 4 Q750 40 900 4 Q1050 40 1200 4" fill="none" stroke="rgba(255,214,102,.65)" stroke-width="1.5" vector-effect="non-scaling-stroke"/></svg></div>
   <div class="wrap hero">
     <h1 lang="bn">পুজো ২০২৬</h1>
     <p class="sub" data-i="sub"></p>
@@ -308,6 +578,7 @@ footer p{max-width:72ch;margin:0 0 10px}
     <div class="contact-row" id="contact-row"></div>
     <div class="when" id="when"></div>
     <p class="note" data-i="dateNote"></p>
+  </div>
   </div>
   <div class="wrap">
     <section class="sec" aria-labelledby="hf-h">
@@ -431,6 +702,18 @@ footer p{max-width:72ch;margin:0 0 10px}
   </div>
 </div>
 
+<!-- ============ STORIES ============ -->
+<div class="view" data-view="stories" id="v-stories" hidden>
+  <div class="wrap">
+    <section class="sec" aria-labelledby="st-h">
+      <h2 id="st-h" data-i="stTitle"></h2>
+      <p class="desc" data-i="stDesc"></p>
+      <div class="chips" id="st-chips" role="group" aria-label="Type" style="padding:12px 0 0"></div>
+      <div class="sgrid" id="st-grid"></div>
+    </section>
+  </div>
+</div>
+
 <!-- ============ ADVERTISE ============ -->
 <div class="view" data-view="advertise" id="v-advertise" hidden>
   <div class="wrap">
@@ -494,6 +777,24 @@ footer p{max-width:72ch;margin:0 0 10px}
   </div>
 </dialog>
 
+<dialog class="enq" id="reader" aria-labelledby="rd-h">
+  <div style="padding:22px 22px 20px;position:relative">
+    <button type="button" class="x" id="rd-x" aria-label="Close">×</button>
+    <div class="rmeta" id="rd-meta"></div>
+    <h2 id="rd-h" class="rtitle"></h2>
+    <p class="meta" id="rd-sub" style="margin:2px 0 0"></p>
+    <div class="rbody" id="rd-body"></div>
+    <div class="rbar">
+      <div class="rsize" role="group" aria-label="Text size"><button type="button" class="btn" id="rd-sm" style="padding:6px 12px">A−</button><button type="button" class="btn" id="rd-lg" style="padding:6px 12px">A+</button></div>
+      <a class="btn wa" id="rd-wa" target="_blank" rel="noopener" href="#"></a>
+    </div>
+    <div class="rbar">
+      <button type="button" class="btn" id="rd-prev"></button>
+      <button type="button" class="btn" id="rd-next"></button>
+    </div>
+  </div>
+</dialog>
+
 <dialog class="enq" id="imgview" aria-labelledby="iv-h">
   <div style="padding:18px;position:relative">
     <button type="button" class="x" id="iv-x" aria-label="Close">×</button>
@@ -513,6 +814,8 @@ footer p{max-width:72ch;margin:0 0 10px}
     <p class="err" id="lf-msg" role="status"></p>
   </div>
 </dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <div class="fab" id="fab"></div>
 
@@ -628,6 +931,76 @@ const SHOW_RATES = [
   {name:"Pinned show", name_bn:"পিন করা শো", where:"Shown first for its date and category", where_bn:"তারিখ ও বিভাগে সবার আগে দেখানো", price:"₹7,500 / show", slots:"2 per date", slots_bn:"প্রতি তারিখে ২টি"},
   {name:"Booking partner", name_bn:"বুকিং পার্টনার", where:"Ticketing or travel brand in the partner strip, paid per booking", where_bn:"পার্টনার স্ট্রিপে টিকিট বা ভ্রমণ ব্র্যান্ড, বুকিং প্রতি কমিশন", price:"Commission", slots:"3 slots", slots_bn:"৩টি স্লট"}
 ];
+/* ---- STORIES AND BLOG (Bengali). Add more by copying an entry. type: story | blog. body = list of paragraphs. ---- */
+const STORIES = [
+ {
+  "id": "didar-lalpere",
+  "type": "story",
+  "title": "দিদার লালপেড়ে শাড়ি",
+  "title_en": "Grandmother's red-bordered saree",
+  "summary_en": "On Ashtami morning, a girl wears her grandmother's old saree and discovers what its still-bright border has been holding.",
+  "date": "2026-10-16",
+  "mins": 2,
+  "body": [
+   "অষ্টমীর ভোরে মিতুলের ঘুম ভাঙল শিউলির গন্ধে। চোখ কচলে সে দেখল, বারান্দার দড়িতে ঝুলছে একটা সাদা শাড়ি, যার পাড়টা টকটকে লাল। রাতেই দিদা সেটা কেচে শুকোতে দিয়েছে।",
+   "“এটা তুই আজ পরবি,” দিদা বলল। “আমার মা আমাকে প্রথম যেবার পরিয়েছিলেন, আমি তখন তোর বয়সি। সেবার ঢাকের আওয়াজে এত ভয় পেয়েছিলাম যে মায়ের আঁচল ছাড়িনি।”",
+   "মিতুল শাড়িটা হাতে নিল। কাপড়টা পাতলা, অথচ কেমন যেন ভারী ভারী লাগছে। কত অষ্টমীর গন্ধ জমে আছে তার ভাঁজে ভাঁজে।",
+   "প্যান্ডেলে পৌঁছে দিদা তার হাতে ফুল আর বেলপাতা তুলে দিল। পুরুতমশাইয়ের মন্ত্রের সঙ্গে সঙ্গে মিতুলও বিড়বিড় করল, যদিও সব কথা তার মুখস্থ ছিল না। অঞ্জলি শেষে পাশে তাকিয়ে সে দেখল, দিদার চোখ চিকচিক করছে।",
+   "“কাঁদছ কেন?”",
+   "“কাঁদছি না রে,” দিদা আঁচলের কোণে চোখ মুছে বলল। “শুধু ভাবছি, শাড়ির এই পাড় আজও একটুও ফিকে হয়নি।”",
+   "বাড়ি ফেরার পথে মিতুল মনে মনে ঠিক করে ফেলল, আসছে বছর এই শাড়ি সে নিজেই কেচে রাখবে।"
+  ]
+ },
+ {
+  "id": "dhakir-bol",
+  "type": "story",
+  "title": "ঢাকির বোল",
+  "title_en": "The dhaki's beat",
+  "summary_en": "A village drummer arrives in the city for Puja, and a small girl asks what his dhak is saying.",
+  "date": "2026-10-16",
+  "mins": 2,
+  "body": [
+   "বিজয় ঢাকি আজ ভোরের ট্রেনে শিয়ালদায় নেমেছে। কাঁধে ঢাক, হাতে কাঠি, আর ঝোলায় বউয়ের বেঁধে দেওয়া চিঁড়ে-গুড়। প্রতি বছর পুজোর আগে সে গ্রাম ছেড়ে শহরে আসে, প্যান্ডেলে ঢাক বাজাতে।",
+   "এবার কমিটির ছেলেরা বলল, “কাকু, এবার একটু অন্যরকম কিছু বাজান।” বিজয় হেসে বলল, “আমার ঢাক তো একটাই কথা জানে।”",
+   "ষষ্ঠীর সন্ধ্যায় দেবীর বোধন হল। বিজয় কাঠি তুলল। প্রথম বোলটা বেজে উঠতেই সারা প্যান্ডেল যেন থমকে গেল। বাচ্চারা ছুটে এল সামনে, বুড়োরা চুপ করে দাঁড়াল। যে ছেলেটা অন্যরকম বাজনা চেয়েছিল, সেই সবার আগে হাততালি দিল।",
+   "রাত গভীর হলে বিজয় প্যান্ডেলের এক কোণে বসে চিঁড়ে-গুড় খেল। একটা ছোট্ট মেয়ে এসে জিজ্ঞেস করল, “কাকু, ঢাকটা কি কথা বলে?”",
+   "“বলে তো,” বিজয় বলল। “বলে, মা এসেছেন।”",
+   "মেয়েটা কান পেতে শুনল। দূরে তখনও ঢাকের রেশ ভেসে বেড়াচ্ছে।"
+  ]
+ },
+ {
+  "id": "pandal-hopping-panch-raat",
+  "type": "blog",
+  "title": "প্যান্ডেল হপিংয়ের পাঁচ রাত: কিছু কাজের কথা",
+  "title_en": "Five nights of pandal hopping: some practical advice",
+  "summary_en": "Comfortable shoes, a plan by area, using the metro, water and a charged phone, and a little patience.",
+  "date": "2026-10-16",
+  "mins": 2,
+  "body": [
+   "পুজোয় প্যান্ডেল ঘোরা মানে শুধু ঠাকুর দেখা নয়, ভিড়, হাঁটা আর খিদের এক লম্বা পরীক্ষাও বটে। কয়েকটা সহজ কথা মাথায় রাখলে রাতটা অনেক আরামের হয়।",
+   "এক, জুতো। নতুন জুতো এই রাতের জন্য নয়। পুরনো, আরামদায়ক, পা-চেনা জুতোই সবচেয়ে ভালো সঙ্গী।",
+   "দুই, পরিকল্পনা। এক রাতে সব প্যান্ডেল দেখার চেষ্টা করবেন না। এলাকা ধরে ভাগ করে নিন। উত্তর কলকাতার গলিতে হাঁটার মজা এক রকম, দক্ষিণের থিম প্যান্ডেলের মজা আরেক রকম। এই সাইটের রুট বানানোর পাতা ঠিক এই কাজেই লাগবে।",
+   "তিন, মেট্রো। ভিড়ের রাতে রাস্তায় যানজট হওয়াই স্বাভাবিক, তাই মেট্রো অনেক সময় সুবিধার। নামার আগে কাছের স্টেশনটা দেখে নিন, আর শেষ পথটুকু হেঁটে যান।",
+   "চার, জল আর ফোন। ছোট এক বোতল জল সঙ্গে রাখুন, আর ফোনে চার্জ। ম্যাপ খুলতে হবে বারবার।",
+   "পাঁচ, ধৈর্য। লাইনে দাঁড়িয়ে থাকাটাও পুজোর অংশ। পাশের অচেনা মানুষের সঙ্গে দুটো কথা, গরম ঘুগনি বা ফুচকা, আর অপেক্ষার শেষে মায়ের মুখ। এই সবটুকু মিলিয়েই তো পুজোর রাত।"
+  ]
+ },
+ {
+  "id": "kumartulir-bikel",
+  "type": "blog",
+  "title": "কুমোরটুলির এক বিকেল",
+  "title_en": "An afternoon in Kumartuli",
+  "summary_en": "A walk through the idol-makers' lanes, and a few words from an artist about the eyes of the goddess.",
+  "date": "2026-10-16",
+  "mins": 2,
+  "body": [
+   "পুজোর কয়েক সপ্তাহ আগে এক বিকেলে কুমোরটুলির গলিতে ঢুকেছিলাম। সরু গলি, দু’পাশে খড় আর বাঁশের কাঠামো, আর বাতাসে এঁটেল মাটির ভেজা গন্ধ। কোথাও আধখানা প্রতিমার মুখ, কোথাও শুধু চালচিত্রের কাঠামো।",
+   "এক শিল্পী মন দিয়ে দেবীর চোখ আঁকছিলেন। জিজ্ঞেস করলাম, এত সূক্ষ্ম কাজে হাত কাঁপে না? তিনি না তাকিয়েই বললেন, “চোখটাই তো শেষে আঁকা হয়, বাবু। চোখ না ফুটলে মা তো আসেন না।”",
+   "সেদিন বুঝলাম, প্যান্ডেলের আলো আর থিমের চমকের আড়ালে একটা ছোট্ট জগৎ আছে, যেখানে মাসের পর মাস হাতের কাজ চলে। যাঁরা সেই কাজ করেন, তাঁদের নাম আমরা অনেক সময় জানিই না।",
+   "এবার পুজোয় ঠাকুর দেখার সময় এক মুহূর্ত দাঁড়াবেন প্রতিমার চোখের সামনে। ভাবুন, কোন হাত এই মুখটা গড়েছে।"
+  ]
+ }
+];
 /* ========================================================================================= */
 
 /* ---------- UI strings ---------- */
@@ -643,12 +1016,15 @@ const UI = {
   wpBuy:"Buy now", wpBy:"By ", wpFeatured:"Featured", wpFree:"Free", wpDownload:"Download image", wpView:"View full size", wpHint:"If the download does not start, press and hold (or right-click) the image and choose Save image.", wpNone:"No wishing posts match this filter. Try another occasion.", wpSoon:"New wishing posts are coming soon. Please check back shortly.",
   wpPoster:{mahalaya:"শুভ মহালয়া",shashthi:"শুভ ষষ্ঠী",saptami:"শুভ সপ্তমী",ashtami:"শুভ অষ্টমী",navami:"শুভ নবমী",bijoya:"শুভ বিজয়া",sharodiya:"শুভ শারদীয়া",business:"শারদীয়ার শুভেচ্ছা"},
   wpCats:{mahalaya:"Mahalaya",shashthi:"Shashthi",saptami:"Saptami",ashtami:"Ashtami",navami:"Navami",bijoya:"Bijoya Dashami",sharodiya:"Shubho Sharodiya",business:"For businesses"},
+  navStories:"Stories", stTitle:"Stories and blog", stDesc:"Short Bengali stories and notes from the pandal trail. The pieces are written in Bengali, with a short English summary.",
+  stAll:"All", stStory:"Story", stBlog:"Blog", stRead:"Read", stMin:(m)=>m+" min read", stPrev:"Previous", stNext:"Next", stShare:"Share on WhatsApp", stNone:"No pieces in this category yet.",
+  toastAdded:"Added to your trail", toastRemoved:"Removed from your trail",
   lfTitle:"This link could not open here", lfText:"The window you are viewing this in blocks links that open new tabs. Copy the link and paste it into your browser. Opening the site on its own page fixes this.", lfCopy:"Copy link", lfClose:"Close", lfCopied:"Copied. Paste it into your browser.",
   brand:"Pandal Hopping Guide", navHome:"Home", navPandals:"Pandals", navPlan:"Plan route", navShows:"Shows", navAdvertise:"Advertise",
   stats:(n,r)=>n+" pandals · "+r+" regions · nearest metro station listed · English and বাংলা",
   ctaPlan:"Plan my route", ctaBrowse:"Browse pandals",
   featTitle:"What you can do here",
-  feats:[["Plan your route","Pick pandals and get a visiting order with timings and map buttons.","#/plan"],["Pandals by region","North, Central, South, Eastern, Western and Greater Kolkata, each with its nearest metro.","#/pandals"],["Cultural shows","Concerts, theatre and dance evenings, with booking links.","#/shows"],["Wishing posts","Browse our festive greeting posts and buy the one you like.","#/wishes"],["Advertise with us","Sponsor listings, promoted shows and booking partner slots.","#/advertise"]],
+  feats:[["Plan your route","Pick pandals and get a visiting order with timings and map buttons.","#/plan"],["Pandals by region","North, Central, South, Eastern, Western and Greater Kolkata, each with its nearest metro.","#/pandals"],["Cultural shows","Concerts, theatre and dance evenings, with booking links.","#/shows"],["Wishing posts","Browse our festive greeting posts and buy the one you like.","#/wishes"],["Stories and blog","Short Bengali stories and notes from the pandal trail.","#/stories"],["Advertise with us","Sponsor listings, promoted shows and booking partner slots.","#/advertise"]],
   regionsTitle:"Explore by region", regionsSub:(n)=>n+" pandals",
   hlTitle:"Themes to look out for", hlDesc:"A few of the 2026 themes announced so far.", seeAll:"See all pandals",
   hiwTitle:"How it works",
@@ -759,12 +1135,15 @@ const UI = {
   wpBuy:"এখনই কিনুন", wpBy:"নকশা: ", wpFeatured:"বিশেষ", wpFree:"বিনামূল্যে", wpDownload:"ছবি ডাউনলোড করুন", wpView:"বড় করে দেখুন", wpHint:"ডাউনলোড শুরু না হলে ছবিটি চেপে ধরে (বা ডান-ক্লিক করে) “Save image” বেছে নিন।", wpNone:"এই ফিল্টারে কোনো শুভেচ্ছা পোস্ট মেলেনি। অন্য উপলক্ষ দেখুন।", wpSoon:"নতুন শুভেচ্ছা পোস্ট শীঘ্রই আসছে। একটু পরে আবার দেখুন।",
   wpPoster:{mahalaya:"শুভ মহালয়া",shashthi:"শুভ ষষ্ঠী",saptami:"শুভ সপ্তমী",ashtami:"শুভ অষ্টমী",navami:"শুভ নবমী",bijoya:"শুভ বিজয়া",sharodiya:"শুভ শারদীয়া",business:"শারদীয়ার শুভেচ্ছা"},
   wpCats:{mahalaya:"মহালয়া",shashthi:"ষষ্ঠী",saptami:"সপ্তমী",ashtami:"অষ্টমী",navami:"নবমী",bijoya:"বিজয়া দশমী",sharodiya:"শুভ শারদীয়া",business:"ব্যবসার জন্য"},
+  navStories:"গল্প", stTitle:"গল্প ও ব্লগ", stDesc:"প্যান্ডেলের পথ থেকে ছোট গল্প আর কিছু কথা।",
+  stAll:"সব", stStory:"গল্প", stBlog:"ব্লগ", stRead:"পড়ুন", stMin:(m)=>toBn(m)+" মিনিটের পাঠ", stPrev:"আগেরটি", stNext:"পরেরটি", stShare:"হোয়াটসঅ্যাপে শেয়ার করুন", stNone:"এই বিভাগে এখনও কোনো লেখা নেই।",
+  toastAdded:"ট্রেইলে যোগ হয়েছে", toastRemoved:"ট্রেইল থেকে সরানো হয়েছে",
   lfTitle:"এখানে লিংকটি খোলা গেল না", lfText:"আপনি যে উইন্ডোতে দেখছেন সেটি নতুন ট্যাবে খোলা লিংক আটকে দেয়। লিংকটি কপি করে ব্রাউজারে পেস্ট করুন। সাইটটি আলাদা পেজে খুললে এই সমস্যা থাকে না।", lfCopy:"লিংক কপি করুন", lfClose:"বন্ধ করুন", lfCopied:"কপি হয়েছে। ব্রাউজারে পেস্ট করুন।",
   brand:"প্যান্ডেল হপিং গাইড", navHome:"হোম", navPandals:"প্যান্ডেল", navPlan:"রুট প্ল্যান", navShows:"অনুষ্ঠান", navAdvertise:"বিজ্ঞাপন",
   stats:(n,r)=>toBn(n)+"টি প্যান্ডেল · "+toBn(r)+"টি অঞ্চল · কাছের মেট্রো স্টেশন দেওয়া · ইংরেজি ও বাংলা",
   ctaPlan:"আমার রুট বানান", ctaBrowse:"প্যান্ডেল দেখুন",
   featTitle:"এখানে কী করতে পারেন",
-  feats:[["রুট বানান","প্যান্ডেল বেছে নিন, সময় ও ম্যাপ বোতাম সহ দেখার ক্রম পান।","#/plan"],["অঞ্চল অনুযায়ী প্যান্ডেল","উত্তর, মধ্য, দক্ষিণ, পূর্ব, পশ্চিম ও বৃহত্তর কলকাতা, প্রতিটির কাছের মেট্রো সহ।","#/pandals"],["সাংস্কৃতিক অনুষ্ঠান","কনসার্ট, নাটক ও নাচের সন্ধ্যা, বুকিং লিংক সহ।","#/shows"],["শুভেচ্ছা পোস্ট","আমাদের উৎসবের শুভেচ্ছা পোস্ট দেখুন, পছন্দেরটি কিনুন।","#/wishes"],["আমাদের সঙ্গে বিজ্ঞাপন দিন","স্পনসর তালিকা, প্রচারিত অনুষ্ঠান ও বুকিং পার্টনার স্লট।","#/advertise"]],
+  feats:[["রুট বানান","প্যান্ডেল বেছে নিন, সময় ও ম্যাপ বোতাম সহ দেখার ক্রম পান।","#/plan"],["অঞ্চল অনুযায়ী প্যান্ডেল","উত্তর, মধ্য, দক্ষিণ, পূর্ব, পশ্চিম ও বৃহত্তর কলকাতা, প্রতিটির কাছের মেট্রো সহ।","#/pandals"],["সাংস্কৃতিক অনুষ্ঠান","কনসার্ট, নাটক ও নাচের সন্ধ্যা, বুকিং লিংক সহ।","#/shows"],["শুভেচ্ছা পোস্ট","আমাদের উৎসবের শুভেচ্ছা পোস্ট দেখুন, পছন্দেরটি কিনুন।","#/wishes"],["গল্প ও ব্লগ","প্যান্ডেলের পথ থেকে ছোট গল্প আর কিছু কথা।","#/stories"],["আমাদের সঙ্গে বিজ্ঞাপন দিন","স্পনসর তালিকা, প্রচারিত অনুষ্ঠান ও বুকিং পার্টনার স্লট।","#/advertise"]],
   regionsTitle:"অঞ্চল ধরে খুঁজুন", regionsSub:(n)=>toBn(n)+"টি প্যান্ডেল",
   hlTitle:"যে থিমগুলি দেখতে ভুলবেন না", hlDesc:"এ পর্যন্ত ঘোষিত ২০২৬-এর কয়েকটি থিম।", seeAll:"সব প্যান্ডেল দেখুন",
   hiwTitle:"কীভাবে কাজ করে",
@@ -1093,7 +1472,8 @@ function renderTrail(){
   document.body.classList.toggle("has-trail",trail.length>0);
   if(!trail.length){ el.classList.remove("show"); return; }
   el.classList.add("show");
-  document.getElementById("trail-count").textContent=T("trailN")(trail.length);
+  const cEl=document.getElementById("trail-count"), nt=T("trailN")(trail.length);
+  if(cEl.textContent!==nt){ cEl.textContent=nt; cEl.classList.remove("bump"); void cEl.offsetWidth; cEl.classList.add("bump"); }
   document.getElementById("trail-plan").textContent=T("trailPlan");
   const ord=planOrder(trail,"auto");
   document.getElementById("trail-go").href = ord.length>1 ? legUrl(ord.slice(0,9)) : (ord[0]?mapUrl(ord[0]):"#");
@@ -1220,7 +1600,7 @@ function renderContact(){
 }
 function renderAll(){
   renderStatic(); renderWhen(); renderLineSelect(); renderSponsors();
-  renderRegions(); renderChips(); renderTrail(); renderMoments(); renderShows(); initEnquiry(); renderContact(); renderPlannerAll(); renderHome(); renderWishes(); setHdr();
+  renderRegions(); renderChips(); renderTrail(); renderMoments(); renderShows(); initEnquiry(); renderContact(); renderPlannerAll(); renderHome(); renderWishes(); renderStories(); setHdr();
 }
 
 /* ---------- enquiry form (visible section) ---------- */
@@ -1392,6 +1772,7 @@ function legUrl(stops){
   return "https://www.google.com/maps/dir/?api=1&origin="+encodeURIComponent(o)+"&destination="+encodeURIComponent(d)+(w?"&waypoints="+encodeURIComponent(w):"")+"&travelmode=driving";
 }
 let plan={day:0,dwell:45,first:"auto"};
+let lastRouteKey="";
 { const now=Date.now(); const ist=n=>Date.UTC(2026,9,n,0,0,0)-5.5*3600*1000; if(now>=ist(17)&&now<ist(22)) plan.day=Math.min(4,Math.floor((now-ist(17))/86400000)); }
 function fmtTime(mins){
   const past=mins>=1440, m=mins%1440, h=Math.floor(m/60), mm=m%60, h12=((h+11)%12)+1, mmS=String(mm).padStart(2,"0");
@@ -1445,18 +1826,20 @@ function updatePlanner(){
   $("pl-daynote").textContent=T("dayNotes")[plan.day]||"";
   const out=$("pl-out"), sum=$("pl-sum"), act=$("pl-actions");
   if(trail.length<2){
-    out.innerHTML=""; act.innerHTML="";
+    lastRouteKey=""; out.innerHTML=""; act.innerHTML="";
     sum.innerHTML='<div class="pl-empty">'+esc(T(trail.length===1?"plOne":"plEmpty"))+'</div>';
     return;
   }
   const order=planOrder(trail,plan.first);
   const tl=timeline(order);
   sum.innerHTML='<div class="pl-sum">'+esc(T("plTotal")(order.length,nb(tl.km.toFixed(1)),tStr(tl.end)))+'</div>';
+  const rk=order.map(p=>p.n).join("|");
+  if(rk!==lastRouteKey){ lastRouteKey=rk; out.classList.remove("anim"); void out.offsetWidth; out.classList.add("anim"); }
   out.innerHTML=tl.stops.map((s,i)=>{
     const p=s.p;
     const leg=s.leg?'<div class="leg">'+esc(s.leg.walk?T("plLegWalk")(s.leg.mins,s.leg.km.toFixed(1)):T("plLegRide")(s.leg.mins,s.leg.km.toFixed(1)))+'</div>':"";
     const metro=p.l==="N"?esc(T("noMetroLine")):'<i class="dot '+p.l+'" style="display:inline-block;vertical-align:middle;margin-right:5px"></i>'+esc(metroL(p))+(p.ap?" ~":"");
-    return '<li>'+leg+'<div class="stop"><span class="num">'+nb(i+1)+'</span><div><h3>'+esc(nameL(p))+mapBtn(p)+'</h3><div class="meta">'+esc(areaL(p))+' · '+metro+'</div></div><div class="times">'+esc(tStr(s.arrive))+'<span>→ '+esc(tStr(s.leave))+'</span></div></div></li>';
+    return '<li style="--i:'+i+'">'+leg+'<div class="stop"><span class="num">'+nb(i+1)+'</span><div><h3>'+esc(nameL(p))+mapBtn(p)+'</h3><div class="meta">'+esc(areaL(p))+' · '+metro+'</div></div><div class="times">'+esc(tStr(s.arrive))+'<span>→ '+esc(tStr(s.leave))+'</span></div></div></li>';
   }).join("");
   // route buttons (Google Maps takes ~9 stops per link)
   const btns=[];
@@ -1471,6 +1854,7 @@ function toggleTrail(name,on){
   const i=trail.indexOf(name);
   if(on&&i===-1) trail.push(name); if(!on&&i>-1) trail.splice(i,1);
   saveTrail(); renderRegions(); renderTrail(); updatePlanner();
+  showToast(T(on?"toastAdded":"toastRemoved"));
 }
 function renderPlannerAll(){ renderPlannerStatic(); buildMselList(); updatePlanner(); }
 $("msel-btn").addEventListener("click",()=>setMsel($("msel-panel").hidden));
@@ -1507,7 +1891,7 @@ $("legal").addEventListener("click",e=>{ if(e.target===$("legal")) closeLegal();
 $("legal").addEventListener("close",()=>{legalKind="";});
 
 /* ---------- home page + view routing ---------- */
-const VIEWS=["home","pandals","plan","shows","wishes","advertise"];
+const VIEWS=["home","pandals","plan","shows","wishes","stories","advertise"];
 const LEGACY={planner:"plan",regions:"pandals",shows:"shows",sponsors:"home",enq:"advertise",home:"home"};
 let currentView="";
 function routeFromHash(){
@@ -1521,7 +1905,8 @@ function showView(v){
   document.querySelectorAll(".view").forEach(el=>{ el.hidden = el.dataset.view!==v; });
   document.querySelectorAll("#tabs a").forEach(a=>{ if(a.dataset.nav===v) a.setAttribute("aria-current","page"); else a.removeAttribute("aria-current"); });
   document.body.dataset.view=v;
-  if(changed) window.scrollTo(0,0);
+  if(changed){ window.scrollTo(0,0); replayEnter(); }
+  moveInd();
 }
 function goto(v,cb){
   if(currentView!==v){ showView(v); try{ history.pushState(null,"","#/"+v); }catch(e){} }
@@ -1532,7 +1917,7 @@ window.addEventListener("popstate",()=>showView(routeFromHash()));
 const HOME_HL=["Kumartuli Park Sarbojanin","Santosh Mitra Square","Ballygunge Samaj Sebi Sangha","Suruchi Sangha","Sreebhumi Sporting Club","Salt Lake FD Block"];
 function renderHome(){
   $("home-stats").textContent=T("stats")(PANDALS.length,REGIONS.length);
-  $("home-feats").innerHTML=T("feats").map(f=>'<a class="feat" href="'+f[2]+'"><b>'+esc(f[0])+'</b><span>'+esc(f[1])+'</span></a>').join("");
+  $("home-feats").innerHTML=T("feats").map(f=>'<a class="feat" href="'+f[2]+'"><i class="fico" aria-hidden="true"><svg viewBox="0 0 24 24">'+(FICONS[f[2]]||"")+'</svg></i><b>'+esc(f[0])+'</b><span>'+esc(f[1])+'</span></a>').join("");
   $("home-regions").innerHTML=REGIONS.map(R=>'<button type="button" class="rtile" data-region-go="'+R.id+'"><b>'+esc(regionName(R))+'</b><span>'+esc(T("regionsSub")(PANDALS.filter(p=>p.r===R.id).length))+'</span></button>').join("");
   $("home-hl").innerHTML=HOME_HL.map(pByName).filter(Boolean).map(itemHTML).join("");
   $("home-hiw").innerHTML=T("hiw").map((s,i)=>'<li><span class="num">'+nb(i+1)+'</span><div><b>'+esc(s[0])+'</b><span class="t">'+esc(s[1])+'</span></div></li>').join("");
@@ -1632,6 +2017,48 @@ $("iv-x").addEventListener("click",()=>$("imgview").close());
 $("iv-close").addEventListener("click",()=>$("imgview").close());
 $("imgview").addEventListener("click",e=>{ if(e.target===$("imgview")) $("imgview").close(); });
 
+/* ---------- stories and blog ---------- */
+let stType="all", rdId=null, rfs=1.2;
+try{ const s=parseFloat(localStorage.getItem("pujo26-rfs")); if(s>=1&&s<=1.8) rfs=s; }catch(e){}
+function renderStories(){
+  const types=[["all",T("stAll")],["story",T("stStory")],["blog",T("stBlog")]];
+  $("st-chips").innerHTML=types.map(c=>'<button type="button" class="chip" data-st="'+c[0]+'" aria-pressed="'+(stType===c[0])+'">'+esc(c[1])+'</button>').join("");
+  const list=STORIES.filter(s=>stType==="all"||s.type===stType);
+  $("st-grid").innerHTML=list.length?list.map(s=>
+    '<article class="scard '+s.type+'" role="button" tabindex="0" data-read="'+esc(s.id)+'" aria-label="'+esc(s.title)+'"><div><span class="tag'+(s.type==="blog"?" sp":"")+'" style="margin:0">'+esc(T(s.type==="blog"?"stBlog":"stStory"))+'</span></div>'+
+    '<h3 lang="bn">'+esc(s.title)+'</h3>'+(lang==="en"&&s.title_en?'<p class="en">'+esc(s.title_en)+'</p>':"")+
+    '<p class="ex" lang="bn">'+esc(s.body[0])+'</p>'+
+    '<div class="foot"><span>'+esc(T("stMin")(s.mins||2))+'</span><span class="read">'+esc(T("stRead"))+'</span></div></article>').join("")
+    :'<p class="empty" style="grid-column:1/-1">'+T("stNone")+'</p>';
+}
+function openReader(id){
+  const s=STORIES.find(x=>x.id===id); if(!s) return;
+  rdId=id;
+  $("rd-meta").innerHTML='<span class="tag'+(s.type==="blog"?" sp":"")+'" style="margin:0">'+esc(T(s.type==="blog"?"stBlog":"stStory"))+'</span><span>'+esc(fmtDate(s.date))+'</span><span>'+esc(T("stMin")(s.mins||2))+'</span>';
+  $("rd-h").textContent=s.title; $("rd-h").lang="bn";
+  $("rd-sub").textContent=(lang==="en"&&s.summary_en)?s.summary_en:"";
+  $("rd-sub").hidden=!$("rd-sub").textContent;
+  $("rd-body").lang="bn"; $("rd-body").innerHTML=s.body.map(p=>'<p>'+esc(p)+'</p>').join("");
+  $("rd-body").style.setProperty("--rfs",rfs+"rem");
+  $("rd-wa").textContent=T("stShare");
+  $("rd-wa").href="https://wa.me/?text="+encodeURIComponent(s.title+"\n"+(location.href.startsWith("http")?location.href:""));
+  $("rd-prev").textContent=T("stPrev"); $("rd-next").textContent=T("stNext");
+  const i=STORIES.findIndex(x=>x.id===id);
+  $("rd-prev").hidden=i<=0; $("rd-next").hidden=i>=STORIES.length-1;
+  const d=$("reader"); if(!d.open){ if(typeof d.showModal==="function") d.showModal(); else d.setAttribute("open",""); }
+  d.scrollTop=0;
+}
+$("st-chips").addEventListener("click",e=>{ const b=e.target.closest("[data-st]"); if(!b) return; stType=b.dataset.st; renderStories(); });
+$("st-grid").addEventListener("click",e=>{ const b=e.target.closest("[data-read]"); if(b) openReader(b.dataset.read); });
+$("st-grid").addEventListener("keydown",e=>{ if(e.key!=="Enter"&&e.key!==" ") return; const b=e.target.closest("[data-read]"); if(b){ e.preventDefault(); openReader(b.dataset.read); } });
+$("rd-x").addEventListener("click",()=>$("reader").close());
+$("reader").addEventListener("click",e=>{ if(e.target===$("reader")) $("reader").close(); });
+$("rd-prev").addEventListener("click",()=>{ const i=STORIES.findIndex(x=>x.id===rdId); if(i>0) openReader(STORIES[i-1].id); });
+$("rd-next").addEventListener("click",()=>{ const i=STORIES.findIndex(x=>x.id===rdId); if(i<STORIES.length-1) openReader(STORIES[i+1].id); });
+function setRfs(v){ rfs=Math.min(1.8,Math.max(1,Math.round(v*100)/100)); $("rd-body").style.setProperty("--rfs",rfs+"rem"); try{ localStorage.setItem("pujo26-rfs",String(rfs)); }catch(e){} }
+$("rd-sm").addEventListener("click",()=>setRfs(rfs-0.1));
+$("rd-lg").addEventListener("click",()=>setRfs(rfs+0.1));
+
 /* ---------- links that must work inside restricted viewers ---------- */
 // In-page navigation without relying on the browser following "#/page" links
 document.addEventListener("click",e=>{
@@ -1665,12 +2092,51 @@ $("lf-copy").addEventListener("click",()=>{
   if(navigator.clipboard&&navigator.clipboard.writeText) navigator.clipboard.writeText(url).then(ok,fb); else fb();
 });
 
+/* ---------- motion and feedback helpers ---------- */
+let toastTimer=null;
+function showToast(msg){
+  const t=$("toast"); if(!t) return;
+  t.textContent=msg; t.classList.add("show");
+  clearTimeout(toastTimer); toastTimer=setTimeout(()=>t.classList.remove("show"),2100);
+}
+function moveInd(){
+  const tabs=$("tabs"), ind=$("tab-ind"); if(!tabs||!ind) return;
+  const a=tabs.querySelector('a[aria-current="page"]'); if(!a) return;
+  ind.style.width=Math.max(a.offsetWidth-28,16)+"px";
+  ind.style.transform="translateX("+(a.offsetLeft+14)+"px)";
+  if(tabs.scrollWidth>tabs.clientWidth) tabs.scrollTo({left:Math.max(0,a.offsetLeft-24),behavior:"smooth"});
+}
+function replayEnter(){
+  const el=document.getElementById("v-"+currentView); if(!el) return;
+  el.classList.remove("enter"); void el.offsetWidth; el.classList.add("enter");
+}
+function buildLights(){
+  const box=$("lights"); if(!box||box.querySelector(".bulb")) return;
+  const N=26, cols=["#FFD24D","#FFAE1A","#FFF3C4","#FF8A3D","#FF5A4D"];
+  for(let i=0;i<N;i++){
+    const x=(i+.5)/N*1200, t=(x%300)/300, y=(1-t)*(1-t)*4+2*(1-t)*t*40+t*t*4;
+    const s=document.createElement("span"); s.className="bulb";
+    s.style.left=(x/12)+"%"; s.style.top=(y-3)+"px";
+    s.style.setProperty("--c",cols[i%cols.length]); s.style.setProperty("--d",(Math.random()*2.6).toFixed(2)+"s");
+    box.appendChild(s);
+  }
+}
+function heroIntro(){ const hb=$("hero-band"); if(!hb) return; hb.classList.add("intro"); setTimeout(()=>hb.classList.remove("intro"),2000); }
+const FICONS={
+  "#/plan":'<path d="M5 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM19 9a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/><path d="M7 17h6a3 3 0 0 0 0-6h-2a3 3 0 0 1 0-6h6"/>',
+  "#/pandals":'<path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/>',
+  "#/shows":'<path d="M9 18V6l10-2v12"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="16" r="2"/>',
+  "#/wishes":'<rect x="4" y="9" width="16" height="11" rx="2"/><path d="M12 9v11M4 13h16"/><path d="M12 9c-1.5-3.5-5-3-4.5-1s4.5 1 4.5 1zm0 0c1.5-3.5 5-3 4.5-1s-4.5 1-4.5 1z"/>',
+  "#/stories":'<path d="M5 5.5A2.5 2.5 0 0 1 7.5 3H19v15H7.5A2.5 2.5 0 0 0 5 20.5z"/><path d="M5 20.5A2.5 2.5 0 0 1 7.5 18H19v3H7.5"/><path d="M9 7h6M9 10h4"/>',
+  "#/advertise":'<path d="M4 10v4l12 5V5L4 10z"/><path d="M19 9.5a3.5 3.5 0 0 1 0 5M7 14.5l1 4.5h3l-1-3.5"/>'
+};
+
 /* ---------- events ---------- */
 document.querySelector(".lang").addEventListener("click",e=>{
   const b=e.target.closest("button[data-lang]"); if(!b||b.dataset.lang===lang) return;
   lang=b.dataset.lang;
   try{ localStorage.setItem("pujo26-lang",lang); }catch(err){}
-  renderAll();
+  renderAll(); replayEnter(); moveInd();
 });
 document.getElementById("chips").addEventListener("click",e=>{
   const b=e.target.closest(".chip"); if(!b) return;
@@ -1684,7 +2150,8 @@ document.addEventListener("click",e=>{
   const n=b.dataset.name, i=trail.indexOf(n);
   if(i>-1) trail.splice(i,1); else trail.push(n);
   saveTrail();
-  document.querySelectorAll('.btn.add').forEach(x=>{ if(x.dataset.name===n){ x.setAttribute("aria-pressed",String(i===-1)); x.textContent = i===-1 ? T("inTrail") : T("addTrail"); } });
+  document.querySelectorAll('.btn.add').forEach(x=>{ if(x.dataset.name===n){ x.setAttribute("aria-pressed",String(i===-1)); x.textContent = i===-1 ? T("inTrail") : T("addTrail"); x.classList.remove("pop"); void x.offsetWidth; x.classList.add("pop"); } });
+  showToast(T(i===-1?"toastAdded":"toastRemoved"));
   renderTrail(); updatePlanner();
 });
 document.getElementById("trail-clear").addEventListener("click",()=>{trail=[];saveTrail();renderRegions();renderTrail();updatePlanner();});
@@ -1694,6 +2161,8 @@ document.getElementById("scat").addEventListener("change",e=>{showCat=e.target.v
 renderAll();
 showView(routeFromHash());
 setHdr();
+buildLights(); heroIntro(); moveInd();
+if(document.fonts&&document.fonts.ready) document.fonts.ready.then(()=>{ moveInd(); setHdr(); });
 </script>
 </body>
 </html>
